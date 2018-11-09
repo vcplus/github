@@ -1,0 +1,93 @@
+  AMCS.AboutForm.resources - Embedded, ContainedInManifestFile, 
+  AMCS.AlcoholForm.resources - Embedded, ContainedInManifestFile, 
+  AMCS.Form1.resources - Embedded, ContainedInManifestFile, 
+  AMCS.HelpForm.resources - Embedded, ContainedInManifestFile, 
+  AMCS.HumiForm.resources - Embedded, ContainedInManifestFile, 
+  AMCS.PMForm.resources - Embedded, ContainedInManifestFile, 
+  AMCS.SearchForm.resources - Embedded, ContainedInManifestFile, 
+  AMCS.SerialDlg.resources - Embedded, ContainedInManifestFile, 
+  AMCS.SettingForm.resources - Embedded, ContainedInManifestFile, 
+  AMCS.TempForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly AMCS, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class AMCS.AboutForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AMCS.AlcoholForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AMCS.SerialDlg: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.ComboBox comboBox1 : Public
+    System.Windows.Forms.ComboBox comboBox2 : Public
+    System.Windows.Forms.ComboBox comboBox3 : Public
+    System.Windows.Forms.ComboBox comboBox4 : Public
+    System.IO.Ports.SerialPort com : Public, Static
+    Boolean serialopen : Public, Static
+Class AMCS.HelpForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AMCS.PMForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AMCS.TempForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AMCS.HumiForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AMCS.SearchForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AMCS.SettingForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.RadioButton radioButton4 : Public
+    System.Windows.Forms.RadioButton radioButton3 : Public
+    System.Windows.Forms.RadioButton radioButton2 : Public
+    System.Windows.Forms.RadioButton radioButton1 : Public
+    System.Windows.Forms.NumericUpDown numericUpDown2 : Public
+    System.Windows.Forms.NumericUpDown numericUpDown1 : Public
+    System.Windows.Forms.ComboBox comboBox4 : Public
+    System.Windows.Forms.ComboBox comboBox3 : Public
+    System.Windows.Forms.ComboBox comboBox2 : Public
+    System.Windows.Forms.ComboBox comboBox1 : Public
+    System.Windows.Forms.NumericUpDown numericUpDown3 : Public
+    System.Windows.Forms.NumericUpDown numericUpDown4 : Public
+    System.Windows.Forms.NumericUpDown numericUpDown5 : Public
+    System.Windows.Forms.NumericUpDown numericUpDown6 : Public
+    System.Windows.Forms.NumericUpDown numericUpDown7 : Public
+    System.Windows.Forms.NumericUpDown numericUpDown8 : Public
+Class AMCS.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    AMCS.SerialDlg dlg : Public
+    System.String receive_data : Public, Static
+  Methods:
+    data_receivce(): PrivateScope, Public, HideBySig
+Class AMCS.Form1+data: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
