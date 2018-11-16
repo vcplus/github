@@ -1,9 +1,12 @@
 #pragma once
 #include "SerialForm.h"
+#include "Windows.h"
+#include "tchar.h"
 namespace AGMS {
 
 	using namespace System;
 	using namespace System::ComponentModel;
+	using namespace System::Windows::Forms;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
@@ -108,6 +111,9 @@ namespace AGMS {
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton2;
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton3;
 	private: System::Windows::Forms::ToolStripMenuItem^  期望值设置ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  系统ToolStripMenuItem1;
+	private: System::Windows::Forms::ToolStripMenuItem^  打开ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  关闭ToolStripMenuItem;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -139,6 +145,9 @@ namespace AGMS {
 			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->系统ToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->打开ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->关闭ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->关闭系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -151,6 +160,7 @@ namespace AGMS {
 			this->湿度ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->振荡度ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->有害气体ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->期望值设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->查看ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->工具栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->状态栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -207,7 +217,6 @@ namespace AGMS {
 			this->刷新ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->期望值设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->toolStrip1->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
@@ -223,15 +232,39 @@ namespace AGMS {
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
-				this->系统ToolStripMenuItem,
-					this->串口设置ToolStripMenuItem, this->气体类型ToolStripMenuItem, this->查看ToolStripMenuItem, this->toolStripMenuItem1, this->帮助ToolStripMenuItem
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
+				this->系统ToolStripMenuItem1,
+					this->系统ToolStripMenuItem, this->串口设置ToolStripMenuItem, this->气体类型ToolStripMenuItem, this->查看ToolStripMenuItem, this->toolStripMenuItem1,
+					this->帮助ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Size = System::Drawing::Size(1323, 25);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// 系统ToolStripMenuItem1
+			// 
+			this->系统ToolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->打开ToolStripMenuItem,
+					this->关闭ToolStripMenuItem
+			});
+			this->系统ToolStripMenuItem1->Name = L"系统ToolStripMenuItem1";
+			this->系统ToolStripMenuItem1->Size = System::Drawing::Size(44, 21);
+			this->系统ToolStripMenuItem1->Text = L"系统";
+			this->系统ToolStripMenuItem1->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::On_DoSystemMenu);
+			// 
+			// 打开ToolStripMenuItem
+			// 
+			this->打开ToolStripMenuItem->Name = L"打开ToolStripMenuItem";
+			this->打开ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->打开ToolStripMenuItem->Text = L"打开文件";
+			// 
+			// 关闭ToolStripMenuItem
+			// 
+			this->关闭ToolStripMenuItem->Name = L"关闭ToolStripMenuItem";
+			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关闭ToolStripMenuItem->Text = L"关闭";
 			// 
 			// 系统ToolStripMenuItem
 			// 
@@ -249,6 +282,7 @@ namespace AGMS {
 			this->打开系统ToolStripMenuItem->Name = L"打开系统ToolStripMenuItem";
 			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开系统ToolStripMenuItem->Text = L"打开系统";
+			this->打开系统ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::打开系统ToolStripMenuItem_Click);
 			// 
 			// 关闭系统ToolStripMenuItem
 			// 
@@ -299,26 +333,32 @@ namespace AGMS {
 			// 温度ToolStripMenuItem
 			// 
 			this->温度ToolStripMenuItem->Name = L"温度ToolStripMenuItem";
-			this->温度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->温度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->温度ToolStripMenuItem->Text = L"温度";
 			// 
 			// 湿度ToolStripMenuItem
 			// 
 			this->湿度ToolStripMenuItem->Name = L"湿度ToolStripMenuItem";
-			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->湿度ToolStripMenuItem->Text = L"湿度";
 			// 
 			// 振荡度ToolStripMenuItem
 			// 
 			this->振荡度ToolStripMenuItem->Name = L"振荡度ToolStripMenuItem";
-			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->振荡度ToolStripMenuItem->Text = L"振荡度";
 			// 
 			// 有害气体ToolStripMenuItem
 			// 
 			this->有害气体ToolStripMenuItem->Name = L"有害气体ToolStripMenuItem";
-			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->有害气体ToolStripMenuItem->Text = L"有害气体";
+			// 
+			// 期望值设置ToolStripMenuItem
+			// 
+			this->期望值设置ToolStripMenuItem->Name = L"期望值设置ToolStripMenuItem";
+			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
 			// 
 			// 查看ToolStripMenuItem
 			// 
@@ -865,12 +905,6 @@ namespace AGMS {
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"数据接收区";
 			// 
-			// 期望值设置ToolStripMenuItem
-			// 
-			this->期望值设置ToolStripMenuItem->Name = L"期望值设置ToolStripMenuItem";
-			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
-			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
@@ -974,10 +1008,62 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 			 int index = comboBox1->SelectedIndex;
 			 switch (index)
 			 {//显示汽车的信息
-			 case 1:
-			 case 2:
-			 case 3:
+			 case 1:break;
+			 case 2:break;
+			 case 3:break;
 			 }
+}
+private: System::Void 打开系统ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void On_DoSystemMenu(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+			 ToolStripMenuItem^ item;
+
+			 if (e == nullptr)
+
+				 item = safe_cast<ToolStripMenuItem^>(sender);
+
+			 else
+
+				 item = safe_cast<ToolStripMenuItem^>(e->ClickedItem);
+
+			 if (item == 打开ToolStripMenuItem)
+
+			 {
+
+				 OpenFileDialog^ pOFD = gcnew OpenFileDialog();
+
+				 pOFD->Filter = "文本文件(*.txt)|*.txt|所有文件(*.*)|*.*";
+
+				 pOFD->DefaultExt = "txt";
+
+				 if (pOFD->ShowDialog() == Windows::Forms::DialogResult::OK)
+
+				 {
+
+					 System::IO::StreamReader ^pReader =
+
+						 gcnew System::IO::StreamReader(pOFD->FileName,
+
+						 System::Text::Encoding::Default);
+
+
+					 pReader->Close();
+
+					 // 在状态栏上显示信息
+
+					 //statusStrip1->Items[3]->Text= "就绪";
+
+					 //statusStrip1->Items[3]->Text =pOFD->FileName;
+
+				 }
+
+			 }
+			 else if (item == 关闭ToolStripMenuItem)
+			 {
+
+				 this->Close();
+				 }
+
 }
 };
 }
