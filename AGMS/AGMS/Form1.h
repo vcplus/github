@@ -107,6 +107,7 @@ namespace AGMS {
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton2;
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton3;
+	private: System::Windows::Forms::ToolStripMenuItem^  期望值设置ToolStripMenuItem;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -125,18 +126,18 @@ namespace AGMS {
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -206,6 +207,7 @@ namespace AGMS {
 			this->刷新ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->期望值设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->toolStrip1->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
@@ -286,9 +288,9 @@ namespace AGMS {
 			// 
 			// 气体类型ToolStripMenuItem
 			// 
-			this->气体类型ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+			this->气体类型ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->温度ToolStripMenuItem,
-					this->湿度ToolStripMenuItem, this->振荡度ToolStripMenuItem, this->有害气体ToolStripMenuItem
+					this->湿度ToolStripMenuItem, this->振荡度ToolStripMenuItem, this->有害气体ToolStripMenuItem, this->期望值设置ToolStripMenuItem
 			});
 			this->气体类型ToolStripMenuItem->Name = L"气体类型ToolStripMenuItem";
 			this->气体类型ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
@@ -297,25 +299,25 @@ namespace AGMS {
 			// 温度ToolStripMenuItem
 			// 
 			this->温度ToolStripMenuItem->Name = L"温度ToolStripMenuItem";
-			this->温度ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->温度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->温度ToolStripMenuItem->Text = L"温度";
 			// 
 			// 湿度ToolStripMenuItem
 			// 
 			this->湿度ToolStripMenuItem->Name = L"湿度ToolStripMenuItem";
-			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->湿度ToolStripMenuItem->Text = L"湿度";
 			// 
 			// 振荡度ToolStripMenuItem
 			// 
 			this->振荡度ToolStripMenuItem->Name = L"振荡度ToolStripMenuItem";
-			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->振荡度ToolStripMenuItem->Text = L"振荡度";
 			// 
 			// 有害气体ToolStripMenuItem
 			// 
 			this->有害气体ToolStripMenuItem->Name = L"有害气体ToolStripMenuItem";
-			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->有害气体ToolStripMenuItem->Text = L"有害气体";
 			// 
 			// 查看ToolStripMenuItem
@@ -668,73 +670,73 @@ namespace AGMS {
 			// 
 			// chart4
 			// 
-			chartArea5->Name = L"ChartArea1";
-			this->chart4->ChartAreas->Add(chartArea5);
-			legend5->Enabled = false;
-			legend5->Name = L"Legend1";
-			this->chart4->Legends->Add(legend5);
+			chartArea1->Name = L"ChartArea1";
+			this->chart4->ChartAreas->Add(chartArea1);
+			legend1->Enabled = false;
+			legend1->Name = L"Legend1";
+			this->chart4->Legends->Add(legend1);
 			this->chart4->Location = System::Drawing::Point(19, 310);
 			this->chart4->Name = L"chart4";
-			series5->ChartArea = L"ChartArea1";
-			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series5->Legend = L"Legend1";
-			series5->Name = L"Series1";
-			this->chart4->Series->Add(series5);
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Series1";
+			this->chart4->Series->Add(series1);
 			this->chart4->Size = System::Drawing::Size(358, 200);
 			this->chart4->TabIndex = 3;
 			this->chart4->Text = L"chart4";
 			// 
 			// chart3
 			// 
-			chartArea6->Name = L"ChartArea1";
-			this->chart3->ChartAreas->Add(chartArea6);
-			legend6->Enabled = false;
-			legend6->Name = L"Legend1";
-			this->chart3->Legends->Add(legend6);
+			chartArea2->Name = L"ChartArea1";
+			this->chart3->ChartAreas->Add(chartArea2);
+			legend2->Enabled = false;
+			legend2->Name = L"Legend1";
+			this->chart3->Legends->Add(legend2);
 			this->chart3->Location = System::Drawing::Point(414, 310);
 			this->chart3->Name = L"chart3";
-			series6->ChartArea = L"ChartArea1";
-			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series6->Legend = L"Legend1";
-			series6->Name = L"Series1";
-			this->chart3->Series->Add(series6);
+			series2->ChartArea = L"ChartArea1";
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series2->Legend = L"Legend1";
+			series2->Name = L"Series1";
+			this->chart3->Series->Add(series2);
 			this->chart3->Size = System::Drawing::Size(358, 200);
 			this->chart3->TabIndex = 2;
 			this->chart3->Text = L"chart3";
 			// 
 			// chart2
 			// 
-			chartArea7->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea7);
-			legend7->Alignment = System::Drawing::StringAlignment::Far;
-			legend7->Enabled = false;
-			legend7->Name = L"Legend1";
-			this->chart2->Legends->Add(legend7);
+			chartArea3->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea3);
+			legend3->Alignment = System::Drawing::StringAlignment::Far;
+			legend3->Enabled = false;
+			legend3->Name = L"Legend1";
+			this->chart2->Legends->Add(legend3);
 			this->chart2->Location = System::Drawing::Point(414, 49);
 			this->chart2->Name = L"chart2";
-			series7->ChartArea = L"ChartArea1";
-			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series7->Legend = L"Legend1";
-			series7->Name = L"Series1";
-			this->chart2->Series->Add(series7);
+			series3->ChartArea = L"ChartArea1";
+			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series3->Legend = L"Legend1";
+			series3->Name = L"Series1";
+			this->chart2->Series->Add(series3);
 			this->chart2->Size = System::Drawing::Size(358, 200);
 			this->chart2->TabIndex = 1;
 			this->chart2->Text = L"chart2";
 			// 
 			// chart1
 			// 
-			chartArea8->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea8);
-			legend8->Enabled = false;
-			legend8->Name = L"Legend1";
-			this->chart1->Legends->Add(legend8);
+			chartArea4->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea4);
+			legend4->Enabled = false;
+			legend4->Name = L"Legend1";
+			this->chart1->Legends->Add(legend4);
 			this->chart1->Location = System::Drawing::Point(19, 49);
 			this->chart1->Name = L"chart1";
-			series8->ChartArea = L"ChartArea1";
-			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series8->Legend = L"Legend1";
-			series8->Name = L"Series1";
-			this->chart1->Series->Add(series8);
+			series4->ChartArea = L"ChartArea1";
+			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series4->Legend = L"Legend1";
+			series4->Name = L"Series1";
+			this->chart1->Series->Add(series4);
 			this->chart1->Size = System::Drawing::Size(358, 200);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
@@ -863,6 +865,12 @@ namespace AGMS {
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"数据接收区";
 			// 
+			// 期望值设置ToolStripMenuItem
+			// 
+			this->期望值设置ToolStripMenuItem->Name = L"期望值设置ToolStripMenuItem";
+			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
@@ -963,6 +971,13 @@ private: System::Void 串口设置ToolStripMenuItem1_Click(System::Object^  sender, 
 private: System::Void 打开串口ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+			 int index = comboBox1->SelectedIndex;
+			 switch (index)
+			 {//显示汽车的信息
+			 case 1:
+			 case 2:
+			 case 3:
+			 }
 }
 };
 }
