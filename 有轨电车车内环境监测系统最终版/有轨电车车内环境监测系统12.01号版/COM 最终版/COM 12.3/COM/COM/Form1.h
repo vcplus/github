@@ -68,7 +68,7 @@ namespace COM {
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Button^  button1;
 
-	private: System::Windows::Forms::PictureBox^  pictureBox1;
+
 
 
 	private: System::Windows::Forms::Label^  label9;
@@ -96,39 +96,51 @@ namespace COM {
 	private: System::Windows::Forms::ListBox^  listBox1;
 	private: System::Windows::Forms::GroupBox^  groupBox3;
 	private: System::Windows::Forms::GroupBox^  groupBox4;
-	private: System::Windows::Forms::GroupBox^  groupBox5;
+
 	private: System::Windows::Forms::Label^  label8;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown10;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown11;
-	private: System::Windows::Forms::Label^  label18;
+
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown12;
 	private: System::Windows::Forms::Label^  label19;
-	private: System::Windows::Forms::Label^  label20;
+
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown13;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown14;
-	private: System::Windows::Forms::Label^  label21;
+
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown15;
-	private: System::Windows::Forms::Label^  label22;
+
 	private: System::Windows::Forms::Label^  label23;
 	private: System::Windows::Forms::Label^  label24;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown16;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown17;
-	private: System::Windows::Forms::Label^  label25;
+	private: System::Windows::Forms::Label^  label27;
+	private: System::Windows::Forms::Label^  label32;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown18;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown19;
-	private: System::Windows::Forms::Label^  label26;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown20;
-	private: System::Windows::Forms::Label^  label27;
-	private: System::Windows::Forms::Label^  label28;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown21;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown22;
-	private: System::Windows::Forms::Label^  label29;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown23;
-	private: System::Windows::Forms::Label^  label30;
-	private: System::Windows::Forms::Label^  label31;
-	private: System::Windows::Forms::Label^  label32;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown24;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown25;
+	private: System::Windows::Forms::Label^  label26;
+	private: System::Windows::Forms::Label^  label25;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	private: System::ComponentModel::IContainer^  components;
@@ -176,7 +188,6 @@ namespace COM {
 			this->toolStripStatusLabel2 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
@@ -205,41 +216,31 @@ namespace COM {
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown10 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown11 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown12 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label19 = (gcnew System::Windows::Forms::Label());
-			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown13 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown14 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown15 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown16 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown17 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
 			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown18 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown19 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown20 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label27 = (gcnew System::Windows::Forms::Label());
-			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown21 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown22 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label29 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown23 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->label30 = (gcnew System::Windows::Forms::Label());
-			this->label31 = (gcnew System::Windows::Forms::Label());
-			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown24 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown25 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
@@ -260,7 +261,6 @@ namespace COM {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown15))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown16))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown17))->BeginInit();
-			this->groupBox5->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown18))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown19))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown20))->BeginInit();
@@ -520,17 +520,6 @@ namespace COM {
 			this->timer1->Interval = 10;
 			this->timer1->Tick += gcnew System::EventHandler(this, &Form1::timer1_Tick);
 			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(200, 31);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(271, 144);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 10;
-			this->pictureBox1->TabStop = false;
-			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
@@ -714,7 +703,7 @@ namespace COM {
 			// 
 			// numericUpDown9
 			// 
-			this->numericUpDown9->Location = System::Drawing::Point(608, 371);
+			this->numericUpDown9->Location = System::Drawing::Point(608, 381);
 			this->numericUpDown9->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown9->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5000, 0, 0, 0 });
 			this->numericUpDown9->Name = L"numericUpDown9";
@@ -725,7 +714,7 @@ namespace COM {
 			// 
 			this->label17->AutoSize = true;
 			this->label17->Font = (gcnew System::Drawing::Font(L"宋体", 12));
-			this->label17->Location = System::Drawing::Point(430, 373);
+			this->label17->Location = System::Drawing::Point(431, 384);
 			this->label17->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(160, 16);
@@ -736,7 +725,7 @@ namespace COM {
 			// 
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->ItemHeight = 12;
-			this->listBox1->Location = System::Drawing::Point(493, 51);
+			this->listBox1->Location = System::Drawing::Point(312, 48);
 			this->listBox1->Margin = System::Windows::Forms::Padding(2);
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(408, 124);
@@ -769,25 +758,33 @@ namespace COM {
 			// 
 			// groupBox4
 			// 
+			this->groupBox4->Controls->Add(this->label27);
+			this->groupBox4->Controls->Add(this->label32);
+			this->groupBox4->Controls->Add(this->numericUpDown18);
+			this->groupBox4->Controls->Add(this->numericUpDown19);
+			this->groupBox4->Controls->Add(this->numericUpDown20);
+			this->groupBox4->Controls->Add(this->numericUpDown21);
+			this->groupBox4->Controls->Add(this->numericUpDown22);
+			this->groupBox4->Controls->Add(this->numericUpDown23);
+			this->groupBox4->Controls->Add(this->numericUpDown24);
+			this->groupBox4->Controls->Add(this->numericUpDown25);
+			this->groupBox4->Controls->Add(this->label26);
+			this->groupBox4->Controls->Add(this->label25);
 			this->groupBox4->Controls->Add(this->label8);
 			this->groupBox4->Controls->Add(this->numericUpDown10);
 			this->groupBox4->Controls->Add(this->numericUpDown11);
-			this->groupBox4->Controls->Add(this->label18);
 			this->groupBox4->Controls->Add(this->numericUpDown12);
 			this->groupBox4->Controls->Add(this->label19);
-			this->groupBox4->Controls->Add(this->label20);
 			this->groupBox4->Controls->Add(this->numericUpDown13);
 			this->groupBox4->Controls->Add(this->numericUpDown14);
-			this->groupBox4->Controls->Add(this->label21);
 			this->groupBox4->Controls->Add(this->numericUpDown15);
-			this->groupBox4->Controls->Add(this->label22);
 			this->groupBox4->Controls->Add(this->label23);
 			this->groupBox4->Controls->Add(this->label24);
 			this->groupBox4->Controls->Add(this->numericUpDown16);
 			this->groupBox4->Controls->Add(this->numericUpDown17);
-			this->groupBox4->Location = System::Drawing::Point(432, 198);
+			this->groupBox4->Location = System::Drawing::Point(446, 187);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(220, 140);
+			this->groupBox4->Size = System::Drawing::Size(438, 177);
 			this->groupBox4->TabIndex = 33;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"第二车厢";
@@ -795,7 +792,7 @@ namespace COM {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(12, 25);
+			this->label8->Location = System::Drawing::Point(20, 61);
 			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(71, 12);
@@ -804,7 +801,7 @@ namespace COM {
 			// 
 			// numericUpDown10
 			// 
-			this->numericUpDown10->Location = System::Drawing::Point(92, 16);
+			this->numericUpDown10->Location = System::Drawing::Point(100, 52);
 			this->numericUpDown10->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown10->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown10->Name = L"numericUpDown10";
@@ -813,26 +810,16 @@ namespace COM {
 			// 
 			// numericUpDown11
 			// 
-			this->numericUpDown11->Location = System::Drawing::Point(166, 16);
+			this->numericUpDown11->Location = System::Drawing::Point(174, 52);
 			this->numericUpDown11->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown11->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown11->Name = L"numericUpDown11";
 			this->numericUpDown11->Size = System::Drawing::Size(44, 21);
 			this->numericUpDown11->TabIndex = 33;
 			// 
-			// label18
-			// 
-			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(144, 25);
-			this->label18->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(17, 12);
-			this->label18->TabIndex = 40;
-			this->label18->Text = L"～";
-			// 
 			// numericUpDown12
 			// 
-			this->numericUpDown12->Location = System::Drawing::Point(91, 49);
+			this->numericUpDown12->Location = System::Drawing::Point(99, 84);
 			this->numericUpDown12->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown12->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown12->Name = L"numericUpDown12";
@@ -842,26 +829,16 @@ namespace COM {
 			// label19
 			// 
 			this->label19->AutoSize = true;
-			this->label19->Location = System::Drawing::Point(10, 110);
+			this->label19->Location = System::Drawing::Point(18, 146);
 			this->label19->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label19->Name = L"label19";
 			this->label19->Size = System::Drawing::Size(59, 12);
 			this->label19->TabIndex = 29;
 			this->label19->Text = L"湿度（%）";
 			// 
-			// label20
-			// 
-			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(145, 111);
-			this->label20->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(17, 12);
-			this->label20->TabIndex = 43;
-			this->label20->Text = L"～";
-			// 
 			// numericUpDown13
 			// 
-			this->numericUpDown13->Location = System::Drawing::Point(166, 49);
+			this->numericUpDown13->Location = System::Drawing::Point(174, 85);
 			this->numericUpDown13->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown13->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown13->Name = L"numericUpDown13";
@@ -870,44 +847,24 @@ namespace COM {
 			// 
 			// numericUpDown14
 			// 
-			this->numericUpDown14->Location = System::Drawing::Point(167, 105);
+			this->numericUpDown14->Location = System::Drawing::Point(175, 141);
 			this->numericUpDown14->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown14->Name = L"numericUpDown14";
 			this->numericUpDown14->Size = System::Drawing::Size(44, 21);
 			this->numericUpDown14->TabIndex = 39;
 			// 
-			// label21
-			// 
-			this->label21->AutoSize = true;
-			this->label21->Location = System::Drawing::Point(144, 84);
-			this->label21->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(17, 12);
-			this->label21->TabIndex = 42;
-			this->label21->Text = L"～";
-			// 
 			// numericUpDown15
 			// 
-			this->numericUpDown15->Location = System::Drawing::Point(90, 105);
+			this->numericUpDown15->Location = System::Drawing::Point(98, 141);
 			this->numericUpDown15->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown15->Name = L"numericUpDown15";
 			this->numericUpDown15->Size = System::Drawing::Size(45, 21);
 			this->numericUpDown15->TabIndex = 38;
 			// 
-			// label22
-			// 
-			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(145, 58);
-			this->label22->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(17, 12);
-			this->label22->TabIndex = 41;
-			this->label22->Text = L"～";
-			// 
 			// label23
 			// 
 			this->label23->AutoSize = true;
-			this->label23->Location = System::Drawing::Point(10, 51);
+			this->label23->Location = System::Drawing::Point(18, 87);
 			this->label23->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(65, 12);
@@ -917,7 +874,7 @@ namespace COM {
 			// label24
 			// 
 			this->label24->AutoSize = true;
-			this->label24->Location = System::Drawing::Point(10, 79);
+			this->label24->Location = System::Drawing::Point(18, 115);
 			this->label24->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label24->Name = L"label24";
 			this->label24->Size = System::Drawing::Size(65, 12);
@@ -926,7 +883,7 @@ namespace COM {
 			// 
 			// numericUpDown16
 			// 
-			this->numericUpDown16->Location = System::Drawing::Point(166, 76);
+			this->numericUpDown16->Location = System::Drawing::Point(174, 112);
 			this->numericUpDown16->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown16->Name = L"numericUpDown16";
 			this->numericUpDown16->Size = System::Drawing::Size(45, 21);
@@ -934,184 +891,119 @@ namespace COM {
 			// 
 			// numericUpDown17
 			// 
-			this->numericUpDown17->Location = System::Drawing::Point(91, 77);
+			this->numericUpDown17->Location = System::Drawing::Point(99, 113);
 			this->numericUpDown17->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown17->Name = L"numericUpDown17";
 			this->numericUpDown17->Size = System::Drawing::Size(45, 21);
 			this->numericUpDown17->TabIndex = 36;
 			// 
-			// groupBox5
-			// 
-			this->groupBox5->Controls->Add(this->label25);
-			this->groupBox5->Controls->Add(this->numericUpDown18);
-			this->groupBox5->Controls->Add(this->numericUpDown19);
-			this->groupBox5->Controls->Add(this->label26);
-			this->groupBox5->Controls->Add(this->numericUpDown20);
-			this->groupBox5->Controls->Add(this->label27);
-			this->groupBox5->Controls->Add(this->label28);
-			this->groupBox5->Controls->Add(this->numericUpDown21);
-			this->groupBox5->Controls->Add(this->numericUpDown22);
-			this->groupBox5->Controls->Add(this->label29);
-			this->groupBox5->Controls->Add(this->numericUpDown23);
-			this->groupBox5->Controls->Add(this->label30);
-			this->groupBox5->Controls->Add(this->label31);
-			this->groupBox5->Controls->Add(this->label32);
-			this->groupBox5->Controls->Add(this->numericUpDown24);
-			this->groupBox5->Controls->Add(this->numericUpDown25);
-			this->groupBox5->Location = System::Drawing::Point(681, 198);
-			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Size = System::Drawing::Size(220, 140);
-			this->groupBox5->TabIndex = 33;
-			this->groupBox5->TabStop = false;
-			this->groupBox5->Text = L"第三车厢";
-			// 
 			// label25
 			// 
 			this->label25->AutoSize = true;
-			this->label25->Location = System::Drawing::Point(10, 25);
+			this->label25->Location = System::Drawing::Point(96, 25);
 			this->label25->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label25->Name = L"label25";
-			this->label25->Size = System::Drawing::Size(71, 12);
-			this->label25->TabIndex = 30;
-			this->label25->Text = L"酒精（ppm）";
-			// 
-			// numericUpDown18
-			// 
-			this->numericUpDown18->Location = System::Drawing::Point(92, 16);
-			this->numericUpDown18->Margin = System::Windows::Forms::Padding(2);
-			this->numericUpDown18->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
-			this->numericUpDown18->Name = L"numericUpDown18";
-			this->numericUpDown18->Size = System::Drawing::Size(45, 21);
-			this->numericUpDown18->TabIndex = 32;
-			// 
-			// numericUpDown19
-			// 
-			this->numericUpDown19->Location = System::Drawing::Point(166, 16);
-			this->numericUpDown19->Margin = System::Windows::Forms::Padding(2);
-			this->numericUpDown19->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
-			this->numericUpDown19->Name = L"numericUpDown19";
-			this->numericUpDown19->Size = System::Drawing::Size(44, 21);
-			this->numericUpDown19->TabIndex = 33;
+			this->label25->Size = System::Drawing::Size(41, 12);
+			this->label25->TabIndex = 44;
+			this->label25->Text = L"实测值";
 			// 
 			// label26
 			// 
 			this->label26->AutoSize = true;
-			this->label26->Location = System::Drawing::Point(144, 25);
+			this->label26->Location = System::Drawing::Point(173, 25);
 			this->label26->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label26->Name = L"label26";
-			this->label26->Size = System::Drawing::Size(17, 12);
-			this->label26->TabIndex = 40;
-			this->label26->Text = L"～";
+			this->label26->Size = System::Drawing::Size(41, 12);
+			this->label26->TabIndex = 45;
+			this->label26->Text = L"预期值";
+			// 
+			// numericUpDown18
+			// 
+			this->numericUpDown18->Location = System::Drawing::Point(260, 58);
+			this->numericUpDown18->Margin = System::Windows::Forms::Padding(2);
+			this->numericUpDown18->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
+			this->numericUpDown18->Name = L"numericUpDown18";
+			this->numericUpDown18->Size = System::Drawing::Size(45, 21);
+			this->numericUpDown18->TabIndex = 47;
+			// 
+			// numericUpDown19
+			// 
+			this->numericUpDown19->Location = System::Drawing::Point(334, 58);
+			this->numericUpDown19->Margin = System::Windows::Forms::Padding(2);
+			this->numericUpDown19->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
+			this->numericUpDown19->Name = L"numericUpDown19";
+			this->numericUpDown19->Size = System::Drawing::Size(44, 21);
+			this->numericUpDown19->TabIndex = 48;
 			// 
 			// numericUpDown20
 			// 
-			this->numericUpDown20->Location = System::Drawing::Point(91, 49);
+			this->numericUpDown20->Location = System::Drawing::Point(259, 90);
 			this->numericUpDown20->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown20->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown20->Name = L"numericUpDown20";
 			this->numericUpDown20->Size = System::Drawing::Size(44, 21);
-			this->numericUpDown20->TabIndex = 34;
-			// 
-			// label27
-			// 
-			this->label27->AutoSize = true;
-			this->label27->Location = System::Drawing::Point(10, 107);
-			this->label27->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label27->Name = L"label27";
-			this->label27->Size = System::Drawing::Size(59, 12);
-			this->label27->TabIndex = 29;
-			this->label27->Text = L"湿度（%）";
-			// 
-			// label28
-			// 
-			this->label28->AutoSize = true;
-			this->label28->Location = System::Drawing::Point(145, 111);
-			this->label28->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(17, 12);
-			this->label28->TabIndex = 43;
-			this->label28->Text = L"～";
+			this->numericUpDown20->TabIndex = 49;
 			// 
 			// numericUpDown21
 			// 
-			this->numericUpDown21->Location = System::Drawing::Point(166, 49);
+			this->numericUpDown21->Location = System::Drawing::Point(334, 90);
 			this->numericUpDown21->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown21->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown21->Name = L"numericUpDown21";
 			this->numericUpDown21->Size = System::Drawing::Size(44, 21);
-			this->numericUpDown21->TabIndex = 35;
+			this->numericUpDown21->TabIndex = 50;
 			// 
 			// numericUpDown22
 			// 
-			this->numericUpDown22->Location = System::Drawing::Point(167, 105);
+			this->numericUpDown22->Location = System::Drawing::Point(335, 147);
 			this->numericUpDown22->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown22->Name = L"numericUpDown22";
 			this->numericUpDown22->Size = System::Drawing::Size(44, 21);
-			this->numericUpDown22->TabIndex = 39;
-			// 
-			// label29
-			// 
-			this->label29->AutoSize = true;
-			this->label29->Location = System::Drawing::Point(144, 84);
-			this->label29->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label29->Name = L"label29";
-			this->label29->Size = System::Drawing::Size(17, 12);
-			this->label29->TabIndex = 42;
-			this->label29->Text = L"～";
+			this->numericUpDown22->TabIndex = 54;
 			// 
 			// numericUpDown23
 			// 
-			this->numericUpDown23->Location = System::Drawing::Point(90, 105);
+			this->numericUpDown23->Location = System::Drawing::Point(258, 147);
 			this->numericUpDown23->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown23->Name = L"numericUpDown23";
 			this->numericUpDown23->Size = System::Drawing::Size(45, 21);
-			this->numericUpDown23->TabIndex = 38;
+			this->numericUpDown23->TabIndex = 53;
 			// 
-			// label30
+			// numericUpDown24
 			// 
-			this->label30->AutoSize = true;
-			this->label30->Location = System::Drawing::Point(145, 58);
-			this->label30->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label30->Name = L"label30";
-			this->label30->Size = System::Drawing::Size(17, 12);
-			this->label30->TabIndex = 41;
-			this->label30->Text = L"～";
+			this->numericUpDown24->Location = System::Drawing::Point(334, 118);
+			this->numericUpDown24->Margin = System::Windows::Forms::Padding(2);
+			this->numericUpDown24->Name = L"numericUpDown24";
+			this->numericUpDown24->Size = System::Drawing::Size(45, 21);
+			this->numericUpDown24->TabIndex = 52;
 			// 
-			// label31
+			// numericUpDown25
 			// 
-			this->label31->AutoSize = true;
-			this->label31->Location = System::Drawing::Point(10, 51);
-			this->label31->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label31->Name = L"label31";
-			this->label31->Size = System::Drawing::Size(65, 12);
-			this->label31->TabIndex = 31;
-			this->label31->Text = L"PM2.5(ppm)";
+			this->numericUpDown25->Location = System::Drawing::Point(259, 119);
+			this->numericUpDown25->Margin = System::Windows::Forms::Padding(2);
+			this->numericUpDown25->Name = L"numericUpDown25";
+			this->numericUpDown25->Size = System::Drawing::Size(45, 21);
+			this->numericUpDown25->TabIndex = 51;
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Location = System::Drawing::Point(330, 28);
+			this->label27->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(65, 12);
+			this->label27->TabIndex = 60;
+			this->label27->Text = L"累计调控值";
 			// 
 			// label32
 			// 
 			this->label32->AutoSize = true;
-			this->label32->Location = System::Drawing::Point(10, 79);
+			this->label32->Location = System::Drawing::Point(252, 28);
 			this->label32->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label32->Name = L"label32";
 			this->label32->Size = System::Drawing::Size(65, 12);
-			this->label32->TabIndex = 28;
-			this->label32->Text = L"温度（℃）";
-			// 
-			// numericUpDown24
-			// 
-			this->numericUpDown24->Location = System::Drawing::Point(166, 76);
-			this->numericUpDown24->Margin = System::Windows::Forms::Padding(2);
-			this->numericUpDown24->Name = L"numericUpDown24";
-			this->numericUpDown24->Size = System::Drawing::Size(45, 21);
-			this->numericUpDown24->TabIndex = 37;
-			// 
-			// numericUpDown25
-			// 
-			this->numericUpDown25->Location = System::Drawing::Point(91, 77);
-			this->numericUpDown25->Margin = System::Windows::Forms::Padding(2);
-			this->numericUpDown25->Name = L"numericUpDown25";
-			this->numericUpDown25->Size = System::Drawing::Size(45, 21);
-			this->numericUpDown25->TabIndex = 36;
+			this->label32->TabIndex = 59;
+			this->label32->Text = L"当前调控值";
 			// 
 			// Form1
 			// 
@@ -1120,12 +1012,10 @@ namespace COM {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->ClientSize = System::Drawing::Size(913, 462);
-			this->Controls->Add(this->groupBox5);
 			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->listBox1);
 			this->Controls->Add(this->label17);
 			this->Controls->Add(this->numericUpDown9);
-			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->statusStrip1);
 			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->button6);
@@ -1146,7 +1036,6 @@ namespace COM {
 			this->statusStrip1->ResumeLayout(false);
 			this->statusStrip1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->EndInit();
@@ -1170,8 +1059,6 @@ namespace COM {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown15))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown16))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown17))->EndInit();
-			this->groupBox5->ResumeLayout(false);
-			this->groupBox5->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown18))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown19))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown20))->EndInit();
