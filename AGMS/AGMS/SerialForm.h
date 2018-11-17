@@ -222,6 +222,7 @@ namespace AGMS {
 					 com->PortName = this->comboBox4->Text->Trim();
 					 com->BaudRate = Single::Parse(this->comboBox3->Text->Trim());
 					 this->Close();
+
 				 }
 	}
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {

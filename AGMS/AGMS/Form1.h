@@ -5,6 +5,7 @@
 namespace AGMS {
 
 	using namespace System;
+	using namespace System::IO::Ports;
 	using namespace System::ComponentModel;
 	using namespace System::Windows::Forms;
 	using namespace System::Collections;
@@ -114,6 +115,7 @@ namespace AGMS {
 	private: System::Windows::Forms::ToolStripMenuItem^  系统ToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^  打开ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  关闭ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  格式设置ToolStripMenuItem;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -217,6 +219,7 @@ namespace AGMS {
 			this->刷新ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->格式设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->toolStrip1->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
@@ -257,13 +260,13 @@ namespace AGMS {
 			// 打开ToolStripMenuItem
 			// 
 			this->打开ToolStripMenuItem->Name = L"打开ToolStripMenuItem";
-			this->打开ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->打开ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->打开ToolStripMenuItem->Text = L"打开文件";
 			// 
 			// 关闭ToolStripMenuItem
 			// 
 			this->关闭ToolStripMenuItem->Name = L"关闭ToolStripMenuItem";
-			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->关闭ToolStripMenuItem->Text = L"关闭";
 			// 
 			// 系统ToolStripMenuItem
@@ -275,18 +278,19 @@ namespace AGMS {
 			this->系统ToolStripMenuItem->Name = L"系统ToolStripMenuItem";
 			this->系统ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
 			this->系统ToolStripMenuItem->Text = L"开始";
+			this->系统ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::系统ToolStripMenuItem_DropDownItemClicked);
 			this->系统ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::系统ToolStripMenuItem_Click);
 			// 
 			// 打开系统ToolStripMenuItem
 			// 
 			this->打开系统ToolStripMenuItem->Name = L"打开系统ToolStripMenuItem";
-			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->打开系统ToolStripMenuItem->Text = L"打开系统";
 			// 
 			// 关闭系统ToolStripMenuItem
 			// 
 			this->关闭系统ToolStripMenuItem->Name = L"关闭系统ToolStripMenuItem";
-			this->关闭系统ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关闭系统ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->关闭系统ToolStripMenuItem->Text = L"关闭系统";
 			// 
 			// 串口设置ToolStripMenuItem
@@ -303,19 +307,19 @@ namespace AGMS {
 			// 串口设置ToolStripMenuItem1
 			// 
 			this->串口设置ToolStripMenuItem1->Name = L"串口设置ToolStripMenuItem1";
-			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(152, 22);
+			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(124, 22);
 			this->串口设置ToolStripMenuItem1->Text = L"串口设置";
 			// 
 			// 打开串口ToolStripMenuItem
 			// 
 			this->打开串口ToolStripMenuItem->Name = L"打开串口ToolStripMenuItem";
-			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开串口ToolStripMenuItem->Text = L"打开串口";
 			// 
 			// 关闭串口ToolStripMenuItem
 			// 
 			this->关闭串口ToolStripMenuItem->Name = L"关闭串口ToolStripMenuItem";
-			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关闭串口ToolStripMenuItem->Text = L"关闭串口";
 			// 
 			// 气体类型ToolStripMenuItem
@@ -331,31 +335,31 @@ namespace AGMS {
 			// 温度ToolStripMenuItem
 			// 
 			this->温度ToolStripMenuItem->Name = L"温度ToolStripMenuItem";
-			this->温度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->温度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->温度ToolStripMenuItem->Text = L"温度";
 			// 
 			// 湿度ToolStripMenuItem
 			// 
 			this->湿度ToolStripMenuItem->Name = L"湿度ToolStripMenuItem";
-			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->湿度ToolStripMenuItem->Text = L"湿度";
 			// 
 			// 振荡度ToolStripMenuItem
 			// 
 			this->振荡度ToolStripMenuItem->Name = L"振荡度ToolStripMenuItem";
-			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->振荡度ToolStripMenuItem->Text = L"振荡度";
 			// 
 			// 有害气体ToolStripMenuItem
 			// 
 			this->有害气体ToolStripMenuItem->Name = L"有害气体ToolStripMenuItem";
-			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->有害气体ToolStripMenuItem->Text = L"有害气体";
 			// 
 			// 期望值设置ToolStripMenuItem
 			// 
 			this->期望值设置ToolStripMenuItem->Name = L"期望值设置ToolStripMenuItem";
-			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
 			// 
 			// 查看ToolStripMenuItem
@@ -367,30 +371,31 @@ namespace AGMS {
 			this->查看ToolStripMenuItem->Name = L"查看ToolStripMenuItem";
 			this->查看ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
 			this->查看ToolStripMenuItem->Text = L"查看";
+			this->查看ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::查看ToolStripMenuItem_DropDownItemClicked);
 			// 
 			// 工具栏ToolStripMenuItem
 			// 
 			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
-			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->工具栏ToolStripMenuItem->Text = L"工具栏";
 			// 
 			// 状态栏ToolStripMenuItem
 			// 
 			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
-			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->状态栏ToolStripMenuItem->Text = L"状态栏";
 			// 
 			// 字体ToolStripMenuItem
 			// 
 			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
-			this->字体ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->字体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->字体ToolStripMenuItem->Text = L"字体";
 			// 
 			// toolStripMenuItem1
 			// 
-			this->toolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+			this->toolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->坐标设置ToolStripMenuItem,
-					this->平滑度设置ToolStripMenuItem
+					this->平滑度设置ToolStripMenuItem, this->格式设置ToolStripMenuItem
 			});
 			this->toolStripMenuItem1->Name = L"toolStripMenuItem1";
 			this->toolStripMenuItem1->Size = System::Drawing::Size(68, 21);
@@ -399,13 +404,13 @@ namespace AGMS {
 			// 坐标设置ToolStripMenuItem
 			// 
 			this->坐标设置ToolStripMenuItem->Name = L"坐标设置ToolStripMenuItem";
-			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->坐标设置ToolStripMenuItem->Text = L"坐标设置";
 			// 
 			// 平滑度设置ToolStripMenuItem
 			// 
 			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
-			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
 			// 
 			// 帮助ToolStripMenuItem
@@ -421,13 +426,13 @@ namespace AGMS {
 			// 系统介绍ToolStripMenuItem
 			// 
 			this->系统介绍ToolStripMenuItem->Name = L"系统介绍ToolStripMenuItem";
-			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->系统介绍ToolStripMenuItem->Text = L"系统介绍";
 			// 
 			// 关于ToolStripMenuItem
 			// 
 			this->关于ToolStripMenuItem->Name = L"关于ToolStripMenuItem";
-			this->关于ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关于ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->关于ToolStripMenuItem->Text = L"关于";
 			// 
 			// toolStrip1
@@ -903,6 +908,12 @@ namespace AGMS {
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"数据接收区";
 			// 
+			// 格式设置ToolStripMenuItem
+			// 
+			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
+			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->格式设置ToolStripMenuItem->Text = L"格式设置";
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
@@ -1077,11 +1088,75 @@ private: System::Void 串口设置ToolStripMenuItem_DropDownItemClicked(System::Obje
 			 }
 			 if (item == 打开串口ToolStripMenuItem)
 			 {
-				 dlg->com->Open;
+				 dlg->com->Open();//打开串口，调整功能chart处理
 			 }
 			 if (item == 关闭串口ToolStripMenuItem)
 			 {
-				 dlg->com->Close;
+				 dlg->com->Close();//关闭串口，调整功能chart处理
+			 }
+}
+private: System::Void 查看ToolStripMenuItem_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+			 ToolStripMenuItem^ item;
+			 if (e == nullptr)
+				 item = safe_cast<ToolStripMenuItem^>(sender);
+			 else
+				 item = safe_cast<ToolStripMenuItem^>(e->ClickedItem);
+			 if (item == 工具栏ToolStripMenuItem)      //“工具栏”菜单项
+			 {
+				 工具栏ToolStripMenuItem->Checked = !工具栏ToolStripMenuItem->Checked;
+				 //显示/隐藏工具栏
+				 toolStrip1->Visible = 工具栏ToolStripMenuItem->Checked;
+			 }
+			 else if (item == 状态栏ToolStripMenuItem)    // “状态栏”菜单项
+			 {
+				 状态栏ToolStripMenuItem->Checked = !状态栏ToolStripMenuItem->Checked;
+				 // 显示/隐藏状态栏
+				 statusStrip1->Visible = 状态栏ToolStripMenuItem->Checked;
+			 }
+			 else if (item == 字体ToolStripMenuItem)    // “字体”菜单项
+			 {
+				 FontDialog ^fDlg = gcnew FontDialog();
+				 fDlg->ShowColor = true;
+				 fDlg->ShowEffects = true;
+				 if (fDlg->ShowDialog() == Windows::Forms::DialogResult::OK)
+				 {
+					 textBox1->Font = fDlg->Font;
+					 textBox2->Font = fDlg->Font;
+					 textBox3->Font = fDlg->Font;
+					 listBox1->Font = fDlg->Font;
+					 textBox1->ForeColor = fDlg->Color;
+					 textBox2->ForeColor = fDlg->Color;
+					 textBox3->ForeColor = fDlg->Color;
+					 listBox1->ForeColor = fDlg->Color;
+				 }
+			 }
+}
+private: System::Void 系统ToolStripMenuItem_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+			
+			 ToolStripMenuItem^ item;
+
+			 if (e == nullptr)
+
+				 item = safe_cast<ToolStripMenuItem^>(sender);
+
+			 else
+
+				 item = safe_cast<ToolStripMenuItem^>(e->ClickedItem);
+
+			 if (item == 打开系统ToolStripMenuItem)
+			 {
+				 this->button1->Enabled = true;
+				 this->button2->Enabled = true;
+				 this->button3->Enabled = true;
+				 this->button4->Enabled = true;
+			 }
+			 else if (item == 关闭系统ToolStripMenuItem)
+			 {
+				 this->button1->Enabled = false;
+				 this->button2->Enabled = false;
+				 this->button3->Enabled = false;
+				 this->button4->Enabled = false;
+
 			 }
 }
 };
