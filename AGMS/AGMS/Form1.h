@@ -257,13 +257,13 @@ namespace AGMS {
 			// 打开ToolStripMenuItem
 			// 
 			this->打开ToolStripMenuItem->Name = L"打开ToolStripMenuItem";
-			this->打开ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->打开ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开ToolStripMenuItem->Text = L"打开文件";
 			// 
 			// 关闭ToolStripMenuItem
 			// 
 			this->关闭ToolStripMenuItem->Name = L"关闭ToolStripMenuItem";
-			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关闭ToolStripMenuItem->Text = L"关闭";
 			// 
 			// 系统ToolStripMenuItem
@@ -282,7 +282,6 @@ namespace AGMS {
 			this->打开系统ToolStripMenuItem->Name = L"打开系统ToolStripMenuItem";
 			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开系统ToolStripMenuItem->Text = L"打开系统";
-			this->打开系统ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::打开系统ToolStripMenuItem_Click);
 			// 
 			// 关闭系统ToolStripMenuItem
 			// 
@@ -299,25 +298,24 @@ namespace AGMS {
 			this->串口设置ToolStripMenuItem->Name = L"串口设置ToolStripMenuItem";
 			this->串口设置ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
 			this->串口设置ToolStripMenuItem->Text = L"串口设置";
+			this->串口设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::串口设置ToolStripMenuItem_DropDownItemClicked);
 			// 
 			// 串口设置ToolStripMenuItem1
 			// 
 			this->串口设置ToolStripMenuItem1->Name = L"串口设置ToolStripMenuItem1";
-			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(124, 22);
+			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(152, 22);
 			this->串口设置ToolStripMenuItem1->Text = L"串口设置";
-			this->串口设置ToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Form1::串口设置ToolStripMenuItem1_Click);
 			// 
 			// 打开串口ToolStripMenuItem
 			// 
 			this->打开串口ToolStripMenuItem->Name = L"打开串口ToolStripMenuItem";
-			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->打开串口ToolStripMenuItem->Text = L"打开串口";
-			this->打开串口ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::打开串口ToolStripMenuItem_Click);
 			// 
 			// 关闭串口ToolStripMenuItem
 			// 
 			this->关闭串口ToolStripMenuItem->Name = L"关闭串口ToolStripMenuItem";
-			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->关闭串口ToolStripMenuItem->Text = L"关闭串口";
 			// 
 			// 气体类型ToolStripMenuItem
@@ -998,12 +996,7 @@ private: System::Void timer2_Tick(System::Object^  sender, System::EventArgs^  e
 }
 private: System::Void 系统ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 }
-private: System::Void 串口设置ToolStripMenuItem1_Click(System::Object^  sender, System::EventArgs^  e) {
-			 SerialForm^dlg = gcnew SerialForm();
-			 dlg->ShowDialog();
-}
-private: System::Void 打开串口ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-}
+
 private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 			 int index = comboBox1->SelectedIndex;
 			 switch (index)
@@ -1013,8 +1006,7 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 			 case 3:break;
 			 }
 }
-private: System::Void 打开系统ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-}
+
 private: System::Void On_DoSystemMenu(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
 			 ToolStripMenuItem^ item;
 
@@ -1061,9 +1053,36 @@ private: System::Void On_DoSystemMenu(System::Object^  sender, System::Windows::
 			 else if (item == 关闭ToolStripMenuItem)
 			 {
 
-				 this->Close();
+				 Application::Exit();
 				 }
 
+}
+
+private: System::Void 串口设置ToolStripMenuItem_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+			
+			 SerialForm^dlg = gcnew SerialForm();
+
+			 ToolStripMenuItem^ item;
+
+			 if (e == nullptr)
+
+				 item = safe_cast<ToolStripMenuItem^>(sender);
+
+			 else
+
+				 item = safe_cast<ToolStripMenuItem^>(e->ClickedItem);
+			 if (item == 串口设置ToolStripMenuItem1)
+			 {
+				 dlg->ShowDialog();
+			 }
+			 if (item == 打开串口ToolStripMenuItem)
+			 {
+				 dlg->com->Open;
+			 }
+			 if (item == 关闭串口ToolStripMenuItem)
+			 {
+				 dlg->com->Close;
+			 }
 }
 };
 }
