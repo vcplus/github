@@ -1,6 +1,7 @@
 #pragma once
 #include <stdlib.h>
 #include "math.h"
+//#include<SerialDlg.h>
 using namespace System::IO::Ports;
 float function1(float max, float min, int divde, int now){
 	float temp1 = min;
@@ -175,6 +176,8 @@ private: System::Windows::Forms::NumericUpDown^  numericUpDown20;
 private: System::Windows::Forms::NumericUpDown^  numericUpDown21;
 private: System::Windows::Forms::NumericUpDown^  numericUpDown22;
 private: System::Windows::Forms::NumericUpDown^  numericUpDown23;
+private: System::Windows::Forms::ListBox^  listBox2;
+private: System::Windows::Forms::TextBox^  textBox1;
 
 
 
@@ -286,6 +289,8 @@ private: System::Windows::Forms::NumericUpDown^  numericUpDown23;
 			this->numericUpDown10 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown11 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
@@ -744,6 +749,7 @@ private: System::Windows::Forms::NumericUpDown^  numericUpDown23;
 			this->menuStrip1->Size = System::Drawing::Size(1217, 28);
 			this->menuStrip1->TabIndex = 28;
 			this->menuStrip1->Text = L"menuStrip1";
+			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::menuStrip1_ItemClicked);
 			// 
 			// shebeiToolStripMenuItem
 			// 
@@ -791,6 +797,7 @@ private: System::Windows::Forms::NumericUpDown^  numericUpDown23;
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(543, 154);
 			this->listBox1->TabIndex = 31;
+			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::listBox1_SelectedIndexChanged);
 			// 
 			// groupBox3
 			// 
@@ -958,6 +965,7 @@ private: System::Windows::Forms::NumericUpDown^  numericUpDown23;
 			this->numericUpDown12->Name = L"numericUpDown12";
 			this->numericUpDown12->Size = System::Drawing::Size(95, 25);
 			this->numericUpDown12->TabIndex = 34;
+			this->numericUpDown12->ValueChanged += gcnew System::EventHandler(this, &Form1::numericUpDown12_ValueChanged);
 			// 
 			// label19
 			// 
@@ -1080,6 +1088,23 @@ private: System::Windows::Forms::NumericUpDown^  numericUpDown23;
 			this->numericUpDown11->TabIndex = 36;
 			this->numericUpDown11->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
+			// listBox2
+			// 
+			this->listBox2->FormattingEnabled = true;
+			this->listBox2->ItemHeight = 15;
+			this->listBox2->Location = System::Drawing::Point(975, 71);
+			this->listBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->listBox2->Name = L"listBox2";
+			this->listBox2->Size = System::Drawing::Size(174, 34);
+			this->listBox2->TabIndex = 38;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(270, 169);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(56, 25);
+			this->textBox1->TabIndex = 39;
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
@@ -1087,6 +1112,8 @@ private: System::Windows::Forms::NumericUpDown^  numericUpDown23;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->ClientSize = System::Drawing::Size(1217, 578);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->listBox2);
 			this->Controls->Add(this->label18);
 			this->Controls->Add(this->numericUpDown11);
 			this->Controls->Add(this->label8);
@@ -1222,6 +1249,17 @@ private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e)
 			ranPM = gcnew System::Random(); // 创建随机数类实例
 
 			timer2->Stop();
+
+		//	Console::WriteLine("dsadas");
+			
+			data_receivce();
+
+
+
+
+
+
+
 
 }
 		 public:int Flag=0;
@@ -1375,7 +1413,8 @@ private: System::Void timer2_Tick(System::Object^  sender, System::EventArgs^  e
 				 
 			 }
 				 
-		
+			
+
 }
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
 			 timer2->Stop();
@@ -1393,6 +1432,43 @@ private: System::Void numericUpDown10_ValueChanged(System::Object^  sender, Syst
 
 
 private: System::Void groupBox4_Enter(System::Object^  sender, System::EventArgs^  e) {
+}
+		// public:SerialDlg ^dlg = gcnew SerialDlg();
+		 String^ receive_data;
+public: void data_receivce()//第一种方法
+
+		 {
+
+			 if (com->IsOpen)
+
+			 {
+
+				 if (com->BytesToRead != 0)
+
+				 {
+
+					 char ch = (char)com->ReadByte();
+
+					 receive_data += ch.ToString();
+					 this->numericUpDown18->Text = ch.ToString();
+					 this->textBox1->Text = receive_data;
+				 }
+				
+			 }
+			 
+			// Console::WriteLine(receive_data);
+			// else
+
+				// MessageBox::Show("未打开串口");
+
+			// this->textBox3->Text = receive_data;
+
+		 }
+private: System::Void numericUpDown12_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void listBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
 }
 };
 }

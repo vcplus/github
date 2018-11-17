@@ -25,3 +25,5 @@ Class COM.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.String[] portName : Public
     Int32 Flag : Public
     System.IO.Ports.SerialPort com : Public, Static
+  Methods:
+    data_receivce(): PrivateScope, Public, HideBySig

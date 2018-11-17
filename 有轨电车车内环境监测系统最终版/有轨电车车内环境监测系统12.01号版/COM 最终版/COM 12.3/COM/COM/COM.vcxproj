@@ -43,6 +43,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\ASUS\Documents\GitHub\github\有轨电车车内环境监测系统最终版\有轨电车车内环境监测系统12.01号版\COM 最终版\COM 12.3\COM\COM;$(IncludePath)</IncludePath>
+    <ReferencePath>C:\Users\ASUS\Documents\GitHub\github\有轨电车车内环境监测系统最终版\有轨电车车内环境监测系统12.01号版\COM 最终版\COM 12.3\COM\COM;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -97,6 +99,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SerialDlg.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
