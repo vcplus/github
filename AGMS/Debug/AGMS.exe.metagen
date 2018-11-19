@@ -1,6 +1,7 @@
   AGMS.Form1.resources - Embedded, ContainedInManifestFile, 
   AGMS.LocationForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.SerialForm.resources - Embedded, ContainedInManifestFile, 
+  AGMS.SetForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly AGMS, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=SHA1, flags=PublicKey
@@ -24,9 +25,35 @@ Class AGMS.SerialForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   Fields:
     System.IO.Ports.SerialPort com : Public, Static
     Boolean serialopen : Public, Static
+Class AGMS.SetFormW: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 temp0 : Public
+    Int32 temp1 : Public
+    Int32 humid0 : Public
+    Int32 humid1 : Public
+    Int32 shake0 : Public
+    Int32 shake1 : Public
+    Int32 F0 : Public
+    Int32 F1 : Public
 Class AGMS.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    AGMS.SerialForm dlg : Public
 Class AGMS.LocationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AGMS.SetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 temp0 : Public
+    Int32 temp1 : Public
+    Int32 humid0 : Public
+    Int32 humid1 : Public
+    Int32 shake0 : Public
+    Int32 shake1 : Public
+    Int32 F0 : Public
+    Int32 F1 : Public

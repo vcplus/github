@@ -2,13 +2,17 @@
 #include "SerialForm.h"
 #include "Windows.h"
 #include "tchar.h"
+#include"SetForm.h"
 namespace AGMS {
 
 	using namespace System;
+	using namespace System::Data;
 	using namespace System::IO::Ports;
 	using namespace System::ComponentModel;
 	using namespace System::Windows::Forms;
 	using namespace System::Collections;
+	using namespace System::Runtime::InteropServices;
+	using namespace System::Windows::Forms::DataVisualization::Charting;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
@@ -106,7 +110,7 @@ namespace AGMS {
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton1;
 	private: System::Windows::Forms::NotifyIcon^  notifyIcon1;
 	private: System::Windows::Forms::ContextMenuStrip^  contextMenuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^  刷新ToolStripMenuItem;
+
 	private: System::Windows::Forms::Timer^  timer2;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton2;
@@ -116,6 +120,8 @@ namespace AGMS {
 	private: System::Windows::Forms::ToolStripMenuItem^  打开ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  关闭ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  格式设置ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  自动换行ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  退出ToolStripMenuItem;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -167,9 +173,11 @@ namespace AGMS {
 			this->工具栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->状态栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->字体ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->自动换行ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->坐标设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->平滑度设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->格式设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->帮助ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->系统介绍ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->关于ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -216,10 +224,9 @@ namespace AGMS {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->notifyIcon1 = (gcnew System::Windows::Forms::NotifyIcon(this->components));
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
-			this->刷新ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->格式设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->退出ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->toolStrip1->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
@@ -279,7 +286,6 @@ namespace AGMS {
 			this->系统ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
 			this->系统ToolStripMenuItem->Text = L"开始";
 			this->系统ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::系统ToolStripMenuItem_DropDownItemClicked);
-			this->系统ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::系统ToolStripMenuItem_Click);
 			// 
 			// 打开系统ToolStripMenuItem
 			// 
@@ -307,19 +313,19 @@ namespace AGMS {
 			// 串口设置ToolStripMenuItem1
 			// 
 			this->串口设置ToolStripMenuItem1->Name = L"串口设置ToolStripMenuItem1";
-			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(124, 22);
+			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(152, 22);
 			this->串口设置ToolStripMenuItem1->Text = L"串口设置";
 			// 
 			// 打开串口ToolStripMenuItem
 			// 
 			this->打开串口ToolStripMenuItem->Name = L"打开串口ToolStripMenuItem";
-			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->打开串口ToolStripMenuItem->Text = L"打开串口";
 			// 
 			// 关闭串口ToolStripMenuItem
 			// 
 			this->关闭串口ToolStripMenuItem->Name = L"关闭串口ToolStripMenuItem";
-			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->关闭串口ToolStripMenuItem->Text = L"关闭串口";
 			// 
 			// 气体类型ToolStripMenuItem
@@ -331,6 +337,7 @@ namespace AGMS {
 			this->气体类型ToolStripMenuItem->Name = L"气体类型ToolStripMenuItem";
 			this->气体类型ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
 			this->气体类型ToolStripMenuItem->Text = L"监测对象";
+			this->气体类型ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::气体类型ToolStripMenuItem_DropDownItemClicked);
 			// 
 			// 温度ToolStripMenuItem
 			// 
@@ -364,9 +371,9 @@ namespace AGMS {
 			// 
 			// 查看ToolStripMenuItem
 			// 
-			this->查看ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+			this->查看ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->工具栏ToolStripMenuItem,
-					this->状态栏ToolStripMenuItem, this->字体ToolStripMenuItem
+					this->状态栏ToolStripMenuItem, this->字体ToolStripMenuItem, this->自动换行ToolStripMenuItem
 			});
 			this->查看ToolStripMenuItem->Name = L"查看ToolStripMenuItem";
 			this->查看ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
@@ -391,6 +398,12 @@ namespace AGMS {
 			this->字体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->字体ToolStripMenuItem->Text = L"字体";
 			// 
+			// 自动换行ToolStripMenuItem
+			// 
+			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
+			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->自动换行ToolStripMenuItem->Text = L"自动换行";
+			// 
 			// toolStripMenuItem1
 			// 
 			this->toolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
@@ -412,6 +425,12 @@ namespace AGMS {
 			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
 			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
+			// 
+			// 格式设置ToolStripMenuItem
+			// 
+			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
+			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->格式设置ToolStripMenuItem->Text = L"格式设置";
 			// 
 			// 帮助ToolStripMenuItem
 			// 
@@ -882,16 +901,10 @@ namespace AGMS {
 			// 
 			// contextMenuStrip1
 			// 
-			this->contextMenuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->刷新ToolStripMenuItem });
+			this->contextMenuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->退出ToolStripMenuItem });
 			this->contextMenuStrip1->Name = L"contextMenuStrip1";
-			this->contextMenuStrip1->Size = System::Drawing::Size(101, 26);
+			this->contextMenuStrip1->Size = System::Drawing::Size(153, 48);
 			this->contextMenuStrip1->Opening += gcnew System::ComponentModel::CancelEventHandler(this, &Form1::contextMenuStrip1_Opening);
-			// 
-			// 刷新ToolStripMenuItem
-			// 
-			this->刷新ToolStripMenuItem->Name = L"刷新ToolStripMenuItem";
-			this->刷新ToolStripMenuItem->Size = System::Drawing::Size(100, 22);
-			this->刷新ToolStripMenuItem->Text = L"刷新";
 			// 
 			// timer2
 			// 
@@ -908,11 +921,12 @@ namespace AGMS {
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"数据接收区";
 			// 
-			// 格式设置ToolStripMenuItem
+			// 退出ToolStripMenuItem
 			// 
-			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
-			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->格式设置ToolStripMenuItem->Text = L"格式设置";
+			this->退出ToolStripMenuItem->Name = L"退出ToolStripMenuItem";
+			this->退出ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->退出ToolStripMenuItem->Text = L"退出";
+			this->退出ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::退出ToolStripMenuItem_Click);
 			// 
 			// Form1
 			// 
@@ -1005,9 +1019,8 @@ private: System::Void timer2_Tick(System::Object^  sender, System::EventArgs^  e
 
 			 this->notifyIcon1->Icon = gcnew System::Drawing::Icon(L"Rotate" + i + L".ico", 64, 64);
 }
-private: System::Void 系统ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
-}
 
+public:SerialForm^dlg = gcnew SerialForm();
 private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 			 int index = comboBox1->SelectedIndex;
 			 switch (index)
@@ -1071,7 +1084,6 @@ private: System::Void On_DoSystemMenu(System::Object^  sender, System::Windows::
 
 private: System::Void 串口设置ToolStripMenuItem_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
 			
-			 SerialForm^dlg = gcnew SerialForm();
 
 			 ToolStripMenuItem^ item;
 
@@ -1130,7 +1142,380 @@ private: System::Void 查看ToolStripMenuItem_DropDownItemClicked(System::Object^ 
 					 listBox1->ForeColor = fDlg->Color;
 				 }
 			 }
+			 else if (item == 自动换行ToolStripMenuItem)
+			 {
+				 自动换行ToolStripMenuItem->Checked = !wordwardToolStripMenuItem->Checked;
+			 }
 }
+private: String^ strConn;
+/*public: void data_receivce()//接收串口数据
+		 {
+					 String^ receiveText = nullptr;
+					 char buffer[100] = {};
+					 if (dlg->com->IsOpen)
+					 {
+						 int bufroom = 0;
+						 bufroom = dlg->com->BytesToRead;
+						 if (bufroom != 0)
+						 {
+							 for (int i = 0; i < bufroom; i++)
+							 {
+								 buffer[i] = dlg->com->ReadChar();
+							 }
+							 String^buff = gcnew String(buffer);
+							 if (buff->Length>32)
+							 {
+								 listBox1->Items->Add(buff);
+								 array<String^> ^split = gcnew array<String^>(12);
+								 //split = gcnew array<String^>{L"0", L"0", L"0", L"0"};
+								 split = buff->Split(59);
+								 DateTime dateTime = DateTime::Now;             //获取系统当前时间
+								 //********连接数据库并存储*******************//////
+								 /*strConn = String::Format("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=AMCS.mdb");
+								 OleDbConnection^ con1 = gcnew OleDbConnection(strConn);
+								 //********选择车厢后画图并存储数据********/
+								/* int nIndex = this->comboBox1->SelectedIndex;
+								 if (nIndex < 0) return;
+								 String^ strTableName = this->comboBox1->Items[nIndex]->ToString();
+								 String^ sql1;
+								 String^ sql2;
+								 String^ sql3;
+								 String^ sql4;
+								 con1->Open();    // 打开连接
+								 sql1 = "INSERT INTO 第一车厢数据表([酒精浓度],[PM浓度],[温度],[湿度],[日期时间],[对应车厢]) VALUES( " + split[0] + " , " + split[1] + " , " + split[2] + ", " + split[3] + ",Now() , '第一车厢' )";
+								 OleDbCommand^ comm1 = gcnew OleDbCommand(sql1, con1);
+								 comm1->ExecuteNonQuery();
+								 sql2 = "INSERT INTO 第二车厢数据表([酒精浓度],[PM浓度],[温度],[湿度],[日期时间],[对应车厢]) VALUES( " + split[4] + " , " + split[5] + " , " + split[6] + ", " + split[7] + ",Now() , '第二车厢' )";
+								 OleDbCommand^ comm2 = gcnew OleDbCommand(sql2, con1);
+								 comm2->ExecuteNonQuery();
+								 //con1->Close();
+								 //con1->Open();    // 打开连接
+								 sql3 = "INSERT INTO 第三车厢数据表([酒精浓度],[PM浓度],[温度],[湿度],[日期时间],[对应车厢]) VALUES( " + split[8] + " , " + split[9] + " , " + split[10] + ", " + split[11] + ",Now() , '第三车厢' )";
+								 OleDbCommand^ comm3 = gcnew OleDbCommand(sql3, con1);
+								 comm3->ExecuteNonQuery();
+								 con1->Close();
+								 if (strTableName == "第一车厢")
+								 {
+									 if (split[0] != nullptr&&split[1] != nullptr&&split[2] != nullptr&&split[3] != nullptr)
+									 {
+
+										 chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[0]);
+										 chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (Int32::Parse(split[0])<0 || Int32::Parse(split[0])>100)  //酒精超限报警
+										 {
+											 UpdateColor1(button1);
+											 this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[0] != nullptr)
+											 {
+												 con1->Open();    // 打开连接
+												 sql4 = "INSERT INTO 异常数据表_酒精([酒精浓度],[酒精日期时间],[酒精对应车厢]) VALUES( " + split[0] + " ,Now() , '" + strTableName + "' )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 /*Sleep(100);*/
+										 /*}
+										 else UpdateColor2(button1);
+										 chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[1]);
+										 chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (Int32::Parse(split[1])<0 || Int32::Parse(split[1])>150)  //PM2.5超限报警
+										 {
+											 UpdateColor1(button2);
+											 this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[1] != nullptr)
+											 {
+												 con1->Open();    // 打开连接
+												 sql4 = "INSERT INTO 异常数据表_PM([PM浓度],[PM日期时间],[PM对应车厢]) VALUES( " + split[1] + " ,Now() , '" + strTableName + "'  )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 //Sleep(100);
+										 }
+										 else
+										 {
+											 UpdateColor2(button2);
+										 }
+										 chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[2]);
+										 chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (float::Parse(split[2])<26 || float::Parse(split[2])>28)  //温度超限报警
+										 {
+											 UpdateColor1(button3);
+											 this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[2] != nullptr)
+											 {
+												 con1->Open();    // 打开连接
+												 sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车厢]) VALUES(" + split[2] + " ,Now() , '" + strTableName + "'  )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 Sleep(100);
+										 }
+										 else
+										 {
+											 UpdateColor2(button3);
+										 }
+										 chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[3]);
+										 chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (Int32::Parse(split[3])<45 || Int32::Parse(split[3])>75)  //湿度超限报警
+										 {
+											 UpdateColor1(button4);
+											 this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[3] != nullptr)
+											 {
+												 con1->Open();    // 打开连接	
+												 sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车厢]) VALUES( " + split[3] + " ,Now() , '" + strTableName + "' )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 Sleep(100);
+
+										 }
+										 else
+										 {
+											 UpdateColor2(button4);
+										 }
+
+										 //分析
+										 if (Int32::Parse(split[0]) <= 50)  this->textBox1->Text = "安全";
+										 else if (Int32::Parse(split[0]) > 50 && Int32::Parse(split[0]) <= 100) this->textBox1->Text = "有安全隐患，请及时排查！";
+										 else if (Int32::Parse(split[0]) > 100)this->textBox1->Text = "警告！危险！";
+
+										 if (Int32::Parse(split[1])<50)  this->textBox1->Text = "车厢内空气质量优";
+										 else if (Int32::Parse(split[1])>50 && Int32::Parse(split[1])<100) this->textBox2->Text = "车厢内空气质量良好";
+										 else if (Int32::Parse(split[1])>100 && Int32::Parse(split[1])<150) this->textBox2->Text = "车厢内空气轻度污染";
+										 else if (Int32::Parse(split[1])>150 && Int32::Parse(split[1])<200) this->textBox2->Text = "车厢内空气中度污染";
+										 else if (Int32::Parse(split[1])>200 && Int32::Parse(split[1])<300) this->textBox2->Text = "车厢内空气重度污染";
+										 else this->textBox2->Text = "车厢内空气严重污染";
+
+										 if (float::Parse(split[2]) > 26 && float::Parse(split[2]) < 28) this->textBox3->Text = "车厢内温度适宜";
+										 else if (float::Parse(split[2]) <26) this->textBox3->Text = "车厢内温度偏低";
+										 else if (float::Parse(split[2]) >28) this->textBox3->Text = "车厢内温度偏高";
+
+										 if (Int32::Parse(split[3])<45)  this->textBox4->Text = "车厢内干燥，多喝水";
+										 else if (Int32::Parse(split[3]) >= 45 && Int32::Parse(split[3]) <= 75)  this->textBox4->Text = "车厢内环境舒适";
+										 else if (Int32::Parse(split[3])>75) this->textBox4->Text = "车厢内潮湿";
+										 if ((Int32::Parse(split[0])<0 || Int32::Parse(split[0])>100) && (Int32::Parse(split[1])<0 || Int32::Parse(split[1])>150) && (float::Parse(split[2])<26 || float::Parse(split[2])>28) && (Int32::Parse(split[3])<45 || Int32::Parse(split[3])>75))
+										 {
+											 //play();
+											 this->textBox2->Text = "车厢内环境差";
+										 }
+									 }
+								 }
+								 else if (strTableName == "第二车厢")
+								 {
+
+									 if (split[4] != nullptr&&split[5] != nullptr&&split[6] != nullptr&&split[7] != nullptr)
+									 {
+
+										 chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[4]);
+										 chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (Int32::Parse(split[4])<0 || Int32::Parse(split[4])>100)  //酒精超限报警
+										 {
+											 UpdateColor1(button1);
+											 this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[4] != nullptr)
+											 {
+												 con1->Open();    // 打开连接
+												 sql4 = "INSERT INTO 异常数据表_酒精([酒精浓度],[酒精日期时间],[酒精对应车厢]) VALUES( " + split[4] + " ,Now() , '" + strTableName + "' )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 /*Sleep(100);*/
+										/* }
+										 else UpdateColor2(button1);
+										 chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[5]);
+										 chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (Int32::Parse(split[5])<0 || Int32::Parse(split[5])>150)  //PM2.5超限报警
+										 {
+											 UpdateColor1(button2);
+											 this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[5] != nullptr)
+											 {
+												 con1->Open();    // 打开连接
+												 sql4 = "INSERT INTO 异常数据表_PM([PM浓度],[PM日期时间],[PM对应车厢]) VALUES( " + split[5] + " ,Now() , '" + strTableName + "'  )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 //Sleep(100);
+										 }
+										 else
+										 {
+											 UpdateColor2(button2);
+										 }
+										 chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[6]);
+										 chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (float::Parse(split[6])<26 || float::Parse(split[6])>28)  //温度超限报警
+										 {
+											 UpdateColor1(button3);
+											 this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[6] != nullptr)
+											 {
+												 con1->Open();    // 打开连接
+												 sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车厢]) VALUES(" + split[6] + " ,Now() , '" + strTableName + "'  )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 //Sleep(100);
+										 }
+										 else
+										 {
+											 UpdateColor2(button3);
+										 }
+										 chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[7]);
+										 chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (Int32::Parse(split[7])<45 || Int32::Parse(split[7])>75)  //湿度超限报警
+										 {
+											 UpdateColor1(button4);
+											 this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[7] != nullptr)
+											 {
+												 con1->Open();    // 打开连接	
+												 sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车厢]) VALUES( " + split[7] + " ,Now() , '" + strTableName + "' )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 //Sleep(100);
+
+										 }
+										 else
+										 {
+											 UpdateColor2(button4);
+										 }
+
+										 //分析
+										 if (Int32::Parse(split[4]) <= 50)  this->textBox1->Text = "安全";
+										 else if (Int32::Parse(split[4]) > 50 && Int32::Parse(split[4]) <= 100) this->textBox1->Text = "有安全隐患，请及时排查！";
+										 else if (Int32::Parse(split[4]) > 100)this->textBox1->Text = "警告！危险！";
+
+										 if (Int32::Parse(split[5])<50)  this->textBox1->Text = "车厢内空气质量优";
+										 else if (Int32::Parse(split[5])>50 && Int32::Parse(split[5])<100) this->textBox2->Text = "车厢内空气质量良好";
+										 else if (Int32::Parse(split[5])>100 && Int32::Parse(split[5])<150) this->textBox2->Text = "车厢内空气轻度污染";
+										 else if (Int32::Parse(split[5])>150 && Int32::Parse(split[5])<200) this->textBox2->Text = "车厢内空气中度污染";
+										 else if (Int32::Parse(split[5])>200 && Int32::Parse(split[5])<300) this->textBox2->Text = "车厢内空气重度污染";
+										 else this->textBox2->Text = "车厢内空气严重污染";
+
+										 if (float::Parse(split[6]) > 26 && float::Parse(split[6]) < 28) this->textBox3->Text = "车厢内温度适宜";
+										 else if (float::Parse(split[6]) <26) this->textBox3->Text = "车厢内温度偏低";
+										 else if (float::Parse(split[6]) >28) this->textBox3->Text = "车厢内温度偏高";
+
+										 if (Int32::Parse(split[7])<45)  this->textBox4->Text = "车厢内干燥，多喝水";
+										 else if (Int32::Parse(split[7]) >= 45 && Int32::Parse(split[7]) <= 75)  this->textBox4->Text = "车厢内环境舒适";
+										 else if (Int32::Parse(split[7])>75) this->textBox4->Text = "车厢内潮湿";
+										 if ((Int32::Parse(split[4])<0 || Int32::Parse(split[4])>100) && (Int32::Parse(split[5])<0 || Int32::Parse(split[5])>150) && (float::Parse(split[6])<26 || float::Parse(split[6])>28) && (Int32::Parse(split[7])<45 || Int32::Parse(split[7])>75))
+										 {
+											 //play();
+											 this->textBox2->Text = "车厢内环境差";
+										 }
+									 }
+								 }
+								 else if (strTableName == "第三车厢")
+								 {
+									 if (split[8] != nullptr&&split[9] != nullptr&&split[10] != nullptr&&split[11] != nullptr)
+									 {
+
+										 chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[8]);
+										 chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (Int32::Parse(split[8])<0 || Int32::Parse(split[8])>100)  //酒精超限报警
+										 {
+											 UpdateColor1(button1);
+											 this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[0] != nullptr)
+											 {
+												 con1->Open();    // 打开连接
+												 sql4 = "INSERT INTO 异常数据表_酒精([酒精浓度],[酒精日期时间],[酒精对应车厢]) VALUES( " + split[8] + " ,Now() , '" + strTableName + "' )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 /*Sleep(100);*/
+										/* }
+										 else UpdateColor2(button1);
+										 chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[9]);
+										 chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (Int32::Parse(split[9])<0 || Int32::Parse(split[9])>150)  //PM2.5超限报警
+										 {
+											 UpdateColor1(button2);
+											 this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[1] != nullptr)
+											 {
+												 con1->Open();    // 打开连接
+												 sql4 = "INSERT INTO 异常数据表_PM([PM浓度],[PM日期时间],[PM对应车厢]) VALUES( " + split[9] + " ,Now() , '" + strTableName + "'  )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 //Sleep(100);
+										 }
+										 else
+										 {
+											 UpdateColor2(button2);
+										 }
+										 chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[10]);
+										 chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (float::Parse(split[10])<26 || float::Parse(split[10])>28)  //温度超限报警
+										 {
+											 UpdateColor1(button3);
+											 this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[2] != nullptr)
+											 {
+												 con1->Open();    // 打开连接
+												 sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车厢]) VALUES(" + split[10] + " ,Now() , '" + strTableName + "'  )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 //Sleep(100);
+										 }
+										 else
+										 {
+											 UpdateColor2(button3);
+										 }
+										 chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[11]);
+										 chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
+										 if (Int32::Parse(split[11])<45 || Int32::Parse(split[11])>75)  //湿度超限报警
+										 {
+											 UpdateColor1(button4);
+											 this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+											 if (split[3] != nullptr)
+											 {
+												 con1->Open();    // 打开连接	
+												 sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车厢]) VALUES( " + split[11] + " ,Now() , '" + strTableName + "' )";
+												 OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+												 con1->Close();
+											 }
+											 //Sleep(100);
+										 }
+										 else
+										 {
+											 UpdateColor2(button4);
+										 }
+
+										 //分析
+										 if (Int32::Parse(split[8]) <= 50)  this->textBox1->Text = "安全";
+										 else if (Int32::Parse(split[8]) > 50 && Int32::Parse(split[8]) <= 100) this->textBox1->Text = "有安全隐患，请及时排查！";
+										 else if (Int32::Parse(split[8]) > 100)this->textBox1->Text = "警告！危险！";
+
+										 if (Int32::Parse(split[9])<50)  this->textBox1->Text = "车厢内空气质量优";
+										 else if (Int32::Parse(split[9])>50 && Int32::Parse(split[9])<100) this->textBox2->Text = "车厢内空气质量良好";
+										 else if (Int32::Parse(split[9])>100 && Int32::Parse(split[9])<150) this->textBox2->Text = "车厢内空气轻度污染";
+										 else if (Int32::Parse(split[9])>150 && Int32::Parse(split[9])<200) this->textBox2->Text = "车厢内空气中度污染";
+										 else if (Int32::Parse(split[9])>200 && Int32::Parse(split[9])<300) this->textBox2->Text = "车厢内空气重度污染";
+										 else this->textBox2->Text = "车厢内空气严重污染";
+
+										 if (float::Parse(split[10]) > 26 && float::Parse(split[10]) < 28) this->textBox3->Text = "车厢内温度适宜";
+										 else if (float::Parse(split[10]) <26) this->textBox3->Text = "车厢内温度偏低";
+										 else if (float::Parse(split[10]) >28) this->textBox3->Text = "车厢内温度偏高";
+
+										 if (Int32::Parse(split[11])<45)  this->textBox4->Text = "车厢内干燥，多喝水";
+										 else if (Int32::Parse(split[11]) >= 45 && Int32::Parse(split[11]) <= 75)  this->textBox4->Text = "车厢内环境舒适";
+										 else if (Int32::Parse(split[11])>75) this->textBox4->Text = "车厢内潮湿";
+										 if ((Int32::Parse(split[8])<0 || Int32::Parse(split[8])>100) && (Int32::Parse(split[9])<0 || Int32::Parse(split[9])>150) && (float::Parse(split[10])<26 || float::Parse(split[10])>28) && (Int32::Parse(split[11])<45 || Int32::Parse(split[11])>75))
+										 {
+											 //play();
+											 this->textBox2->Text = "车厢内环境差";
+										 }
+									 }
+								 }
+							 }
+						 }
+					 }
+		 }*/
 private: System::Void 系统ToolStripMenuItem_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
 			
 			 ToolStripMenuItem^ item;
@@ -1158,6 +1543,27 @@ private: System::Void 系统ToolStripMenuItem_DropDownItemClicked(System::Object^ 
 				 this->button4->Enabled = false;
 
 			 }
+}
+private: System::Void 气体类型ToolStripMenuItem_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+
+			 ToolStripMenuItem^ item;
+
+			 if (e == nullptr)
+
+				 item = safe_cast<ToolStripMenuItem^>(sender);
+
+			 else
+
+				 item = safe_cast<ToolStripMenuItem^>(e->ClickedItem);
+
+			 if (item == 期望值设置ToolStripMenuItem)
+			 {
+				 SetForm^dlg = gcnew SetForm();
+				 dlg->ShowDialog();
+			 }
+}
+private: System::Void 退出ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Application::Exit();
 }
 };
 }

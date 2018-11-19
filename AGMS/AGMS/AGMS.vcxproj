@@ -90,6 +90,7 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="LocationForm.cpp" />
     <ClCompile Include="SerialForm.cpp" />
+    <ClCompile Include="SetForm.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -104,6 +105,9 @@
     </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="SerialForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SetForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="stdafx.h" />
@@ -126,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SerialForm.resx">
       <DependentUpon>SerialForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetForm.resx">
+      <DependentUpon>SetForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
