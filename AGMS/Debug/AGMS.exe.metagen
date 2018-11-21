@@ -2,6 +2,7 @@
   AGMS.LocationForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.SerialForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.SetForm.resources - Embedded, ContainedInManifestFile, 
+  AGMS.TempForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly AGMS, Version=1.0.*, Culture=固定语言(固定国家/地区): 
 	hash=SHA1, flags=PublicKey
@@ -37,12 +38,23 @@ Class AGMS.SetFormW: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 shake1 : Public
     Int32 F0 : Public
     Int32 F1 : Public
+Class AGMS.LocationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.TextBox textBox3 : Public
+Class AGMS.TempForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class AGMS.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     AGMS.SerialForm dlg : Public
-Class AGMS.LocationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class AGMS.FForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AGMS.HumidForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class AGMS.SetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -57,3 +69,6 @@ Class AGMS.SetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 shake1 : Public
     Int32 F0 : Public
     Int32 F1 : Public
+Class AGMS.ShakeForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

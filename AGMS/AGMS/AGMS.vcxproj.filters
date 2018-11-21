@@ -36,6 +36,18 @@
     <ClCompile Include="SetForm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TempForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HumidForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ShakeForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -56,6 +68,18 @@
     <ClInclude Include="SetForm.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="TempForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HumidForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ShakeForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -72,6 +96,18 @@
     <Image Include="..\..\Users\Administrator\Desktop\bitbug_favicon.ico">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="..\icon6.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\icon3.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\icon4.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\icon5.ico">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resX">
@@ -81,6 +117,12 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="LocationForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempForm.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

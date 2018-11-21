@@ -88,16 +88,26 @@
   <ItemGroup>
     <ClCompile Include="AGMS.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="FForm.cpp" />
+    <ClCompile Include="HumidForm.cpp" />
     <ClCompile Include="LocationForm.cpp" />
     <ClCompile Include="SerialForm.cpp" />
     <ClCompile Include="SetForm.cpp" />
+    <ClCompile Include="ShakeForm.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TempForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Form1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="HumidForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="LocationForm.h">
@@ -110,7 +120,13 @@
     <ClInclude Include="SetForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ShakeForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TempForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
@@ -118,6 +134,10 @@
   <ItemGroup>
     <Image Include="..\..\Users\Administrator\Desktop\bitbug_favicon.ico" />
     <Image Include="..\bitbug_favicon.ico" />
+    <Image Include="..\icon3.ico" />
+    <Image Include="..\icon4.ico" />
+    <Image Include="..\icon5.ico" />
+    <Image Include="..\icon6.ico" />
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SetForm.resx">
       <DependentUpon>SetForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempForm.resx">
+      <DependentUpon>TempForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

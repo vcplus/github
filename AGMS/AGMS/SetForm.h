@@ -276,6 +276,7 @@ namespace AGMS {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::MenuBar;
 			this->ClientSize = System::Drawing::Size(392, 329);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
