@@ -127,6 +127,12 @@ namespace AGMS {
 private: System::IO::Ports::SerialPort^  serialPort1;
 private: System::Windows::Forms::ToolStripMenuItem^  地图ToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
+private: System::Windows::Forms::ToolTip^  toolTip1;
+private: System::Windows::Forms::ToolStripButton^  toolStripButton4;
+private: System::Windows::Forms::ToolStripStatusLabel^  toolStripStatusLabel3;
+private: System::Windows::Forms::ToolStripStatusLabel^  toolStripStatusLabel4;
+private: System::Windows::Forms::ToolStripStatusLabel^  toolStripStatusLabel5;
+private: System::Windows::Forms::ToolStripStatusLabel^  toolStripStatusLabel6;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -145,18 +151,18 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->系统ToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -168,6 +174,8 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->串口设置ToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开串口ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->关闭串口ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->显示地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->气体类型ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->温度ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->湿度ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -199,11 +207,16 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->toolStripButton1 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton2 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton3 = (gcnew System::Windows::Forms::ToolStripButton());
+			this->toolStripButton4 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->imageList1 = (gcnew System::Windows::Forms::ImageList(this->components));
 			this->statusStrip1 = (gcnew System::Windows::Forms::StatusStrip());
 			this->toolStripStatusLabel1 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
 			this->toolStripStatusLabel2 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
 			this->toolStripProgressBar1 = (gcnew System::Windows::Forms::ToolStripProgressBar());
+			this->toolStripStatusLabel3 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
+			this->toolStripStatusLabel4 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
+			this->toolStripStatusLabel5 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
+			this->toolStripStatusLabel6 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->实时数据 = (gcnew System::Windows::Forms::GroupBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -233,8 +246,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->serialPort1 = (gcnew System::IO::Ports::SerialPort(this->components));
-			this->地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->显示地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolTip1 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->menuStrip1->SuspendLayout();
 			this->toolStrip1->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
@@ -250,6 +262,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
 				this->系统ToolStripMenuItem1,
 					this->系统ToolStripMenuItem, this->串口设置ToolStripMenuItem, this->地图ToolStripMenuItem, this->气体类型ToolStripMenuItem, this->查看ToolStripMenuItem,
@@ -257,9 +270,12 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1323, 25);
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(8, 2, 0, 2);
+			this->menuStrip1->Size = System::Drawing::Size(1764, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
+			this->menuStrip1->MouseEnter += gcnew System::EventHandler(this, &Form1::menuStrip1_MouseEnter);
+			this->menuStrip1->MouseLeave += gcnew System::EventHandler(this, &Form1::menuStrip1_MouseLeave);
 			// 
 			// 系统ToolStripMenuItem1
 			// 
@@ -268,21 +284,24 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 					this->关闭ToolStripMenuItem
 			});
 			this->系统ToolStripMenuItem1->Name = L"系统ToolStripMenuItem1";
-			this->系统ToolStripMenuItem1->Size = System::Drawing::Size(44, 21);
+			this->系统ToolStripMenuItem1->Size = System::Drawing::Size(51, 24);
 			this->系统ToolStripMenuItem1->Text = L"系统";
 			this->系统ToolStripMenuItem1->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::On_DoSystemMenu);
+			this->系统ToolStripMenuItem1->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 打开ToolStripMenuItem
 			// 
 			this->打开ToolStripMenuItem->Name = L"打开ToolStripMenuItem";
-			this->打开ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->打开ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->打开ToolStripMenuItem->Text = L"打开文件";
+			this->打开ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关闭ToolStripMenuItem
 			// 
 			this->关闭ToolStripMenuItem->Name = L"关闭ToolStripMenuItem";
-			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->关闭ToolStripMenuItem->Text = L"关闭";
+			this->关闭ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 系统ToolStripMenuItem
 			// 
@@ -291,21 +310,24 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 					this->关闭系统ToolStripMenuItem
 			});
 			this->系统ToolStripMenuItem->Name = L"系统ToolStripMenuItem";
-			this->系统ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
+			this->系统ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
 			this->系统ToolStripMenuItem->Text = L"开始";
 			this->系统ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::系统ToolStripMenuItem_DropDownItemClicked);
+			this->系统ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 打开系统ToolStripMenuItem
 			// 
 			this->打开系统ToolStripMenuItem->Name = L"打开系统ToolStripMenuItem";
-			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->打开系统ToolStripMenuItem->Text = L"打开系统";
+			this->打开系统ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关闭系统ToolStripMenuItem
 			// 
 			this->关闭系统ToolStripMenuItem->Name = L"关闭系统ToolStripMenuItem";
-			this->关闭系统ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关闭系统ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->关闭系统ToolStripMenuItem->Text = L"关闭系统";
+			this->关闭系统ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 串口设置ToolStripMenuItem
 			// 
@@ -314,27 +336,47 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 					this->打开串口ToolStripMenuItem, this->关闭串口ToolStripMenuItem
 			});
 			this->串口设置ToolStripMenuItem->Name = L"串口设置ToolStripMenuItem";
-			this->串口设置ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
+			this->串口设置ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
 			this->串口设置ToolStripMenuItem->Text = L"串口设置";
 			this->串口设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::串口设置ToolStripMenuItem_DropDownItemClicked);
+			this->串口设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 串口设置ToolStripMenuItem1
 			// 
 			this->串口设置ToolStripMenuItem1->Name = L"串口设置ToolStripMenuItem1";
-			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(152, 22);
+			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(144, 26);
 			this->串口设置ToolStripMenuItem1->Text = L"串口设置";
+			this->串口设置ToolStripMenuItem1->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 打开串口ToolStripMenuItem
 			// 
 			this->打开串口ToolStripMenuItem->Name = L"打开串口ToolStripMenuItem";
-			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->打开串口ToolStripMenuItem->Text = L"打开串口";
+			this->打开串口ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关闭串口ToolStripMenuItem
 			// 
 			this->关闭串口ToolStripMenuItem->Name = L"关闭串口ToolStripMenuItem";
-			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->关闭串口ToolStripMenuItem->Text = L"关闭串口";
+			this->关闭串口ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 地图ToolStripMenuItem
+			// 
+			this->地图ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->显示地图ToolStripMenuItem });
+			this->地图ToolStripMenuItem->Name = L"地图ToolStripMenuItem";
+			this->地图ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
+			this->地图ToolStripMenuItem->Text = L"地图";
+			this->地图ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 显示地图ToolStripMenuItem
+			// 
+			this->显示地图ToolStripMenuItem->Name = L"显示地图ToolStripMenuItem";
+			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->显示地图ToolStripMenuItem->Text = L"显示地图";
+			this->显示地图ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::显示地图ToolStripMenuItem_Click);
+			this->显示地图ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 气体类型ToolStripMenuItem
 			// 
@@ -343,39 +385,45 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 					this->湿度ToolStripMenuItem, this->振荡度ToolStripMenuItem, this->有害气体ToolStripMenuItem, this->期望值设置ToolStripMenuItem
 			});
 			this->气体类型ToolStripMenuItem->Name = L"气体类型ToolStripMenuItem";
-			this->气体类型ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
+			this->气体类型ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
 			this->气体类型ToolStripMenuItem->Text = L"监测对象";
 			this->气体类型ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::气体类型ToolStripMenuItem_DropDownItemClicked);
+			this->气体类型ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 温度ToolStripMenuItem
 			// 
 			this->温度ToolStripMenuItem->Name = L"温度ToolStripMenuItem";
-			this->温度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->温度ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
 			this->温度ToolStripMenuItem->Text = L"温度";
+			this->温度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 湿度ToolStripMenuItem
 			// 
 			this->湿度ToolStripMenuItem->Name = L"湿度ToolStripMenuItem";
-			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
 			this->湿度ToolStripMenuItem->Text = L"湿度";
+			this->湿度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 振荡度ToolStripMenuItem
 			// 
 			this->振荡度ToolStripMenuItem->Name = L"振荡度ToolStripMenuItem";
-			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
 			this->振荡度ToolStripMenuItem->Text = L"振荡度";
+			this->振荡度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 有害气体ToolStripMenuItem
 			// 
 			this->有害气体ToolStripMenuItem->Name = L"有害气体ToolStripMenuItem";
-			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
 			this->有害气体ToolStripMenuItem->Text = L"有害气体";
+			this->有害气体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 期望值设置ToolStripMenuItem
 			// 
 			this->期望值设置ToolStripMenuItem->Name = L"期望值设置ToolStripMenuItem";
-			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
 			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
+			this->期望值设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 查看ToolStripMenuItem
 			// 
@@ -384,34 +432,39 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 					this->状态栏ToolStripMenuItem, this->字体ToolStripMenuItem, this->自动换行ToolStripMenuItem
 			});
 			this->查看ToolStripMenuItem->Name = L"查看ToolStripMenuItem";
-			this->查看ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
+			this->查看ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
 			this->查看ToolStripMenuItem->Text = L"格式";
 			this->查看ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::查看ToolStripMenuItem_DropDownItemClicked);
 			this->查看ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::查看ToolStripMenuItem_Click);
+			this->查看ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 工具栏ToolStripMenuItem
 			// 
 			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
-			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->工具栏ToolStripMenuItem->Text = L"工具栏";
+			this->工具栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 状态栏ToolStripMenuItem
 			// 
 			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
-			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->状态栏ToolStripMenuItem->Text = L"状态栏";
+			this->状态栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 字体ToolStripMenuItem
 			// 
 			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
-			this->字体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->字体ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->字体ToolStripMenuItem->Text = L"字体";
+			this->字体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 自动换行ToolStripMenuItem
 			// 
 			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
-			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->自动换行ToolStripMenuItem->Text = L"自动换行";
+			this->自动换行ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// toolStripMenuItem1
 			// 
@@ -420,26 +473,30 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 					this->平滑度设置ToolStripMenuItem, this->格式设置ToolStripMenuItem
 			});
 			this->toolStripMenuItem1->Name = L"toolStripMenuItem1";
-			this->toolStripMenuItem1->Size = System::Drawing::Size(68, 21);
+			this->toolStripMenuItem1->Size = System::Drawing::Size(81, 24);
 			this->toolStripMenuItem1->Text = L"图像设置";
+			this->toolStripMenuItem1->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 坐标设置ToolStripMenuItem
 			// 
 			this->坐标设置ToolStripMenuItem->Name = L"坐标设置ToolStripMenuItem";
-			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
 			this->坐标设置ToolStripMenuItem->Text = L"坐标设置";
+			this->坐标设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 平滑度设置ToolStripMenuItem
 			// 
 			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
-			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
 			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
+			this->平滑度设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 格式设置ToolStripMenuItem
 			// 
 			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
-			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
 			this->格式设置ToolStripMenuItem->Text = L"格式设置";
+			this->格式设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 帮助ToolStripMenuItem
 			// 
@@ -448,34 +505,37 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 					this->关于ToolStripMenuItem
 			});
 			this->帮助ToolStripMenuItem->Name = L"帮助ToolStripMenuItem";
-			this->帮助ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
+			this->帮助ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
 			this->帮助ToolStripMenuItem->Text = L"帮助";
+			this->帮助ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 系统介绍ToolStripMenuItem
 			// 
 			this->系统介绍ToolStripMenuItem->Name = L"系统介绍ToolStripMenuItem";
-			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(181, 26);
 			this->系统介绍ToolStripMenuItem->Text = L"系统介绍";
+			this->系统介绍ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关于ToolStripMenuItem
 			// 
 			this->关于ToolStripMenuItem->Name = L"关于ToolStripMenuItem";
-			this->关于ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关于ToolStripMenuItem->Size = System::Drawing::Size(181, 26);
 			this->关于ToolStripMenuItem->Text = L"关于";
+			this->关于ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// toolStrip1
 			// 
 			this->toolStrip1->BackColor = System::Drawing::SystemColors::ButtonShadow;
 			this->toolStrip1->ImageScalingSize = System::Drawing::Size(15, 15);
-			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(12) {
+			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(13) {
 				this->新建NToolStripButton,
 					this->打开OToolStripButton, this->保存SToolStripButton, this->打印PToolStripButton, this->toolStripSeparator, this->剪切UToolStripButton,
 					this->复制CToolStripButton, this->粘贴PToolStripButton, this->toolStripSeparator1, this->toolStripButton1, this->toolStripButton2,
-					this->toolStripButton3
+					this->toolStripButton3, this->toolStripButton4
 			});
-			this->toolStrip1->Location = System::Drawing::Point(0, 25);
+			this->toolStrip1->Location = System::Drawing::Point(0, 28);
 			this->toolStrip1->Name = L"toolStrip1";
-			this->toolStrip1->Size = System::Drawing::Size(1323, 25);
+			this->toolStrip1->Size = System::Drawing::Size(1764, 25);
 			this->toolStrip1->TabIndex = 1;
 			this->toolStrip1->Text = L"toolStrip1";
 			// 
@@ -528,6 +588,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->剪切UToolStripButton->Name = L"剪切UToolStripButton";
 			this->剪切UToolStripButton->Size = System::Drawing::Size(23, 22);
 			this->剪切UToolStripButton->Text = L"剪切(&U)";
+			this->剪切UToolStripButton->Click += gcnew System::EventHandler(this, &Form1::剪切UToolStripButton_Click);
 			// 
 			// 复制CToolStripButton
 			// 
@@ -563,6 +624,8 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->toolStripButton1->Name = L"toolStripButton1";
 			this->toolStripButton1->Size = System::Drawing::Size(23, 22);
 			this->toolStripButton1->Text = L"toolStripButton1";
+			this->toolStripButton1->ToolTipText = L"接收数据";
+			this->toolStripButton1->Click += gcnew System::EventHandler(this, &Form1::toolStripButton1_Click);
 			// 
 			// toolStripButton2
 			// 
@@ -572,6 +635,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->toolStripButton2->Name = L"toolStripButton2";
 			this->toolStripButton2->Size = System::Drawing::Size(23, 22);
 			this->toolStripButton2->Text = L"toolStripButton2";
+			this->toolStripButton2->ToolTipText = L"数据曲线";
 			// 
 			// toolStripButton3
 			// 
@@ -581,6 +645,18 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->toolStripButton3->Name = L"toolStripButton3";
 			this->toolStripButton3->Size = System::Drawing::Size(23, 22);
 			this->toolStripButton3->Text = L"toolStripButton3";
+			this->toolStripButton3->ToolTipText = L"期望值";
+			// 
+			// toolStripButton4
+			// 
+			this->toolStripButton4->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Image;
+			this->toolStripButton4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton4.Image")));
+			this->toolStripButton4->ImageTransparentColor = System::Drawing::Color::Magenta;
+			this->toolStripButton4->Name = L"toolStripButton4";
+			this->toolStripButton4->Size = System::Drawing::Size(23, 22);
+			this->toolStripButton4->Text = L"toolStripButton4";
+			this->toolStripButton4->ToolTipText = L"快递车跟踪";
+			this->toolStripButton4->Click += gcnew System::EventHandler(this, &Form1::toolStripButton4_Click);
 			// 
 			// imageList1
 			// 
@@ -590,26 +666,29 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 
 			// statusStrip1
 			// 
-			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+			this->statusStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
 				this->toolStripStatusLabel1,
-					this->toolStripStatusLabel2, this->toolStripProgressBar1
+					this->toolStripStatusLabel2, this->toolStripProgressBar1, this->toolStripStatusLabel3, this->toolStripStatusLabel4, this->toolStripStatusLabel5,
+					this->toolStripStatusLabel6
 			});
-			this->statusStrip1->Location = System::Drawing::Point(0, 640);
+			this->statusStrip1->Location = System::Drawing::Point(0, 788);
 			this->statusStrip1->Name = L"statusStrip1";
-			this->statusStrip1->Size = System::Drawing::Size(1323, 22);
+			this->statusStrip1->Padding = System::Windows::Forms::Padding(1, 0, 19, 0);
+			this->statusStrip1->Size = System::Drawing::Size(1764, 40);
 			this->statusStrip1->TabIndex = 2;
 			this->statusStrip1->Text = L"statusStrip1";
 			// 
 			// toolStripStatusLabel1
 			// 
 			this->toolStripStatusLabel1->Name = L"toolStripStatusLabel1";
-			this->toolStripStatusLabel1->Size = System::Drawing::Size(131, 17);
+			this->toolStripStatusLabel1->Size = System::Drawing::Size(167, 35);
 			this->toolStripStatusLabel1->Text = L"toolStripStatusLabel1";
 			// 
 			// toolStripStatusLabel2
 			// 
 			this->toolStripStatusLabel2->Name = L"toolStripStatusLabel2";
-			this->toolStripStatusLabel2->Size = System::Drawing::Size(131, 17);
+			this->toolStripStatusLabel2->Size = System::Drawing::Size(167, 35);
 			this->toolStripStatusLabel2->Text = L"toolStripStatusLabel2";
 			// 
 			// toolStripProgressBar1
@@ -618,8 +697,45 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->toolStripProgressBar1->Maximum = 60;
 			this->toolStripProgressBar1->Name = L"toolStripProgressBar1";
 			this->toolStripProgressBar1->RightToLeftLayout = true;
-			this->toolStripProgressBar1->Size = System::Drawing::Size(100, 16);
+			this->toolStripProgressBar1->Size = System::Drawing::Size(133, 34);
 			this->toolStripProgressBar1->Step = 1;
+			this->toolStripProgressBar1->Click += gcnew System::EventHandler(this, &Form1::toolStripProgressBar1_Click);
+			// 
+			// toolStripStatusLabel3
+			// 
+			this->toolStripStatusLabel3->Name = L"toolStripStatusLabel3";
+			this->toolStripStatusLabel3->Size = System::Drawing::Size(774, 35);
+			this->toolStripStatusLabel3->Spring = true;
+			// 
+			// toolStripStatusLabel4
+			// 
+			this->toolStripStatusLabel4->AutoSize = false;
+			this->toolStripStatusLabel4->BorderSides = static_cast<System::Windows::Forms::ToolStripStatusLabelBorderSides>((((System::Windows::Forms::ToolStripStatusLabelBorderSides::Left | System::Windows::Forms::ToolStripStatusLabelBorderSides::Top)
+				| System::Windows::Forms::ToolStripStatusLabelBorderSides::Right)
+				| System::Windows::Forms::ToolStripStatusLabelBorderSides::Bottom));
+			this->toolStripStatusLabel4->BorderStyle = System::Windows::Forms::Border3DStyle::SunkenInner;
+			this->toolStripStatusLabel4->Name = L"toolStripStatusLabel4";
+			this->toolStripStatusLabel4->Size = System::Drawing::Size(167, 35);
+			// 
+			// toolStripStatusLabel5
+			// 
+			this->toolStripStatusLabel5->AutoSize = false;
+			this->toolStripStatusLabel5->BorderSides = static_cast<System::Windows::Forms::ToolStripStatusLabelBorderSides>((((System::Windows::Forms::ToolStripStatusLabelBorderSides::Left | System::Windows::Forms::ToolStripStatusLabelBorderSides::Top)
+				| System::Windows::Forms::ToolStripStatusLabelBorderSides::Right)
+				| System::Windows::Forms::ToolStripStatusLabelBorderSides::Bottom));
+			this->toolStripStatusLabel5->BorderStyle = System::Windows::Forms::Border3DStyle::SunkenInner;
+			this->toolStripStatusLabel5->Name = L"toolStripStatusLabel5";
+			this->toolStripStatusLabel5->Size = System::Drawing::Size(167, 35);
+			// 
+			// toolStripStatusLabel6
+			// 
+			this->toolStripStatusLabel6->AutoSize = false;
+			this->toolStripStatusLabel6->BorderSides = static_cast<System::Windows::Forms::ToolStripStatusLabelBorderSides>((((System::Windows::Forms::ToolStripStatusLabelBorderSides::Left | System::Windows::Forms::ToolStripStatusLabelBorderSides::Top)
+				| System::Windows::Forms::ToolStripStatusLabelBorderSides::Right)
+				| System::Windows::Forms::ToolStripStatusLabelBorderSides::Bottom));
+			this->toolStripStatusLabel6->BorderStyle = System::Windows::Forms::Border3DStyle::SunkenInner;
+			this->toolStripStatusLabel6->Name = L"toolStripStatusLabel6";
+			this->toolStripStatusLabel6->Size = System::Drawing::Size(167, 35);
 			// 
 			// timer1
 			// 
@@ -643,9 +759,11 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->实时数据->Controls->Add(this->chart1);
 			this->实时数据->Font = (gcnew System::Drawing::Font(L"宋体", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->实时数据->Location = System::Drawing::Point(12, 67);
+			this->实时数据->Location = System::Drawing::Point(16, 84);
+			this->实时数据->Margin = System::Windows::Forms::Padding(4);
 			this->实时数据->Name = L"实时数据";
-			this->实时数据->Size = System::Drawing::Size(822, 570);
+			this->实时数据->Padding = System::Windows::Forms::Padding(4);
+			this->实时数据->Size = System::Drawing::Size(1096, 700);
 			this->实时数据->TabIndex = 3;
 			this->实时数据->TabStop = false;
 			this->实时数据->Text = L"实时数据";
@@ -654,9 +772,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 
 			this->button4->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button4->Location = System::Drawing::Point(216, 529);
+			this->button4->Location = System::Drawing::Point(288, 661);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(64, 24);
+			this->button4->Size = System::Drawing::Size(85, 30);
 			this->button4->TabIndex = 5;
 			this->button4->Text = L"显示";
 			this->button4->UseVisualStyleBackColor = true;
@@ -666,9 +785,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label4->Location = System::Drawing::Point(126, 534);
+			this->label4->Location = System::Drawing::Point(168, 668);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(66, 19);
+			this->label4->Size = System::Drawing::Size(82, 24);
 			this->label4->TabIndex = 4;
 			this->label4->Text = L"振荡度";
 			this->label4->Click += gcnew System::EventHandler(this, &Form1::label4_Click);
@@ -677,9 +797,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button3->Location = System::Drawing::Point(612, 529);
+			this->button3->Location = System::Drawing::Point(816, 661);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(64, 24);
+			this->button3->Size = System::Drawing::Size(85, 30);
 			this->button3->TabIndex = 5;
 			this->button3->Text = L"显示";
 			this->button3->UseVisualStyleBackColor = true;
@@ -689,9 +810,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label3->Location = System::Drawing::Point(508, 534);
+			this->label3->Location = System::Drawing::Point(677, 668);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(85, 19);
+			this->label3->Size = System::Drawing::Size(106, 24);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"有害气体";
 			// 
@@ -699,9 +821,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button2->Location = System::Drawing::Point(612, 267);
+			this->button2->Location = System::Drawing::Point(816, 334);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(64, 24);
+			this->button2->Size = System::Drawing::Size(85, 30);
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"显示";
 			this->button2->UseVisualStyleBackColor = true;
@@ -711,9 +834,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label2->Location = System::Drawing::Point(522, 268);
+			this->label2->Location = System::Drawing::Point(696, 335);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(47, 19);
+			this->label2->Size = System::Drawing::Size(58, 24);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"湿度";
 			// 
@@ -721,9 +845,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button1->Location = System::Drawing::Point(216, 266);
+			this->button1->Location = System::Drawing::Point(288, 332);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(64, 24);
+			this->button1->Size = System::Drawing::Size(85, 30);
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"显示";
 			this->button1->UseVisualStyleBackColor = true;
@@ -733,93 +858,99 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label1->Location = System::Drawing::Point(126, 267);
+			this->label1->Location = System::Drawing::Point(168, 334);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(47, 19);
+			this->label1->Size = System::Drawing::Size(58, 24);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"温度";
 			// 
 			// chart4
 			// 
-			chartArea5->Name = L"ChartArea1";
-			this->chart4->ChartAreas->Add(chartArea5);
-			legend5->Enabled = false;
-			legend5->Name = L"Legend1";
-			this->chart4->Legends->Add(legend5);
-			this->chart4->Location = System::Drawing::Point(19, 310);
+			chartArea1->Name = L"ChartArea1";
+			this->chart4->ChartAreas->Add(chartArea1);
+			legend1->Enabled = false;
+			legend1->Name = L"Legend1";
+			this->chart4->Legends->Add(legend1);
+			this->chart4->Location = System::Drawing::Point(25, 388);
+			this->chart4->Margin = System::Windows::Forms::Padding(4);
 			this->chart4->Name = L"chart4";
-			series5->ChartArea = L"ChartArea1";
-			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series5->Legend = L"Legend1";
-			series5->Name = L"Series1";
-			this->chart4->Series->Add(series5);
-			this->chart4->Size = System::Drawing::Size(358, 200);
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Series1";
+			this->chart4->Series->Add(series1);
+			this->chart4->Size = System::Drawing::Size(477, 250);
 			this->chart4->TabIndex = 3;
 			this->chart4->Text = L"chart4";
 			// 
 			// chart3
 			// 
-			chartArea6->Name = L"ChartArea1";
-			this->chart3->ChartAreas->Add(chartArea6);
-			legend6->Enabled = false;
-			legend6->Name = L"Legend1";
-			this->chart3->Legends->Add(legend6);
-			this->chart3->Location = System::Drawing::Point(414, 310);
+			chartArea2->Name = L"ChartArea1";
+			this->chart3->ChartAreas->Add(chartArea2);
+			legend2->Enabled = false;
+			legend2->Name = L"Legend1";
+			this->chart3->Legends->Add(legend2);
+			this->chart3->Location = System::Drawing::Point(552, 388);
+			this->chart3->Margin = System::Windows::Forms::Padding(4);
 			this->chart3->Name = L"chart3";
-			series6->ChartArea = L"ChartArea1";
-			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series6->Legend = L"Legend1";
-			series6->Name = L"Series1";
-			this->chart3->Series->Add(series6);
-			this->chart3->Size = System::Drawing::Size(358, 200);
+			series2->ChartArea = L"ChartArea1";
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series2->Legend = L"Legend1";
+			series2->Name = L"Series1";
+			this->chart3->Series->Add(series2);
+			this->chart3->Size = System::Drawing::Size(477, 250);
 			this->chart3->TabIndex = 2;
 			this->chart3->Text = L"chart3";
 			// 
 			// chart2
 			// 
 			this->chart2->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea7->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea7);
+			chartArea3->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea3);
 			this->chart2->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend7->Alignment = System::Drawing::StringAlignment::Far;
-			legend7->Enabled = false;
-			legend7->Name = L"Legend1";
-			this->chart2->Legends->Add(legend7);
-			this->chart2->Location = System::Drawing::Point(414, 49);
+			legend3->Alignment = System::Drawing::StringAlignment::Far;
+			legend3->Enabled = false;
+			legend3->Name = L"Legend1";
+			this->chart2->Legends->Add(legend3);
+			this->chart2->Location = System::Drawing::Point(552, 61);
+			this->chart2->Margin = System::Windows::Forms::Padding(4);
 			this->chart2->Name = L"chart2";
-			series7->ChartArea = L"ChartArea1";
-			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series7->Legend = L"Legend1";
-			series7->Name = L"Series1";
-			this->chart2->Series->Add(series7);
-			this->chart2->Size = System::Drawing::Size(358, 200);
+			series3->ChartArea = L"ChartArea1";
+			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series3->Legend = L"Legend1";
+			series3->Name = L"Series1";
+			this->chart2->Series->Add(series3);
+			this->chart2->Size = System::Drawing::Size(477, 250);
 			this->chart2->TabIndex = 1;
 			this->chart2->Text = L"chart2";
 			// 
 			// chart1
 			// 
-			chartArea8->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea8);
-			legend8->Enabled = false;
-			legend8->Name = L"Legend1";
-			this->chart1->Legends->Add(legend8);
-			this->chart1->Location = System::Drawing::Point(19, 49);
+			chartArea4->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea4);
+			legend4->Enabled = false;
+			legend4->Name = L"Legend1";
+			this->chart1->Legends->Add(legend4);
+			this->chart1->Location = System::Drawing::Point(25, 61);
+			this->chart1->Margin = System::Windows::Forms::Padding(4);
 			this->chart1->Name = L"chart1";
-			series8->ChartArea = L"ChartArea1";
-			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series8->Legend = L"Legend1";
-			series8->Name = L"Series1";
-			this->chart1->Series->Add(series8);
-			this->chart1->Size = System::Drawing::Size(358, 200);
+			series4->ChartArea = L"ChartArea1";
+			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series4->Legend = L"Legend1";
+			series4->Name = L"Series1";
+			this->chart1->Series->Add(series4);
+			this->chart1->Size = System::Drawing::Size(477, 250);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(908, 67);
+			this->pictureBox1->Location = System::Drawing::Point(1211, 84);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(346, 243);
+			this->pictureBox1->Size = System::Drawing::Size(461, 304);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 4;
 			this->pictureBox1->TabStop = false;
@@ -829,19 +960,21 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->listBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 16;
-			this->listBox1->Location = System::Drawing::Point(908, 504);
+			this->listBox1->ItemHeight = 20;
+			this->listBox1->Location = System::Drawing::Point(1211, 630);
+			this->listBox1->Margin = System::Windows::Forms::Padding(4);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(358, 116);
+			this->listBox1->Size = System::Drawing::Size(476, 144);
 			this->listBox1->TabIndex = 5;
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号", L"2号", L"3号" });
-			this->comboBox1->Location = System::Drawing::Point(1106, 366);
+			this->comboBox1->Location = System::Drawing::Point(1475, 458);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(4);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(160, 20);
+			this->comboBox1->Size = System::Drawing::Size(212, 23);
 			this->comboBox1->Sorted = true;
 			this->comboBox1->TabIndex = 6;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::comboBox1_SelectedIndexChanged);
@@ -851,9 +984,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label6->Location = System::Drawing::Point(1103, 339);
+			this->label6->Location = System::Drawing::Point(1471, 424);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(104, 16);
+			this->label6->Size = System::Drawing::Size(129, 20);
 			this->label6->TabIndex = 7;
 			this->label6->Text = L"选择快递车辆";
 			// 
@@ -861,9 +995,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 
 			this->button5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button5->Location = System::Drawing::Point(1106, 401);
+			this->button5->Location = System::Drawing::Point(1475, 501);
+			this->button5->Margin = System::Windows::Forms::Padding(4);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(160, 57);
+			this->button5->Size = System::Drawing::Size(213, 71);
 			this->button5->TabIndex = 8;
 			this->button5->Text = L"查询历史数据";
 			this->button5->UseVisualStyleBackColor = true;
@@ -875,32 +1010,37 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->groupBox1->Controls->Add(this->textBox1);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"微软雅黑", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox1->Location = System::Drawing::Point(899, 316);
+			this->groupBox1->Location = System::Drawing::Point(1199, 395);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(182, 163);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
+			this->groupBox1->Size = System::Drawing::Size(243, 204);
 			this->groupBox1->TabIndex = 9;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"环境评定";
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(9, 116);
+			this->textBox3->Location = System::Drawing::Point(12, 145);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(158, 26);
+			this->textBox3->Size = System::Drawing::Size(209, 31);
 			this->textBox3->TabIndex = 2;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(9, 71);
+			this->textBox2->Location = System::Drawing::Point(12, 89);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(158, 26);
+			this->textBox2->Size = System::Drawing::Size(209, 31);
 			this->textBox2->TabIndex = 1;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(9, 25);
+			this->textBox1->Location = System::Drawing::Point(12, 31);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(158, 26);
+			this->textBox1->Size = System::Drawing::Size(209, 31);
 			this->textBox1->TabIndex = 0;
 			// 
 			// notifyIcon1
@@ -913,15 +1053,16 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 
 			// contextMenuStrip1
 			// 
+			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->contextMenuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->退出ToolStripMenuItem });
 			this->contextMenuStrip1->Name = L"contextMenuStrip1";
-			this->contextMenuStrip1->Size = System::Drawing::Size(101, 26);
+			this->contextMenuStrip1->Size = System::Drawing::Size(109, 28);
 			this->contextMenuStrip1->Opening += gcnew System::ComponentModel::CancelEventHandler(this, &Form1::contextMenuStrip1_Opening);
 			// 
 			// 退出ToolStripMenuItem
 			// 
 			this->退出ToolStripMenuItem->Name = L"退出ToolStripMenuItem";
-			this->退出ToolStripMenuItem->Size = System::Drawing::Size(100, 22);
+			this->退出ToolStripMenuItem->Size = System::Drawing::Size(108, 24);
 			this->退出ToolStripMenuItem->Text = L"退出";
 			this->退出ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::退出ToolStripMenuItem_Click);
 			// 
@@ -934,31 +1075,22 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label5->Location = System::Drawing::Point(904, 482);
+			this->label5->Location = System::Drawing::Point(1205, 602);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(104, 19);
+			this->label5->Size = System::Drawing::Size(130, 24);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"数据接收区";
 			// 
-			// 地图ToolStripMenuItem
+			// toolTip1
 			// 
-			this->地图ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->显示地图ToolStripMenuItem });
-			this->地图ToolStripMenuItem->Name = L"地图ToolStripMenuItem";
-			this->地图ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
-			this->地图ToolStripMenuItem->Text = L"地图";
-			// 
-			// 显示地图ToolStripMenuItem
-			// 
-			this->显示地图ToolStripMenuItem->Name = L"显示地图ToolStripMenuItem";
-			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->显示地图ToolStripMenuItem->Text = L"显示地图";
-			this->显示地图ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::显示地图ToolStripMenuItem_Click);
+			this->toolTip1->IsBalloon = true;
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1323, 662);
+			this->ClientSize = System::Drawing::Size(1764, 828);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->button5);
@@ -972,11 +1104,13 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Form1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"快递运输环境监测系统";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->SizeChanged += gcnew System::EventHandler(this, &Form1::Form1_SizeChanged);
+			this->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &Form1::Form1_MouseMove);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->toolStrip1->ResumeLayout(false);
@@ -1015,6 +1149,29 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 			 toolStripStatusLabel1->Text = dateTime.ToLongDateString();       // 显示日期
 			 toolStripStatusLabel2->Text = dateTime.ToLongTimeString();     // 显示时间
 			 toolStripProgressBar1->Value = dateTime.Second;           //进度条
+			 if (Control::IsKeyLocked(Keys::CapsLock))
+
+				 this->toolStripStatusLabel4->Text = "大写";
+
+			 else
+
+				 this->toolStripStatusLabel4->Text = "";
+
+			 if (Control::IsKeyLocked(Keys::NumLock))
+
+				 this->toolStripStatusLabel5->Text = "数字";
+
+			 else
+
+				 this->toolStripStatusLabel5->Text = "";
+
+			 if (Control::IsKeyLocked(Keys::Scroll))
+
+				 this->toolStripStatusLabel6->Text = "滚动";
+
+			 else
+
+				 this->toolStripStatusLabel6->Text = "";
 }
 private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
 }
@@ -1608,6 +1765,112 @@ private: System::Void 查看ToolStripMenuItem_Click(System::Object^  sender, Syste
 private: System::Void 显示地图ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			 LocationForm^dlg = gcnew LocationForm();
 			 dlg->ShowDialog();
+}
+private: System::Void toolStripButton1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+
+private: System::Void toolStripButton4_Click(System::Object^  sender, System::EventArgs^  e) {
+	LocationForm^dlg = gcnew LocationForm();
+	dlg->ShowDialog();
+}
+private: System::Void 剪切UToolStripButton_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void toolStripProgressBar1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void Form1_MouseMove(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+	String ^str = "X=" + e->X.ToString() + ",Y=" + e->Y.ToString();
+	this->toolStripStatusLabel3->Text = str;
+}
+private: System::Void menuStrip1_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+	this->statusStrip1->Items[3]->Text = "就绪";
+}
+private: System::Void menuStrip1_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+	this->statusStrip1->Items[3]->Text = "就绪";
+}
+private: System::Void On_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+	String^ str = "就绪";
+
+	ToolStripMenuItem^ item = safe_cast<ToolStripMenuItem^>(sender);
+
+	if (item == 系统ToolStripMenuItem)  str = "当前为系统菜单项";
+
+	if (item == 打开ToolStripMenuItem) str = "当前为打开文件菜单项";
+
+	if (item == 关闭ToolStripMenuItem)  str = "退出应用程序";
+
+	if (item == 打开系统ToolStripMenuItem)  str = "当前为开始菜单项";
+
+	if (item == 串口设置ToolStripMenuItem)    str = "设置串口操作";
+
+	if (item == 地图ToolStripMenuItem)   str = "当前为地图设置菜单项";
+
+	if (item == 气体类型ToolStripMenuItem)   str = "当前为监控对象菜单项";
+
+	if (item == 查看ToolStripMenuItem) str = "当前为格式菜单项";
+
+	if (item == toolStripMenuItem1)  str = "当前为图像设置菜单项";
+
+	if (item == 帮助ToolStripMenuItem)   str = "当前为帮助菜单项";
+
+	if (item == 系统介绍ToolStripMenuItem)  str = "当前为系统介绍菜单项";
+
+	if (item == 关于ToolStripMenuItem)     str = "当前为关于菜单项";
+
+	if (item == 坐标设置ToolStripMenuItem)  str = "进行坐标的设置";
+
+	if (item == 平滑度设置ToolStripMenuItem) str = "进行平滑度的设置";
+	if (item == 工具栏ToolStripMenuItem)  str = "当前为工具栏菜单项";
+
+	if (item == 状态栏ToolStripMenuItem)   str = "当前为状态栏菜单项";
+
+	if (item == 字体ToolStripMenuItem)  str = "当前为字体菜单项";
+
+	if (item == 自动换行ToolStripMenuItem)     str = "当前为自动换行菜单项";
+
+	if (item == 期望值设置ToolStripMenuItem)  str = "进行期望值的设置";
+
+	if (item == 有害气体ToolStripMenuItem) str = "检测对象为有害气体";
+	if (item == 振荡度ToolStripMenuItem)  str = "监测对象为振荡度";
+
+	if (item == 温度ToolStripMenuItem) str = "监测对象为温度";
+	if (item == 湿度ToolStripMenuItem)  str = "监测对象为湿度";
+
+	if (item == 显示地图ToolStripMenuItem)   str = "进行显示地图操作";
+
+	if (item == 打开串口ToolStripMenuItem)  str = "打开串口操作";
+
+	if (item == 关闭串口ToolStripMenuItem)     str = "关闭串口操作";
+
+	if (item == 打开系统ToolStripMenuItem)  str = "打开系统操作";
+
+	if (item == 关闭系统ToolStripMenuItem) str = "关闭系统操作";
+
+	if (item == 工具栏ToolStripMenuItem){
+
+		if (工具栏ToolStripMenuItem->Checked)str = "隐藏工具栏";
+
+		else str = "显示工具栏";
+	}
+
+	if (item == 状态栏ToolStripMenuItem){
+
+		if (状态栏ToolStripMenuItem->Checked) str = "隐藏状态栏";
+
+		else str = "显示状态栏";
+	}
+
+	if (item == 字体ToolStripMenuItem)	 str = "设置显示的字体和颜色";
+
+	if (item == 自动换行ToolStripMenuItem){
+
+		if (自动换行ToolStripMenuItem->Checked) str = "取消自动换行";
+
+		else str = "文本自动换行";
+	}
+
+	this->statusStrip1->Items[3]->Text = str; // 在状态栏上显示信息
+}
+private: System::Void 帮助ToolStripMenuItem_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
