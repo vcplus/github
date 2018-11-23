@@ -48,6 +48,9 @@
     <ClCompile Include="FForm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ChartSetForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -80,6 +83,9 @@
     <ClInclude Include="FForm.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ChartSetForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -108,6 +114,9 @@
     <Image Include="..\icon5.ico">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="..\icon7.ico">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resX">
@@ -123,6 +132,15 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="TempForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumidForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShakeForm.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

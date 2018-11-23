@@ -99,6 +99,7 @@ namespace AGMS {
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"ÍË³ö";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &TempForm::button1_Click);
 			// 
 			// label3
 			// 
@@ -174,6 +175,9 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, Sy
 			 case 2:break;
 			 case 3:break;
 			 }
+}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 this->Close();
 }
 };
 }

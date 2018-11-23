@@ -5,6 +5,10 @@
 #include"SetForm.h"
 #include"LocationForm.h"
 #include"TempForm.h"
+#include"FForm.h"
+#include"HumidForm.h"
+#include"ShakeForm.h"
+#include"ChartSetForm.h"
 namespace AGMS {
 
 	using namespace System;
@@ -80,7 +84,7 @@ namespace AGMS {
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart4;
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart3;
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart2;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart1;
+
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::ListBox^  listBox1;
 
@@ -127,10 +131,15 @@ namespace AGMS {
 private: System::IO::Ports::SerialPort^  serialPort1;
 private: System::Windows::Forms::ToolStripMenuItem^  地图ToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  平滑ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  折线ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  曲线图ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  折线图ToolStripMenuItem;
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart1;
 
 	private: System::ComponentModel::IContainer^  components;
 
-	private:
+	public:
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
@@ -145,18 +154,18 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->系统ToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -168,6 +177,8 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->串口设置ToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开串口ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->关闭串口ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->显示地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->气体类型ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->温度ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->湿度ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -182,7 +193,11 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->toolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->坐标设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->平滑度设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->平滑ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->折线ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->格式设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->曲线图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->折线图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->帮助ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->系统介绍ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->关于ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -233,8 +248,6 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->serialPort1 = (gcnew System::IO::Ports::SerialPort(this->components));
-			this->地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->显示地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->toolStrip1->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
@@ -298,13 +311,13 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 打开系统ToolStripMenuItem
 			// 
 			this->打开系统ToolStripMenuItem->Name = L"打开系统ToolStripMenuItem";
-			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开系统ToolStripMenuItem->Text = L"打开系统";
 			// 
 			// 关闭系统ToolStripMenuItem
 			// 
 			this->关闭系统ToolStripMenuItem->Name = L"关闭系统ToolStripMenuItem";
-			this->关闭系统ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关闭系统ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关闭系统ToolStripMenuItem->Text = L"关闭系统";
 			// 
 			// 串口设置ToolStripMenuItem
@@ -321,20 +334,34 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 串口设置ToolStripMenuItem1
 			// 
 			this->串口设置ToolStripMenuItem1->Name = L"串口设置ToolStripMenuItem1";
-			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(152, 22);
+			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(124, 22);
 			this->串口设置ToolStripMenuItem1->Text = L"串口设置";
 			// 
 			// 打开串口ToolStripMenuItem
 			// 
 			this->打开串口ToolStripMenuItem->Name = L"打开串口ToolStripMenuItem";
-			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开串口ToolStripMenuItem->Text = L"打开串口";
 			// 
 			// 关闭串口ToolStripMenuItem
 			// 
 			this->关闭串口ToolStripMenuItem->Name = L"关闭串口ToolStripMenuItem";
-			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关闭串口ToolStripMenuItem->Text = L"关闭串口";
+			// 
+			// 地图ToolStripMenuItem
+			// 
+			this->地图ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->显示地图ToolStripMenuItem });
+			this->地图ToolStripMenuItem->Name = L"地图ToolStripMenuItem";
+			this->地图ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
+			this->地图ToolStripMenuItem->Text = L"地图";
+			// 
+			// 显示地图ToolStripMenuItem
+			// 
+			this->显示地图ToolStripMenuItem->Name = L"显示地图ToolStripMenuItem";
+			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->显示地图ToolStripMenuItem->Text = L"显示地图";
+			this->显示地图ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::显示地图ToolStripMenuItem_Click);
 			// 
 			// 气体类型ToolStripMenuItem
 			// 
@@ -345,36 +372,37 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->气体类型ToolStripMenuItem->Name = L"气体类型ToolStripMenuItem";
 			this->气体类型ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
 			this->气体类型ToolStripMenuItem->Text = L"监测对象";
+			this->气体类型ToolStripMenuItem->DropDownOpened += gcnew System::EventHandler(this, &Form1::气体类型ToolStripMenuItem_DropDownOpened);
 			this->气体类型ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::气体类型ToolStripMenuItem_DropDownItemClicked);
 			// 
 			// 温度ToolStripMenuItem
 			// 
 			this->温度ToolStripMenuItem->Name = L"温度ToolStripMenuItem";
-			this->温度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->温度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->温度ToolStripMenuItem->Text = L"温度";
 			// 
 			// 湿度ToolStripMenuItem
 			// 
 			this->湿度ToolStripMenuItem->Name = L"湿度ToolStripMenuItem";
-			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->湿度ToolStripMenuItem->Text = L"湿度";
 			// 
 			// 振荡度ToolStripMenuItem
 			// 
 			this->振荡度ToolStripMenuItem->Name = L"振荡度ToolStripMenuItem";
-			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->振荡度ToolStripMenuItem->Text = L"振荡度";
 			// 
 			// 有害气体ToolStripMenuItem
 			// 
 			this->有害气体ToolStripMenuItem->Name = L"有害气体ToolStripMenuItem";
-			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->有害气体ToolStripMenuItem->Text = L"有害气体";
 			// 
 			// 期望值设置ToolStripMenuItem
 			// 
 			this->期望值设置ToolStripMenuItem->Name = L"期望值设置ToolStripMenuItem";
-			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
 			// 
 			// 查看ToolStripMenuItem
@@ -392,25 +420,25 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 工具栏ToolStripMenuItem
 			// 
 			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
-			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->工具栏ToolStripMenuItem->Text = L"工具栏";
 			// 
 			// 状态栏ToolStripMenuItem
 			// 
 			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
-			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->状态栏ToolStripMenuItem->Text = L"状态栏";
 			// 
 			// 字体ToolStripMenuItem
 			// 
 			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
-			this->字体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->字体ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->字体ToolStripMenuItem->Text = L"字体";
 			// 
 			// 自动换行ToolStripMenuItem
 			// 
 			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
-			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->自动换行ToolStripMenuItem->Text = L"自动换行";
 			// 
 			// toolStripMenuItem1
@@ -422,24 +450,61 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->toolStripMenuItem1->Name = L"toolStripMenuItem1";
 			this->toolStripMenuItem1->Size = System::Drawing::Size(68, 21);
 			this->toolStripMenuItem1->Text = L"图像设置";
+			this->toolStripMenuItem1->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::toolStripMenuItem1_DropDownItemClicked);
+			this->toolStripMenuItem1->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem1_Click);
 			// 
 			// 坐标设置ToolStripMenuItem
 			// 
 			this->坐标设置ToolStripMenuItem->Name = L"坐标设置ToolStripMenuItem";
 			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->坐标设置ToolStripMenuItem->Text = L"坐标设置";
+			this->坐标设置ToolStripMenuItem->Text = L"坐标调整";
+			this->坐标设置ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::坐标设置ToolStripMenuItem_Click);
 			// 
 			// 平滑度设置ToolStripMenuItem
 			// 
+			this->平滑度设置ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->平滑ToolStripMenuItem,
+					this->折线ToolStripMenuItem
+			});
 			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
 			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
+			this->平滑度设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::平滑度设置ToolStripMenuItem_DropDownItemClicked);
+			// 
+			// 平滑ToolStripMenuItem
+			// 
+			this->平滑ToolStripMenuItem->Name = L"平滑ToolStripMenuItem";
+			this->平滑ToolStripMenuItem->Size = System::Drawing::Size(100, 22);
+			this->平滑ToolStripMenuItem->Text = L"平滑";
+			// 
+			// 折线ToolStripMenuItem
+			// 
+			this->折线ToolStripMenuItem->Name = L"折线ToolStripMenuItem";
+			this->折线ToolStripMenuItem->Size = System::Drawing::Size(100, 22);
+			this->折线ToolStripMenuItem->Text = L"折线";
 			// 
 			// 格式设置ToolStripMenuItem
 			// 
+			this->格式设置ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->曲线图ToolStripMenuItem,
+					this->折线图ToolStripMenuItem
+			});
 			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
 			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->格式设置ToolStripMenuItem->Text = L"格式设置";
+			this->格式设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::格式设置ToolStripMenuItem_DropDownItemClicked);
+			// 
+			// 曲线图ToolStripMenuItem
+			// 
+			this->曲线图ToolStripMenuItem->Name = L"曲线图ToolStripMenuItem";
+			this->曲线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->曲线图ToolStripMenuItem->Text = L"曲线图";
+			// 
+			// 折线图ToolStripMenuItem
+			// 
+			this->折线图ToolStripMenuItem->Name = L"折线图ToolStripMenuItem";
+			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
+			this->折线图ToolStripMenuItem->Text = L"折线图";
 			// 
 			// 帮助ToolStripMenuItem
 			// 
@@ -454,13 +519,13 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 系统介绍ToolStripMenuItem
 			// 
 			this->系统介绍ToolStripMenuItem->Name = L"系统介绍ToolStripMenuItem";
-			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->系统介绍ToolStripMenuItem->Text = L"系统介绍";
 			// 
 			// 关于ToolStripMenuItem
 			// 
 			this->关于ToolStripMenuItem->Name = L"关于ToolStripMenuItem";
-			this->关于ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关于ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关于ToolStripMenuItem->Text = L"关于";
 			// 
 			// toolStrip1
@@ -741,36 +806,36 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// 
 			// chart4
 			// 
-			chartArea5->Name = L"ChartArea1";
-			this->chart4->ChartAreas->Add(chartArea5);
-			legend5->Enabled = false;
-			legend5->Name = L"Legend1";
-			this->chart4->Legends->Add(legend5);
+			chartArea1->Name = L"ChartArea1";
+			this->chart4->ChartAreas->Add(chartArea1);
+			legend1->Enabled = false;
+			legend1->Name = L"Legend1";
+			this->chart4->Legends->Add(legend1);
 			this->chart4->Location = System::Drawing::Point(19, 310);
 			this->chart4->Name = L"chart4";
-			series5->ChartArea = L"ChartArea1";
-			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series5->Legend = L"Legend1";
-			series5->Name = L"Series1";
-			this->chart4->Series->Add(series5);
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Series1";
+			this->chart4->Series->Add(series1);
 			this->chart4->Size = System::Drawing::Size(358, 200);
 			this->chart4->TabIndex = 3;
 			this->chart4->Text = L"chart4";
 			// 
 			// chart3
 			// 
-			chartArea6->Name = L"ChartArea1";
-			this->chart3->ChartAreas->Add(chartArea6);
-			legend6->Enabled = false;
-			legend6->Name = L"Legend1";
-			this->chart3->Legends->Add(legend6);
+			chartArea2->Name = L"ChartArea1";
+			this->chart3->ChartAreas->Add(chartArea2);
+			legend2->Enabled = false;
+			legend2->Name = L"Legend1";
+			this->chart3->Legends->Add(legend2);
 			this->chart3->Location = System::Drawing::Point(414, 310);
 			this->chart3->Name = L"chart3";
-			series6->ChartArea = L"ChartArea1";
-			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series6->Legend = L"Legend1";
-			series6->Name = L"Series1";
-			this->chart3->Series->Add(series6);
+			series2->ChartArea = L"ChartArea1";
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series2->Legend = L"Legend1";
+			series2->Name = L"Series1";
+			this->chart3->Series->Add(series2);
 			this->chart3->Size = System::Drawing::Size(358, 200);
 			this->chart3->TabIndex = 2;
 			this->chart3->Text = L"chart3";
@@ -778,41 +843,42 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			// chart2
 			// 
 			this->chart2->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea7->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea7);
+			chartArea3->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea3);
 			this->chart2->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend7->Alignment = System::Drawing::StringAlignment::Far;
-			legend7->Enabled = false;
-			legend7->Name = L"Legend1";
-			this->chart2->Legends->Add(legend7);
+			legend3->Alignment = System::Drawing::StringAlignment::Far;
+			legend3->Enabled = false;
+			legend3->Name = L"Legend1";
+			this->chart2->Legends->Add(legend3);
 			this->chart2->Location = System::Drawing::Point(414, 49);
 			this->chart2->Name = L"chart2";
-			series7->ChartArea = L"ChartArea1";
-			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series7->Legend = L"Legend1";
-			series7->Name = L"Series1";
-			this->chart2->Series->Add(series7);
+			series3->ChartArea = L"ChartArea1";
+			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series3->Legend = L"Legend1";
+			series3->Name = L"Series1";
+			this->chart2->Series->Add(series3);
 			this->chart2->Size = System::Drawing::Size(358, 200);
 			this->chart2->TabIndex = 1;
-			this->chart2->Text = L"chart2";
+			this->chart2->Text = L"chart2";;
 			// 
 			// chart1
 			// 
-			chartArea8->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea8);
-			legend8->Enabled = false;
-			legend8->Name = L"Legend1";
-			this->chart1->Legends->Add(legend8);
+			chartArea4->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea4);
+			legend4->Enabled = false;
+			legend4->Name = L"Legend1";
+			this->chart1->Legends->Add(legend4);
 			this->chart1->Location = System::Drawing::Point(19, 49);
 			this->chart1->Name = L"chart1";
-			series8->ChartArea = L"ChartArea1";
-			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series8->Legend = L"Legend1";
-			series8->Name = L"Series1";
-			this->chart1->Series->Add(series8);
+			series4->ChartArea = L"ChartArea1";
+			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series4->Legend = L"Legend1";
+			series4->Name = L"Series1";
+			this->chart1->Series->Add(series4);
 			this->chart1->Size = System::Drawing::Size(358, 200);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
+
 			// 
 			// pictureBox1
 			// 
@@ -940,20 +1006,6 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"数据接收区";
 			// 
-			// 地图ToolStripMenuItem
-			// 
-			this->地图ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->显示地图ToolStripMenuItem });
-			this->地图ToolStripMenuItem->Name = L"地图ToolStripMenuItem";
-			this->地图ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
-			this->地图ToolStripMenuItem->Text = L"地图";
-			// 
-			// 显示地图ToolStripMenuItem
-			// 
-			this->显示地图ToolStripMenuItem->Name = L"显示地图ToolStripMenuItem";
-			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->显示地图ToolStripMenuItem->Text = L"显示地图";
-			this->显示地图ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::显示地图ToolStripMenuItem_Click);
-			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
@@ -1000,10 +1052,6 @@ private: System::Windows::Forms::ToolStripMenuItem^  显示地图ToolStripMenuItem;
 #pragma endregion
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 				 //this->timer2->Enabled = true;
-				 this->chart2->Enabled = false;
-				 this->chart1->Enabled = false;
-				 this->chart3->Enabled = false;
-				 this->chart4->Enabled = false;
 				 this->button1->Enabled = false;
 				 this->button2->Enabled = false;
 				 this->button3->Enabled = false;
@@ -1594,7 +1642,22 @@ private: System::Void 气体类型ToolStripMenuItem_DropDownItemClicked(System::Obje
 				 TempForm^dlg = gcnew TempForm();
 				 dlg->ShowDialog();
 			 }
-			 if (item == 期望值设置ToolStripMenuItem)
+			 else if (item == 湿度ToolStripMenuItem)
+			 {
+				 HumidForm^dlg = gcnew HumidForm();
+				 dlg->ShowDialog();
+			 }
+			 else if (item == 振荡度ToolStripMenuItem)
+			 {
+				ShakeForm^dlg = gcnew ShakeForm();
+				 dlg->ShowDialog();
+			 }
+			 else if (item == 有害气体ToolStripMenuItem)
+			 {
+				 FForm^dlg = gcnew FForm();
+				 dlg->ShowDialog();
+			 }
+			 else if (item == 期望值设置ToolStripMenuItem)
 			 {
 				 SetForm^dlg = gcnew SetForm();
 				 dlg->ShowDialog();
@@ -1608,6 +1671,121 @@ private: System::Void 查看ToolStripMenuItem_Click(System::Object^  sender, Syste
 private: System::Void 显示地图ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			 LocationForm^dlg = gcnew LocationForm();
 			 dlg->ShowDialog();
+}
+private: System::Void 气体类型ToolStripMenuItem_DropDownOpened(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void toolStripMenuItem1_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+
+			 ToolStripMenuItem^ item;
+
+			 if (e == nullptr)
+
+				 item = safe_cast<ToolStripMenuItem^>(sender);
+
+			 else
+
+				 item = safe_cast<ToolStripMenuItem^>(e->ClickedItem);
+}
+private: System::Void 平滑度设置ToolStripMenuItem_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+			
+			 ToolStripMenuItem^ item;
+
+			 if (e == nullptr)
+
+				 item = safe_cast<ToolStripMenuItem^>(sender);
+
+			 else
+
+				 item = safe_cast<ToolStripMenuItem^>(e->ClickedItem);
+
+}
+private: System::Void 格式设置ToolStripMenuItem_DropDownItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+			 
+			 ToolStripMenuItem^ item;
+
+			 if (e == nullptr)
+
+				 item = safe_cast<ToolStripMenuItem^>(sender);
+
+			 else
+
+				 item = safe_cast<ToolStripMenuItem^>(e->ClickedItem);
+			 if (item == 曲线图ToolStripMenuItem)
+			 {
+				 chart1->Series["Series1"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+				 chart2->Series["Series1"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+				 chart3->Series["Series1"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+				 chart4->Series["Series1"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			 }
+			 else if (item == 折线图ToolStripMenuItem)
+			 {
+				 chart1->Series["Series1"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+				 chart2->Series["Series1"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+				 chart3->Series["Series1"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+				 chart4->Series["Series1"]->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			 }
+}
+private:Color changeColor(int n)
+{
+			Color co;
+			switch (n)
+			{
+			case 0:co = Color::Red;
+				break;
+			case 1:co = Color::DarkRed;
+				break;
+			case 2:co = Color::Orange;
+				break;
+			case 3:co = Color::Yellow;
+				break;
+			case 4:co = Color::LightYellow;
+				break;
+			case 5:co = Color::Green;
+				break;
+			case 6:co = Color::LightGreen;
+				break;
+			case 7:co = Color::DarkGreen;
+				break;
+			case 8:co = Color::Blue;
+				break;
+			case 9:co = Color::LightBlue;
+				break;
+			case 10:co = Color::DarkBlue;
+				break;
+			case 11:co = Color::Purple;
+				break;
+			case 12:co = Color::MediumPurple;
+				break;
+			case 13:co = Color::Black;
+				break;
+			case 14:co = Color::White;
+				break;
+			default:
+				break;
+			}
+			return co;
+}
+private: System::Void toolStripMenuItem1_Click(System::Object^  sender, System::EventArgs^  e) {
+
+}
+private: System::Void 坐标设置ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 ChartSetForm^dlg = gcnew ChartSetForm();
+			 dlg->ShowDialog();
+			 if (dlg->DialogResult == Windows::Forms::DialogResult::OK)
+			 {
+				 chart1->Series["Series1"]->Color = changeColor(dlg->tempcolor);
+				 chart2->Series["Series1"]->Color = changeColor(dlg->humidcolor);
+				 chart3->Series["Series1"]->Color = changeColor(dlg->shakecolor);
+				 chart4->Series["Series1"]->Color = changeColor(dlg->Fcolor);
+				 chart1->ChartAreas["ChartArea1"]->AxisY->Minimum = double(dlg->tempx);
+				 chart1->ChartAreas["ChartArea1"]->AxisY->Maximum = double(dlg->tempy);
+				 chart2->ChartAreas["ChartArea1"]->AxisY->Minimum = double(dlg->humidx);
+				 chart2->ChartAreas["ChartArea1"]->AxisY->Maximum = double(dlg->humidy);
+				 chart3->ChartAreas["ChartArea1"]->AxisY->Minimum = double(dlg->shakex);
+				 chart3->ChartAreas["ChartArea1"]->AxisY->Maximum = double(dlg->shakey);
+				 chart4->ChartAreas["ChartArea1"]->AxisY->Minimum = double(dlg->Fx);
+				 chart4->ChartAreas["ChartArea1"]->AxisY->Maximum = double(dlg->Fy);
+			 }
 }
 };
 }
