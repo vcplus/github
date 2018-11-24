@@ -48,6 +48,9 @@
     <ClCompile Include="FForm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ChartSetForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -78,6 +81,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="FForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ChartSetForm.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -123,6 +129,9 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="TempForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShakeForm.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

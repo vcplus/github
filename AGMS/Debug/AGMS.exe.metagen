@@ -1,7 +1,11 @@
+  AGMS.ChartSetForm.resources - Embedded, ContainedInManifestFile, 
+  AGMS.FForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.Form1.resources - Embedded, ContainedInManifestFile, 
+  AGMS.HumidForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.LocationForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.SerialForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.SetForm.resources - Embedded, ContainedInManifestFile, 
+  AGMS.ShakeForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.TempForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly AGMS, Version=1.0.*, Culture=固定语言(固定国家/地区): 
@@ -46,17 +50,36 @@ Class AGMS.LocationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class AGMS.TempForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class AGMS.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    AGMS.SerialForm dlg : Public
 Class AGMS.FForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class AGMS.HumidForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AGMS.ShakeForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AGMS.ChartSetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single tempx : Public
+    Single tempy : Public
+    Int32 tempcolor : Public
+    Single humidx : Public
+    Single humidy : Public
+    Int32 humidcolor : Public
+    Single shakex : Public
+    Single shakey : Public
+    Int32 shakecolor : Public
+    Single Fx : Public
+    Single Fy : Public
+    Int32 Fcolor : Public
+Class AGMS.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    AGMS.SerialForm dlg : Public
 Class AGMS.SetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -69,6 +92,3 @@ Class AGMS.SetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 shake1 : Public
     Int32 F0 : Public
     Int32 F1 : Public
-Class AGMS.ShakeForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
