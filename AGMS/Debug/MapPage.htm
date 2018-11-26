@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>�ٶȵ�ͼ��Hello World</title>
+    <style type="text/css">
+        body, html, #allmap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        #l-map {
+            height: 100%;
+            width: 78%;
+            float: left;
+            border-right: 2px solid #bcbcbc;
+        }
+
+        #r-result {
+            height: 100%;
+            width: 20%;
+            float: left;
+        }
+    </style>
+
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=km0KPfIVuGBPHpZOPiN17FmQLCdRrBTW"></script>
+
+
+</head>
+<body>
+    <div id="allmap">
+    </div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+    //alert("Hello World");
+    var map = new BMap.Map("allmap");               // ����Mapʵ��
+
+
+    var point = new BMap.Point(113.5408, 22.258);    // ����������(����,γ��)
+    map.centerAndZoom(point, 11);                   // ��ʼ����ͼ,�������ĵ�����͵�ͼ��С����
+    map.addOverlay(new BMap.Marker(point));         // ���������һ�������
+
+
+    //var traffic = new BMap.TrafficLayer();         // ������ͨ����ͼ��ʵ��
+    //map.addTileLayer(traffic);                     // ��ͼ����ӵ���ͼ��
+
+
+    map.addControl(new BMap.NavigationControl());   // ���ƽ�����ſؼ�
+    map.addControl(new BMap.ScaleControl());        // ��ӱ����߿ؼ�
+    map.addControl(new BMap.OverviewMapControl());  //������Ե�ͼ�ؼ�
+
+
+    map.addControl(new BMap.MapTypeControl());      //��ӵ�ͼ���Ϳؼ�
+    map.setCurrentCity("�麣");                     //���õ�ͼ��ʾ�ĳ���
+
+
+
+
+    map.enableScrollWheelZoom();                    //���ù��ַŴ���С
+
+    function setLocation(x, y) {//��������γ��
+        var point = new BMap.Point(x, y);
+        map.centerAndZoom(point, 11);
+        map.addOverlay(new BMap.Marker(point));
+    }
+</script>
+
+
+
+
+

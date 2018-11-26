@@ -134,5 +134,18 @@
     <EmbeddedResource Include="ShakeForm.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartSetForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumidForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MapPage.htm" />
+    <None Include="..\Debug\MapPage.htm" />
   </ItemGroup>
 </Project>

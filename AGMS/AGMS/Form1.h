@@ -380,7 +380,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  折线图ToolStripMenuItem;
 			// 显示地图ToolStripMenuItem
 			// 
 			this->显示地图ToolStripMenuItem->Name = L"显示地图ToolStripMenuItem";
-			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->显示地图ToolStripMenuItem->Text = L"显示地图";
 			this->显示地图ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::显示地图ToolStripMenuItem_Click);
 			this->显示地图ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -487,7 +487,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  折线图ToolStripMenuItem;
 			// 坐标设置ToolStripMenuItem
 			// 
 			this->坐标设置ToolStripMenuItem->Name = L"坐标设置ToolStripMenuItem";
-			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->坐标设置ToolStripMenuItem->Text = L"坐标设置";
 			this->坐标设置ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::坐标设置ToolStripMenuItem_Click);
 			this->坐标设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -495,7 +495,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  折线图ToolStripMenuItem;
 			// 平滑度设置ToolStripMenuItem
 			// 
 			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
-			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
 			this->平滑度设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -506,7 +506,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  折线图ToolStripMenuItem;
 					this->折线图ToolStripMenuItem
 			});
 			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
-			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->格式设置ToolStripMenuItem->Text = L"格式设置";
 			this->格式设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::格式设置ToolStripMenuItem_DropDownItemClicked);
 			this->格式设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -514,13 +514,13 @@ private: System::Windows::Forms::ToolStripMenuItem^  折线图ToolStripMenuItem;
 			// 曲线图ToolStripMenuItem
 			// 
 			this->曲线图ToolStripMenuItem->Name = L"曲线图ToolStripMenuItem";
-			this->曲线图ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->曲线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
 			this->曲线图ToolStripMenuItem->Text = L"曲线图";
 			// 
 			// 折线图ToolStripMenuItem
 			// 
 			this->折线图ToolStripMenuItem->Name = L"折线图ToolStripMenuItem";
-			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
 			this->折线图ToolStripMenuItem->Text = L"折线图";
 			// 
 			// 帮助ToolStripMenuItem
