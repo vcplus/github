@@ -37,8 +37,8 @@ namespace AGMS {
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::TextBox^  textBox1;
-	private: System::Windows::Forms::ComboBox^  comboBox1;
+	public:static  System::Windows::Forms::TextBox^  textBox1;
+	public:static System::Windows::Forms::ComboBox^  comboBox1;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label3;
 	protected:
@@ -112,6 +112,8 @@ namespace AGMS {
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(121, 20);
 			this->comboBox1->TabIndex = 8;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1ºÅ³µÁ¾", L"2ºÅ³µÁ¾", L"3ºÅ³µÁ¾" });
+			this->comboBox1->SelectedIndex = 1;
 			// 
 			// label4
 			// 
@@ -156,7 +158,7 @@ namespace AGMS {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-				 this->Close();
+		this->Close();
 	}
 	private: System::Void HumidForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	}

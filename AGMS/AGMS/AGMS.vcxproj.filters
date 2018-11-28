@@ -51,6 +51,9 @@
     <ClCompile Include="ChartSetForm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="HistorySearch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -84,6 +87,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ChartSetForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HistorySearch.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -141,6 +147,9 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="HumidForm.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorySearch.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

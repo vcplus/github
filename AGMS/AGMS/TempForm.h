@@ -40,9 +40,9 @@ namespace AGMS {
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Label^  label3;
 
-	private: System::Windows::Forms::TextBox^  textBox1;
+	public:static  System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  label5;
-	private: System::Windows::Forms::ComboBox^  comboBox1;
+	public:static System::Windows::Forms::ComboBox^  comboBox1;
 
 	private:
 		/// <summary>
@@ -116,6 +116,7 @@ namespace AGMS {
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1ºÅ³µÁ¾", L"2ºÅ³µÁ¾", L"3ºÅ³µÁ¾" });
+			this->comboBox1->SelectedIndex = 1;
 			this->comboBox1->Location = System::Drawing::Point(126, 165);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(121, 20);
@@ -163,21 +164,21 @@ namespace AGMS {
 		}
 #pragma endregion
 	private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
-				 this->textBox1->Text = "1";
+		this->textBox1->Text = "1";
 	}
 	private: System::Void TempForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
-				 int index = comboBox1->SelectedIndex;
-				 switch (index)
-				 {
-				 case 1:break;
-				 case 2:break;
-				 case 3:break;
-				 }
+		int index = comboBox1->SelectedIndex;
+		switch (index)
+		{
+		case 1:break;
+		case 2:break;
+		case 3:break;
+		}
 	}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-				 this->Close();
+		this->Close();
 	}
 	};
 }

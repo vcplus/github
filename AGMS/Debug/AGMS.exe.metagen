@@ -1,6 +1,7 @@
   AGMS.ChartSetForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.FForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.Form1.resources - Embedded, ContainedInManifestFile, 
+  AGMS.HistorySearch.resources - Embedded, ContainedInManifestFile, 
   AGMS.HumidForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.LocationForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.SerialForm.resources - Embedded, ContainedInManifestFile, 
@@ -28,6 +29,7 @@ Class AGMS.SerialForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
+    System.Windows.Forms.ComboBox comboBox4 : Public
     System.IO.Ports.SerialPort com : Public, Static
     Boolean serialopen : Public, Static
 Class AGMS.SetFormW: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -42,6 +44,7 @@ Class AGMS.SetFormW: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 shake1 : Public
     Int32 F0 : Public
     Int32 F1 : Public
+    AGMS.SerialForm dlg : Public
 Class AGMS.LocationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -50,15 +53,27 @@ Class AGMS.LocationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class AGMS.TempForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.TextBox textBox1 : Public, Static
+    System.Windows.Forms.ComboBox comboBox1 : Public, Static
 Class AGMS.FForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.TextBox textBox1 : Public, Static
+    System.Windows.Forms.ComboBox comboBox1 : Public, Static
 Class AGMS.HumidForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.TextBox textBox1 : Public, Static
+    System.Windows.Forms.ComboBox comboBox1 : Public, Static
 Class AGMS.ShakeForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.ComboBox comboBox1 : Public, Static
+    System.Windows.Forms.TextBox textBox1 : Public, Static
 Class AGMS.ChartSetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -75,11 +90,16 @@ Class AGMS.ChartSetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Single Fx : Public
     Single Fy : Public
     Int32 Fcolor : Public
+Class AGMS.HistorySearch: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class AGMS.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     AGMS.SerialForm dlg : Public
+  Methods:
+    data_receivce(): PrivateScope, Public, HideBySig
 Class AGMS.SetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -92,3 +112,4 @@ Class AGMS.SetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 shake1 : Public
     Int32 F0 : Public
     Int32 F1 : Public
+    AGMS.SerialForm dlg : Public

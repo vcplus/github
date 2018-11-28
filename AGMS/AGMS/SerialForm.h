@@ -34,11 +34,11 @@ namespace AGMS {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::ComboBox^  comboBox1;
+	public: System::Windows::Forms::ComboBox^  comboBox4;
 	protected:
 	private: System::Windows::Forms::ComboBox^  comboBox2;
 	private: System::Windows::Forms::ComboBox^  comboBox3;
-	private: System::Windows::Forms::ComboBox^  comboBox4;
+	private: System::Windows::Forms::ComboBox^  comboBox1;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::Label^  label6;
@@ -82,6 +82,8 @@ namespace AGMS {
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(121, 20);
 			this->comboBox1->TabIndex = 0;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1", L"1.5", L"2" });
+			this->comboBox1->Text = L"1";
 			// 
 			// comboBox2
 			// 
@@ -90,6 +92,9 @@ namespace AGMS {
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(121, 20);
 			this->comboBox2->TabIndex = 0;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"8" });
+			this->comboBox2->Text = L"8";
+
 			// 
 			// comboBox3
 			// 
@@ -98,6 +103,8 @@ namespace AGMS {
 			this->comboBox3->Name = L"comboBox3";
 			this->comboBox3->Size = System::Drawing::Size(121, 20);
 			this->comboBox3->TabIndex = 0;
+			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"4800", L"9600", L"14400" });
+			this->comboBox3->Text = L"9600";
 			// 
 			// comboBox4
 			// 
@@ -202,31 +209,33 @@ namespace AGMS {
 
 	private: System::Void SerialForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
-    public:static SerialPort ^com = gcnew SerialPort();
+	public:static SerialPort ^com = gcnew SerialPort();
 	public:static bool serialopen;
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-				 /*String ^str = "串口参数设置为：";
-				 str = str + "\n串口：" + this->comboBox1->Text;
-				 str = str + "\n波特率：" + this->comboBox2->Text;
-				 str = str + "\n数据位：" + this->comboBox3->Text;
-				 str = str + "\n停止位：" + this->comboBox4->Text;
-				 MessageBox::Show(str, "串口参数设置");*/
-				 if (this->comboBox4->Text->Trim() == "" || this->comboBox3->Text->Trim() == "" || this->comboBox2->Text->Trim() == "" || this->comboBox1->Text->Trim() == "")
-				 {
-					 MessageBox::Show("请输入完整信息！", "警告");
-					 this->Close();
-				 }
-				 else
-				 {
+		/*String ^str = "串口参数设置为：";
+		str = str + "\n串口：" + this->comboBox1->Text;
+		str = str + "\n波特率：" + this->comboBox2->Text;
+		str = str + "\n数据位：" + this->comboBox3->Text;
+		str = str + "\n停止位：" + this->comboBox4->Text;
+		MessageBox::Show(str, "串口参数设置");*/
+		if (this->comboBox4->Text->Trim() == "" || this->comboBox3->Text->Trim() == "" || this->comboBox2->Text->Trim() == "" || this->comboBox1->Text->Trim() == "")
+		{
+			MessageBox::Show("请输入完整信息！", "警告");
+			this->Close();
+		}
+		else
+		{
 
-					 com->PortName = this->comboBox4->Text->Trim();
-					 com->BaudRate = Single::Parse(this->comboBox3->Text->Trim());
-					 this->Close();
+			com->PortName = this->comboBox4->Text->Trim();
+			com->BaudRate = Single::Parse(this->comboBox3->Text->Trim());
+			this->Close();
 
-				 }
+		}
 	}
-private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 this->Close();
-}
-};
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->Close();
+	}
+
+
+	};
 }
