@@ -1245,6 +1245,7 @@ namespace AGMS {
 			 HumidForm^hf = gcnew HumidForm();
 			 ShakeForm^sf = gcnew ShakeForm();
 			 FForm^ff = gcnew FForm();
+			 LocationForm^lf = gcnew LocationForm();
 	public: void data_receivce()//接收串口数据
 	{
 		String^ receiveText = nullptr;
@@ -1278,6 +1279,10 @@ namespace AGMS {
 					String^ sql2;
 					String^ sql3;
 					String^ sql4;
+
+					LocationForm::textBox1->Text = split[12];
+					LocationForm::textBox1->Text = split[13];
+
 					con1->Open();    // 打开连接
 					sql1 = "INSERT INTO 1号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[0] + " , " + split[1] + " , " + split[2] + ", " + split[3] + ",Now() , '1号' )";
 					OleDbCommand^ comm1 = gcnew OleDbCommand(sql1, con1);

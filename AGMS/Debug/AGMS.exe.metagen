@@ -50,6 +50,8 @@ Class AGMS.LocationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Windows.Forms.TextBox textBox3 : Public
+    System.Windows.Forms.TextBox textBox2 : Public, Static
+    System.Windows.Forms.TextBox textBox1 : Public, Static
 Class AGMS.TempForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
