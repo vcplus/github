@@ -1,9 +1,35 @@
-﻿生成启动时间为 2018/11/28 17:33:22。
-     1>项目“C:\Users\99713\Documents\GitHub\github\AGMS\AGMS\AGMS.vcxproj”在节点 2 上(Build 个目标)。
-     1>Link:
-         AGMS.vcxproj -> C:\Users\99713\Documents\GitHub\github\AGMS\Debug\AGMS.exe
-     1>已完成生成项目“C:\Users\99713\Documents\GitHub\github\AGMS\AGMS\AGMS.vcxproj”(Build 个目标)的操作。
+﻿生成启动时间为 2018/11/30 15:48:32。
+     1>项目“C:\Users\c304\Documents\GitHub\github\AGMS\AGMS\AGMS.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\AGMS.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.DataVisualization.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib AGMS.cpp HistorySearch.cpp
+         AGMS.cpp
+     1>c:\users\c304\documents\github\github\agms\agms\SerialForm.h(230): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+     1>c:\users\c304\documents\github\github\agms\agms\SetForm.h(248): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>c:\users\c304\documents\github\github\agms\agms\SetForm.h(250): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>c:\users\c304\documents\github\github\agms\agms\SetForm.h(252): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>c:\users\c304\documents\github\github\agms\agms\SetForm.h(254): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>c:\users\c304\documents\github\github\agms\agms\ChartSetForm.h(476): warning C4553: “==”: 运算符不起任何作用；是否是有意使用“=”的?
+     1>c:\users\c304\documents\github\github\agms\agms\Form1.h(1280): warning C4101: “sql4”: 未引用的局部变量
+         HistorySearch.cpp
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\c304\Documents\GitHub\github\AGMS\Debug\AGMS.exe" /INCREMENTAL /NOLOGO user32.lib kernel32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\AGMS.ChartSetForm.resources /ASSEMBLYRESOURCE:Debug\AGMS.FForm.resources /ASSEMBLYRESOURCE:Debug\AGMS.Form1.resources /ASSEMBLYRESOURCE:Debug\AGMS.HistorySearch.resources /ASSEMBLYRESOURCE:Debug\AGMS.HumidForm.resources /ASSEMBLYRESOURCE:Debug\AGMS.LocationForm.resources /ASSEMBLYRESOURCE:Debug\AGMS.SerialForm.resources /ASSEMBLYRESOURCE:Debug\AGMS.SetForm.resources /ASSEMBLYRESOURCE:Debug\AGMS.ShakeForm.resources /ASSEMBLYRESOURCE:Debug\AGMS.TempForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\c304\Documents\GitHub\github\AGMS\Debug\AGMS.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\AGMS.obj
+         Debug\AssemblyInfo.obj
+         Debug\ChartSetForm.obj
+         Debug\FForm.obj
+         Debug\HistorySearch.obj
+         Debug\HumidForm.obj
+         Debug\LocationForm.obj
+         Debug\SerialForm.obj
+         Debug\SetForm.obj
+         Debug\ShakeForm.obj
+         Debug\stdafx.obj
+         Debug\TempForm.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         AGMS.vcxproj -> C:\Users\c304\Documents\GitHub\github\AGMS\Debug\AGMS.exe
+     1>已完成生成项目“C:\Users\c304\Documents\GitHub\github\AGMS\AGMS\AGMS.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.74
+已用时间 00:00:01.24

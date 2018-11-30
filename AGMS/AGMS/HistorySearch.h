@@ -48,12 +48,12 @@ namespace AGMS {
 	private: System::Windows::Forms::DateTimePicker^  dateTimePicker2;
 	private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
 	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::ListBox^  listBox1;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^  chart1;
+
+
 	private: System::Windows::Forms::ListView^  listView1;
-	private: System::Windows::Forms::Label^  label3;
+
 	private: System::Windows::Forms::Label^  label4;
-	private: System::Windows::Forms::ComboBox^  comboBox1;
+
 	private: System::Windows::Forms::ComboBox^  comboBox2;
 
 	private:
@@ -69,9 +69,6 @@ namespace AGMS {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->odbcSelectCommand1 = (gcnew System::Data::Odbc::OdbcCommand());
 			this->odbcInsertCommand1 = (gcnew System::Data::Odbc::OdbcCommand());
 			this->odbcUpdateCommand1 = (gcnew System::Data::Odbc::OdbcCommand());
@@ -84,16 +81,11 @@ namespace AGMS {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
-			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->listView1 = (gcnew System::Windows::Forms::ListView());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataSet1))->BeginInit();
 			this->groupBox1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// odbcDataAdapter1
@@ -117,9 +109,11 @@ namespace AGMS {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->groupBox1->ForeColor = System::Drawing::Color::Green;
-			this->groupBox1->Location = System::Drawing::Point(44, 34);
+			this->groupBox1->Location = System::Drawing::Point(33, 27);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(383, 291);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox1->Size = System::Drawing::Size(334, 357);
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"选择查询时间范围";
@@ -128,18 +122,20 @@ namespace AGMS {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(31, 168);
+			this->label2->Location = System::Drawing::Point(23, 206);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(106, 24);
+			this->label2->Size = System::Drawing::Size(85, 19);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"结束时间";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(31, 51);
+			this->label1->Location = System::Drawing::Point(23, 41);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(106, 24);
+			this->label1->Size = System::Drawing::Size(85, 19);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"开始时间";
 			this->label1->Click += gcnew System::EventHandler(this, &HistorySearch::label1_Click);
@@ -148,47 +144,21 @@ namespace AGMS {
 			// 
 			this->dateTimePicker2->CustomFormat = L"yyyy/MM/dd HH:mm:ss";
 			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker2->Location = System::Drawing::Point(29, 212);
+			this->dateTimePicker2->Location = System::Drawing::Point(27, 256);
+			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dateTimePicker2->Name = L"dateTimePicker2";
-			this->dateTimePicker2->Size = System::Drawing::Size(280, 34);
+			this->dateTimePicker2->Size = System::Drawing::Size(211, 28);
 			this->dateTimePicker2->TabIndex = 1;
 			// 
 			// dateTimePicker1
 			// 
 			this->dateTimePicker1->CustomFormat = L"yyyy/MM/dd HH:mm:ss";
 			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker1->Location = System::Drawing::Point(35, 110);
+			this->dateTimePicker1->Location = System::Drawing::Point(27, 90);
+			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(274, 34);
+			this->dateTimePicker1->Size = System::Drawing::Size(206, 28);
 			this->dateTimePicker1->TabIndex = 0;
-			// 
-			// listBox1
-			// 
-			this->listBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 15;
-			this->listBox1->Location = System::Drawing::Point(543, 34);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(538, 274);
-			this->listBox1->TabIndex = 11;
-			// 
-			// chart1
-			// 
-			chartArea2->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea2);
-			legend2->Name = L"Legend1";
-			this->chart1->Legends->Add(legend2);
-			this->chart1->Location = System::Drawing::Point(12, 396);
-			this->chart1->Name = L"chart1";
-			series2->ChartArea = L"ChartArea1";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series2->Legend = L"Legend1";
-			series2->Name = L"Series1";
-			this->chart1->Series->Add(series2);
-			this->chart1->Size = System::Drawing::Size(590, 323);
-			this->chart1->TabIndex = 2;
-			this->chart1->Text = L"chart1";
 			// 
 			// listView1
 			// 
@@ -197,72 +167,53 @@ namespace AGMS {
 			this->listView1->FullRowSelect = true;
 			this->listView1->GridLines = true;
 			this->listView1->HideSelection = false;
-			this->listView1->Location = System::Drawing::Point(627, 396);
+			this->listView1->Location = System::Drawing::Point(418, 68);
+			this->listView1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->listView1->MultiSelect = false;
 			this->listView1->Name = L"listView1";
-			this->listView1->Size = System::Drawing::Size(894, 296);
+			this->listView1->Size = System::Drawing::Size(797, 411);
 			this->listView1->TabIndex = 7;
 			this->listView1->UseCompatibleStateImageBehavior = false;
 			this->listView1->View = System::Windows::Forms::View::Details;
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(44, 352);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(82, 15);
-			this->label3->TabIndex = 4;
-			this->label3->Text = L"历史数据图";
+			this->listView1->AutoResizeColumns(ColumnHeaderAutoResizeStyle::ColumnContent);
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(743, 352);
+			this->label4->Location = System::Drawing::Point(468, 27);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(82, 15);
+			this->label4->Size = System::Drawing::Size(65, 12);
 			this->label4->TabIndex = 5;
 			this->label4->Text = L"历史数据表";
-			// 
-			// comboBox1
-			// 
-			this->comboBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12));
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号车数据表", L"2号车数据表", L"3号车数据表" });
-			this->comboBox1->Location = System::Drawing::Point(158, 345);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(178, 28);
-			this->comboBox1->TabIndex = 8;
 			// 
 			// comboBox2
 			// 
 			this->comboBox2->Font = (gcnew System::Drawing::Font(L"宋体", 12));
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号车数据表", L"2号车数据表", L"3号车数据表" });
-			this->comboBox2->Location = System::Drawing::Point(862, 345);
+			this->comboBox2->Location = System::Drawing::Point(713, 27);
+			this->comboBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(178, 28);
+			this->comboBox2->Size = System::Drawing::Size(134, 24);
 			this->comboBox2->TabIndex = 8;
 			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &HistorySearch::comboBox2_SelectedIndexChanged);
 			// 
 			// HistorySearch
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1732, 703);
+			this->ClientSize = System::Drawing::Size(1299, 562);
 			this->Controls->Add(this->comboBox2);
-			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
 			this->Controls->Add(this->listView1);
-			this->Controls->Add(this->chart1);
-			this->Controls->Add(this->listBox1);
 			this->Controls->Add(this->groupBox1);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"HistorySearch";
 			this->Text = L"历史查询";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataSet1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -282,6 +233,8 @@ private: System::Void DispView(DataTable^ table)
 	this->listView1->Columns->Clear();
 
 	this->listView1->Items->Clear();
+
+	//this->listView1->AutoResizeColumns(ColumnHeaderAutoResizeStyle::ColumnContent);
 
 	if (table == nullptr) return;
 
@@ -393,10 +346,10 @@ private: System::Void comboBox2_SelectedIndexChanged(System::Object^  sender, Sy
 
 	if (nIndex < 0) return;
 
-	String^ strTableName = this->comboBox1->Items[nIndex]->ToString();			 // 获取选择的数据表名
+	String^ strTableName = this->comboBox2->Items[nIndex]->ToString();			 // 获取选择的数据表名
 	// 使用DataAdapter和DataSet
 
-	String^ strCmd = String::Format("SELECT * FROM {0}", strTableName);
+	String^ strCmd = String::Format("SELECT * FROM {0} WHERE 日期时间>={1} AND 日期时间<={2}", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
 
 	//OleDbDataAdapter^ da1 = gcnew OleDbDataAdapter(cmdText, strConn);
 
@@ -406,21 +359,28 @@ private: System::Void comboBox2_SelectedIndexChanged(System::Object^  sender, Sy
 	//this->Text = "异常数据查询";
 
 	// String ^strCmd = "SELECT *FROM yichang_data";
+	this->listView1->Columns->Clear();
+
+	this->listView1->Items->Clear();
+
+
 
 	Data::OleDb::OleDbCommand ^ cmd = gcnew Data::OleDb::OleDbCommand(strCmd, con1);
 
 	this->oleDbDataAdapter1->SelectCommand = cmd;
 
-	oleDbDataAdapter1->Fill(dataSet1, "TestInfo");
+	System::Data::DataSet^  dataSet = gcnew DataSet();
+
+	oleDbDataAdapter1->Fill(dataSet, "TestInfo");
 	// 获取数据表
 
-	oleDbDataAdapter1->Fill(dataSet1, strTableName);
+	oleDbDataAdapter1->Fill(dataSet, strTableName);
 
-	DataTable^ table1 = dataSet1->Tables[strTableName];
+	DataTable^ table1 = dataSet->Tables[strTableName];
 
 	table1->PrimaryKey = gcnew array<DataColumn^>{ table1->Columns[0] };
 
-	binding1 = gcnew BindingSource(dataSet1, strTableName);
+	binding1 = gcnew BindingSource(dataSet, strTableName);
 	DispView(table1);
 	//	 this->dataGridView1->DataSource = dataSet1;
 
