@@ -1309,13 +1309,14 @@ namespace AGMS {
 							{
 							UpdateColor1(button1);//R
 							this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							/*if (split[0] != nullptr)
+							if (split[0] != nullptr)
 							{
 							con1->Open();    // 打开连接
 							sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车辆]) VALUES( " + split[0] + " ,Now() , '" + strTableName + "' )";
-							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
+							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); 
+							comm2->ExecuteNonQuery();
 							con1->Close();
-							}*/
+							}
 							//Sleep(100);
 							}
 							else UpdateColor2(button1);//G
@@ -1327,13 +1328,13 @@ namespace AGMS {
 							{
 							UpdateColor1(button2);
 							this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							/*if (split[1] != nullptr)
+							if (split[1] != nullptr)
 							{
 							con1->Open();    // 打开连接
 							sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[1] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
-							}*/
+							}
 							//Sleep(100);
 							}
 							else
@@ -1348,13 +1349,13 @@ namespace AGMS {
 							{
 							UpdateColor1(button3);
 							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							/*if (split[3] != nullptr)
+							if (split[3] != nullptr)
 							{
 							con1->Open();    // 打开连接
 							sql4 = "INSERT INTO 异常数据表_有毒气体([有毒气体],[有毒气体日期时间],[有毒气体对应车辆]) VALUES(" + split[3] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
-							}*/
+							}
 							//Sleep(100);
 							}
 							else
@@ -1369,13 +1370,13 @@ namespace AGMS {
 							{
 							UpdateColor1(button4);
 							this->chart4->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							/*if (split[2] != nullptr)
+							if (split[2] != nullptr)
 							{
 							con1->Open();    // 打开连接
 							sql4 = "INSERT INTO 异常数据表_振荡度([振荡度],[振荡度日期时间],[振荡度对应车辆]) VALUES( " + split[2] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
-							}*/
+							}
 							Sleep(100);
 
 							}
@@ -1422,7 +1423,7 @@ namespace AGMS {
 							if (split[6] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_温度([温度浓度],[温度日期时间],[温度对应车辆]) VALUES( " + split[6] + " ,Now() , '" + strTableName + "' )";
+							sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车辆]) VALUES( " + split[6] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1438,7 +1439,7 @@ namespace AGMS {
 							if (split[7] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_湿度([湿度浓度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[7] + " ,Now() , '" + strTableName + "'  )";
+							sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[7] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1527,7 +1528,7 @@ namespace AGMS {
 							if (split[12] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_温度([温度浓度],[温度日期时间],[温度对应车辆]) VALUES( " + split[12] + " ,Now() , '" + strTableName + "' )";
+							sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车辆]) VALUES( " + split[12] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1543,7 +1544,7 @@ namespace AGMS {
 							if (split[13] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_PM([湿度浓度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[13] + " ,Now() , '" + strTableName + "'  )";
+							sql4 = "INSERT INTO 异常数据表_PM([湿度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[13] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1581,7 +1582,7 @@ namespace AGMS {
 							if (split[14] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_振荡度([振荡度],[振荡度日期时间],[振荡度对应车厢]) VALUES( " + split[14] + " ,Now() , '" + strTableName + "' )";
+							sql4 = "INSERT INTO 异常数据表_振荡度([振荡度],[振荡度日期时间],[振荡度对应车辆]) VALUES( " + split[14] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
