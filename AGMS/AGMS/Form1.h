@@ -145,7 +145,7 @@ namespace AGMS {
 	private: System::Data::OleDb::OleDbConnection^  oleDbConnection1;
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown1;
-
+	public: static array<String^> ^split = gcnew array<String^>(18){ "1" };
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -161,6 +161,8 @@ namespace AGMS {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+
+			
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
@@ -1246,6 +1248,7 @@ namespace AGMS {
 			 ShakeForm^sf = gcnew ShakeForm();
 			 FForm^ff = gcnew FForm();
 			 LocationForm^lf = gcnew LocationForm();
+			 
 	public: void data_receivce()//接收串口数据
 	{
 		String^ receiveText = nullptr;
@@ -1264,7 +1267,7 @@ namespace AGMS {
 				if (buff->Length > 32)
 				{
 					listBox1->Items->Add(buff);
-					array<String^> ^split = gcnew array<String^>(12);
+					
 					//split = gcnew array<String^>{L"0", L"0", L"0", L"0"};
 					split = buff->Split(59);
 					DateTime dateTime = DateTime::Now;             //获取系统当前时间
@@ -1280,19 +1283,19 @@ namespace AGMS {
 					String^ sql3;
 					String^ sql4;
 
-					LocationForm::textBox1->Text = split[12];
-					LocationForm::textBox1->Text = split[13];
+					//LocationForm::textBox1->Text = split[12];
+					//LocationForm::textBox1->Text = split[13];
 
 					con1->Open();    // 打开连接
 					sql1 = "INSERT INTO 1号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[0] + " , " + split[1] + " , " + split[2] + ", " + split[3] + ",Now() , '1号' )";
 					OleDbCommand^ comm1 = gcnew OleDbCommand(sql1, con1);
 					comm1->ExecuteNonQuery();
-					sql2 = "INSERT INTO 2号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[4] + " , " + split[5] + " , " + split[6] + ", " + split[7] + ",Now() , '2号' )";
+					sql2 = "INSERT INTO 2号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[6] + " , " + split[7] + " , " + split[8] + ", " + split[9] + ",Now() , '2号' )";
 					OleDbCommand^ comm2 = gcnew OleDbCommand(sql2, con1);
 					comm2->ExecuteNonQuery();
 					//con1->Close();
 					//con1->Open();    // 打开连接
-					sql3 = "INSERT INTO 3号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[8] + " , " + split[9] + " , " + split[10] + ", " + split[11] + ",Now() , '3号' )";
+					sql3 = "INSERT INTO 3号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[12] + " , " + split[13] + " , " + split[14] + ", " + split[15] + ",Now() , '3号' )";
 					OleDbCommand^ comm3 = gcnew OleDbCommand(sql3, con1);
 					comm3->ExecuteNonQuery();
 					con1->Close();
@@ -1377,15 +1380,15 @@ namespace AGMS {
 							}*/
 
 							//分析
-							if ((float::Parse(split[2]) > 10 && float::Parse(split[6]) < 30)) this->textBox1->Text = "震荡度较大";
+							if ((float::Parse(split[2]) > 10 && float::Parse(split[2]) < 30)) this->textBox1->Text = "震荡度较大";
 							else if (float::Parse(split[2]) < 10) this->textBox1->Text = "震荡度较小";
 							else if (float::Parse(split[2]) > 30) this->textBox1->Text = "震荡度很大";
 
-							if ((float::Parse(split[3]) > 10 && float::Parse(split[2]) < 40)) this->textBox2->Text = "车内空气质量一般";
+							if ((float::Parse(split[3]) > 10 && float::Parse(split[3]) < 40)) this->textBox2->Text = "车内空气质量一般";
 							else if (float::Parse(split[3]) < 10) this->textBox2->Text = "车内空气质量好";
 							else if (float::Parse(split[3]) > 40) this->textBox2->Text = "车内空气质量差";
 
-							if ((float::Parse(split[0]) > 26 && float::Parse(split[2]) < 28)) this->textBox3->Text = "车厢内温度适宜";
+							if ((float::Parse(split[0]) > 26 && float::Parse(split[0]) < 28)) this->textBox3->Text = "车厢内温度适宜";
 							else if (float::Parse(split[0]) < 26) this->textBox3->Text = "车内温度偏低";
 							else if (float::Parse(split[0]) > 28) this->textBox3->Text = "车内温度偏高";
 
@@ -1402,10 +1405,10 @@ namespace AGMS {
 					else if (strTableName == "2号")
 					{
 
-						if (split[4] != nullptr&&split[5] != nullptr&&split[6] != nullptr&&split[7] != nullptr)
+						if (split[6] != nullptr&&split[7] != nullptr&&split[8] != nullptr&&split[9] != nullptr)
 						{
 
-							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[4]);
+							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[6]);
 							chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							/*if (Int32::Parse(split[4])<0 || Int32::Parse(split[4])>100)  //酒精超限报警
 							{
@@ -1421,7 +1424,7 @@ namespace AGMS {
 							//Sleep(100);
 							}
 							else UpdateColor2(button1);*/
-							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[5]);
+							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[7]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							/*if (Int32::Parse(split[5])<0 || Int32::Parse(split[5])>150)  //PM2.5超限报警
 							{
@@ -1440,7 +1443,7 @@ namespace AGMS {
 							{
 							UpdateColor2(button2);
 							}*/
-							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[6]);
+							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[8]);
 							chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							/*if (float::Parse(split[6])<26 || float::Parse(split[6])>28)  //温度超限报警
 							{
@@ -1459,7 +1462,7 @@ namespace AGMS {
 							{
 							UpdateColor2(button3);
 							}*/
-							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[7]);
+							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[9]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							/*if (Int32::Parse(split[7])<45 || Int32::Parse(split[7])>75)  //湿度超限报警
 							{
@@ -1481,17 +1484,17 @@ namespace AGMS {
 							}*/
 
 							//分析
-							if ((float::Parse(split[6]) > 10 && float::Parse(split[6]) < 30)) this->textBox1->Text = "震荡度较大";
-							else if (float::Parse(split[6]) < 10) this->textBox1->Text = "震荡度较小";
-							else if (float::Parse(split[6]) > 30) this->textBox1->Text = "震荡度很大";
+							if ((float::Parse(split[8]) > 10 && float::Parse(split[8]) < 30)) this->textBox1->Text = "震荡度较大";
+							else if (float::Parse(split[8]) < 10) this->textBox1->Text = "震荡度较小";
+							else if (float::Parse(split[8]) > 30) this->textBox1->Text = "震荡度很大";
 
-							if ((float::Parse(split[7]) > 10 && float::Parse(split[2]) < 40)) this->textBox2->Text = "车内空气质量一般";
-							else if (float::Parse(split[7]) < 10) this->textBox2->Text = "车内空气质量好";
-							else if (float::Parse(split[7]) > 40) this->textBox2->Text = "车内空气质量差";
+							if ((float::Parse(split[9]) > 10 && float::Parse(split[9]) < 40)) this->textBox2->Text = "车内空气质量一般";
+							else if (float::Parse(split[9]) < 10) this->textBox2->Text = "车内空气质量好";
+							else if (float::Parse(split[9]) > 40) this->textBox2->Text = "车内空气质量差";
 
-							if ((float::Parse(split[4]) > 26 && float::Parse(split[2]) < 28)) this->textBox3->Text = "车厢内温度适宜";
-							else if (float::Parse(split[4]) < 26) this->textBox3->Text = "车内温度偏低";
-							else if (float::Parse(split[4]) > 28) this->textBox3->Text = "车内温度偏高";
+							if ((float::Parse(split[6]) > 26 && float::Parse(split[6]) < 28)) this->textBox3->Text = "车厢内温度适宜";
+							else if (float::Parse(split[6]) < 26) this->textBox3->Text = "车内温度偏低";
+							else if (float::Parse(split[6]) > 28) this->textBox3->Text = "车内温度偏高";
 
 							/*if (Int32::Parse(split[7])<45)  this->textBox4->Text = "车厢内干燥，多喝水";
 							else if (Int32::Parse(split[7]) >= 45 && Int32::Parse(split[7]) <= 75)  this->textBox4->Text = "车厢内环境舒适";
@@ -1505,10 +1508,10 @@ namespace AGMS {
 					}
 					else if (strTableName == "3号")
 					{
-						if (split[8] != nullptr&&split[9] != nullptr&&split[10] != nullptr&&split[11] != nullptr)
+						if (split[12] != nullptr&&split[13] != nullptr&&split[14] != nullptr&&split[15] != nullptr)
 						{
 
-							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[8]);
+							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[12]);
 							chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							/*if (Int32::Parse(split[8])<0 || Int32::Parse(split[8])>100)  //酒精超限报警
 							{
@@ -1524,7 +1527,7 @@ namespace AGMS {
 							//Sleep(100);
 							}
 							else UpdateColor2(button1);*/
-							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[9]);
+							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[13]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							/*if (Int32::Parse(split[9])<0 || Int32::Parse(split[9])>150)  //PM2.5超限报警
 							{
@@ -1543,7 +1546,7 @@ namespace AGMS {
 							{
 							UpdateColor2(button2);
 							}*/
-							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[10]);
+							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[14]);
 							chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							/*if (float::Parse(split[10])<26 || float::Parse(split[10])>28)  //温度超限报警
 							{
@@ -1562,7 +1565,7 @@ namespace AGMS {
 							{
 							UpdateColor2(button3);
 							}*/
-							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[11]);
+							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[15]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							/*if (Int32::Parse(split[11])<45 || Int32::Parse(split[11])>75)  //湿度超限报警
 							{
@@ -1583,17 +1586,17 @@ namespace AGMS {
 							}*/
 
 							//分析
-							if ((float::Parse(split[10]) > 10 && float::Parse(split[6]) < 30)) this->textBox1->Text = "震荡度较大";
-							else if (float::Parse(split[10]) < 10) this->textBox1->Text = "震荡度较小";
-							else if (float::Parse(split[10]) > 30) this->textBox1->Text = "震荡度很大";
+							if ((float::Parse(split[14]) > 10 && float::Parse(split[14]) < 30)) this->textBox1->Text = "震荡度较大";
+							else if (float::Parse(split[14]) < 10) this->textBox1->Text = "震荡度较小";
+							else if (float::Parse(split[14]) > 30) this->textBox1->Text = "震荡度很大";
 
-							if ((float::Parse(split[11]) > 10 && float::Parse(split[2]) < 40)) this->textBox2->Text = "车内空气质量一般";
-							else if (float::Parse(split[11]) < 10) this->textBox2->Text = "车内空气质量好";
-							else if (float::Parse(split[11]) > 40) this->textBox2->Text = "车内空气质量差";
+							if ((float::Parse(split[15]) > 10 && float::Parse(split[15]) < 40)) this->textBox2->Text = "车内空气质量一般";
+							else if (float::Parse(split[15]) < 10) this->textBox2->Text = "车内空气质量好";
+							else if (float::Parse(split[15]) > 40) this->textBox2->Text = "车内空气质量差";
 
-							if ((float::Parse(split[8]) > 26 && float::Parse(split[2]) < 28)) this->textBox3->Text = "车厢内温度适宜";
-							else if (float::Parse(split[8]) < 26) this->textBox3->Text = "车内温度偏低";
-							else if (float::Parse(split[8]) > 28) this->textBox3->Text = "车内温度偏高";
+							if ((float::Parse(split[12]) > 26 && float::Parse(split[12]) < 28)) this->textBox3->Text = "车厢内温度适宜";
+							else if (float::Parse(split[12]) < 26) this->textBox3->Text = "车内温度偏低";
+							else if (float::Parse(split[12]) > 28) this->textBox3->Text = "车内温度偏高";
 
 							/*if (Int32::Parse(split[11])<45)  this->textBox4->Text = "车厢内干燥，多喝水";
 							else if (Int32::Parse(split[11]) >= 45 && Int32::Parse(split[11]) <= 75)  this->textBox4->Text = "车厢内环境舒适";
@@ -1605,13 +1608,39 @@ namespace AGMS {
 							}*/
 						}
 					}
+
+					if (LocationForm::comboBox1->Items->Count > 0){
+						int index = LocationForm::comboBox1->SelectedIndex;
+						switch (index)
+						{
+						case 0:
+						{
+							LocationForm::textBox1->Text = split[4]; 
+							LocationForm::textBox2->Text = split[5]; 
+							break;
+						}
+						case 1:
+						{
+							LocationForm::textBox1->Text = split[10]; 
+							LocationForm::textBox2->Text = split[11];
+							break;
+						}
+						case 2:
+						{
+							LocationForm::textBox1->Text = split[16];
+							LocationForm::textBox2->Text = split[17]; 
+							break;
+						}
+						}
+					}
+
 					if (TempForm::comboBox1->Items->Count > 0){
 						int index1 = TempForm::comboBox1->SelectedIndex;
 						switch (index1)
 						{
 						case 0:TempForm::textBox1->Text = split[0]; break;
-						case 1:TempForm::textBox1->Text = split[4]; break;
-						case 2:TempForm::textBox1->Text = split[8]; break;
+						case 1:TempForm::textBox1->Text = split[6]; break;
+						case 2:TempForm::textBox1->Text = split[12]; break;
 						}
 					}
 
@@ -1621,8 +1650,8 @@ namespace AGMS {
 						switch (index2)
 						{
 						case 0:HumidForm::textBox1->Text = split[1]; break;
-						case 1:HumidForm::textBox1->Text = split[5]; break;
-						case 2:HumidForm::textBox1->Text = split[9]; break;
+						case 1:HumidForm::textBox1->Text = split[7]; break;
+						case 2:HumidForm::textBox1->Text = split[13]; break;
 						}
 					}
 
@@ -1632,8 +1661,8 @@ namespace AGMS {
 						switch (index3)
 						{
 						case 0:ShakeForm::textBox1->Text = split[2]; break;
-						case 1:ShakeForm::textBox1->Text = split[6]; break;
-						case 2:ShakeForm::textBox1->Text = split[10]; break;
+						case 1:ShakeForm::textBox1->Text = split[8]; break;
+						case 2:ShakeForm::textBox1->Text = split[14]; break;
 						}
 					}
 
@@ -1642,8 +1671,8 @@ namespace AGMS {
 						switch (index4)
 						{
 						case 0:FForm::textBox1->Text = split[3]; break;
-						case 1:FForm::textBox1->Text = split[7]; break;
-						case 2:FForm::textBox1->Text = split[11]; break;
+						case 1:FForm::textBox1->Text = split[9]; break;
+						case 2:FForm::textBox1->Text = split[15]; break;
 						}
 					}
 				}

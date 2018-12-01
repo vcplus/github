@@ -1,5 +1,5 @@
 #pragma once
-
+//#include"Form1.h"
 namespace AGMS {
 	using namespace System;
 	using namespace System::IO;
@@ -41,11 +41,16 @@ namespace AGMS {
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label1;
-	public: static System::Windows::Forms::TextBox^  textBox2;
+	public:static  System::Windows::Forms::TextBox^  textBox2;
+	private:
 	public: static System::Windows::Forms::TextBox^  textBox1;
 
-	public: System::Windows::Forms::TextBox^  textBox3;
+
+
+
 	private: System::Windows::Forms::WebBrowser^  webBrowser1;
+	private: System::Windows::Forms::Button^  button1;
+	public: static System::Windows::Forms::ComboBox^  comboBox1;
 	public:
 	private:
 	protected:
@@ -64,11 +69,12 @@ namespace AGMS {
 		void InitializeComponent(void)
 		{
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->webBrowser1 = (gcnew System::Windows::Forms::WebBrowser());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
@@ -85,11 +91,12 @@ namespace AGMS {
 			// 
 			// splitContainer1.Panel1
 			// 
+			this->splitContainer1->Panel1->Controls->Add(this->button1);
+			this->splitContainer1->Panel1->Controls->Add(this->comboBox1);
 			this->splitContainer1->Panel1->Controls->Add(this->label3);
 			this->splitContainer1->Panel1->Controls->Add(this->label2);
 			this->splitContainer1->Panel1->Controls->Add(this->label1);
 			this->splitContainer1->Panel1->Controls->Add(this->textBox2);
-			this->splitContainer1->Panel1->Controls->Add(this->textBox3);
 			this->splitContainer1->Panel1->Controls->Add(this->textBox1);
 			// 
 			// splitContainer1.Panel2
@@ -97,9 +104,28 @@ namespace AGMS {
 			this->splitContainer1->Panel2->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->splitContainer1->Panel2->Controls->Add(this->webBrowser1);
 			this->splitContainer1->Panel2->Cursor = System::Windows::Forms::Cursors::Cross;
-			this->splitContainer1->Size = System::Drawing::Size(1119, 502);
-			this->splitContainer1->SplitterDistance = 372;
+			this->splitContainer1->Size = System::Drawing::Size(910, 496);
+			this->splitContainer1->SplitterDistance = 302;
 			this->splitContainer1->TabIndex = 0;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(184, 369);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 4;
+			this->button1->Text = L"确定";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &LocationForm::button1_Click);
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Location = System::Drawing::Point(107, 89);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(121, 20);
+			this->comboBox1->TabIndex = 3;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号车辆", L"2号车辆", L"3号车辆" });
 			// 
 			// label3
 			// 
@@ -142,13 +168,6 @@ namespace AGMS {
 			this->textBox2->Size = System::Drawing::Size(100, 21);
 			this->textBox2->TabIndex = 1;
 			// 
-			// textBox3
-			// 
-			this->textBox3->Location = System::Drawing::Point(107, 94);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 21);
-			this->textBox3->TabIndex = 1;
-			// 
 			// textBox1
 			// 
 			this->textBox1->Location = System::Drawing::Point(107, 182);
@@ -162,16 +181,15 @@ namespace AGMS {
 			this->webBrowser1->Location = System::Drawing::Point(0, 0);
 			this->webBrowser1->MinimumSize = System::Drawing::Size(20, 20);
 			this->webBrowser1->Name = L"webBrowser1";
-			this->webBrowser1->Size = System::Drawing::Size(743, 502);
+			this->webBrowser1->Size = System::Drawing::Size(604, 496);
 			this->webBrowser1->TabIndex = 0;
-			//this->webBrowser1->Url = (gcnew System::Uri(L"file:///C:/Users/Administrator/Desktop/AGMS/Debug/MapPage.htm", System::UriKind::Absolute));
 			this->webBrowser1->DocumentCompleted += gcnew System::Windows::Forms::WebBrowserDocumentCompletedEventHandler(this, &LocationForm::webBrowser1_DocumentCompleted_1);
 			// 
 			// LocationForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1119, 502);
+			this->ClientSize = System::Drawing::Size(910, 496);
 			this->Controls->Add(this->splitContainer1);
 			this->Name = L"LocationForm";
 			this->Text = L"车辆位置";
@@ -203,5 +221,32 @@ namespace AGMS {
 	}
 	private: System::Void webBrowser1_DocumentCompleted_1(System::Object^  sender, System::Windows::Forms::WebBrowserDocumentCompletedEventArgs^  e) {
 	}
-	};
+
+			
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 // AGMS::Form1^ form1 = gcnew  Form1();
+				 int index = this->comboBox1->SelectedIndex;
+				 double m, n;
+				 array<System::Object^>^a = gcnew array<System::Object^>{m, n};
+				 switch (index)
+				 {
+				 case 0:
+					// m =Double::Parse(form1->split[4]) ;
+					// n = Double::Parse(form1->split[5]);
+					 break;
+				 case 1:
+					 //m = Double::Parse(form1->split[10]);
+					// n = Double::Parse(form1->split[11]);
+					 break;
+				 case 2:
+					// m = Double::Parse(form1->split[16]);
+					// n = Double::Parse(form1->split[17]);
+					 
+					 break;
+				 }
+			//	 this->textBox1->Text = m.ToString;
+			//	 this->textBox2->Text = n.ToString;
+				 this->webBrowser1->Document->InvokeScript("setLocation", a);
+	}
+};
 }

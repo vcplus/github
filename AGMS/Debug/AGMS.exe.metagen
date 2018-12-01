@@ -49,9 +49,9 @@ Class AGMS.LocationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    System.Windows.Forms.TextBox textBox3 : Public
     System.Windows.Forms.TextBox textBox2 : Public, Static
     System.Windows.Forms.TextBox textBox1 : Public, Static
+    System.Windows.Forms.ComboBox comboBox1 : Public, Static
 Class AGMS.TempForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -100,6 +100,7 @@ Class AGMS.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     AGMS.SerialForm dlg : Public
+    System.String[] split : Public, Static
   Methods:
     data_receivce(): PrivateScope, Public, HideBySig
 Class AGMS.SetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
