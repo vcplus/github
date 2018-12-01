@@ -1168,6 +1168,26 @@ namespace AGMS {
 
 		}
 #pragma endregion
+	void UpdateColor1(Button ^button)
+		{
+			Color color1;
+
+			color1 = Color::FromArgb(255, 0, 0);
+			// color2 = Color::FromArgb(0, 255, 0);
+			button->BackColor = color1;
+			//Sleep(1000);
+			//button->BackColor = color2;
+		}
+	void UpdateColor2(Button ^button)
+	{
+		Color color2;
+
+		color2 = Color::FromArgb(0, 255, 0);
+		// color2 = Color::FromArgb(0, 255, 0);
+		//button->BackColor = color1;
+		//Sleep(1000);
+		button->BackColor = color2;
+	}
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 		//this->timer2->Enabled = true;
 		this->chart2->Enabled = false;
@@ -1285,78 +1305,84 @@ namespace AGMS {
 
 							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[0]);
 							chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (Int32::Parse(split[0])<0 || Int32::Parse(split[0])>100)  //酒精超限报警
+							if (Int32::Parse(split[0])<0 || Int32::Parse(split[0])>30)  //温度超限报警
 							{
-							UpdateColor1(button1);
+							UpdateColor1(button1);//R
 							this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[0] != nullptr)
+							/*if (split[0] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_酒精([酒精浓度],[酒精日期时间],[酒精对应车厢]) VALUES( " + split[0] + " ,Now() , '" + strTableName + "' )";
+							sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车辆]) VALUES( " + split[0] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
-							}
+							}*/
 							//Sleep(100);
 							}
-							else UpdateColor2(button1);*/
+							else UpdateColor2(button1);//G
+
 							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[1]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (Int32::Parse(split[1])<0 || Int32::Parse(split[1])>150)  //PM2.5超限报警
+							
+							if (Int32::Parse(split[1])<0 || Int32::Parse(split[1])>50)  //湿度超限报警
 							{
 							UpdateColor1(button2);
 							this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[1] != nullptr)
+							/*if (split[1] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_PM([PM浓度],[PM日期时间],[PM对应车厢]) VALUES( " + split[1] + " ,Now() , '" + strTableName + "'  )";
+							sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[1] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
-							}
+							}*/
 							//Sleep(100);
 							}
 							else
 							{
 							UpdateColor2(button2);
-							}*/
-							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[2]);
+							}
+
+							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[3]);
 							chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (float::Parse(split[2])<26 || float::Parse(split[2])>28)  //温度超限报警
+							
+							if (float::Parse(split[3])<0 || float::Parse(split[3])>80)  //有毒气体超限报警
 							{
 							UpdateColor1(button3);
 							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[2] != nullptr)
+							/*if (split[3] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车厢]) VALUES(" + split[2] + " ,Now() , '" + strTableName + "'  )";
+							sql4 = "INSERT INTO 异常数据表_有毒气体([有毒气体],[有毒气体日期时间],[有毒气体对应车辆]) VALUES(" + split[3] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
-							}
-							Sleep(100);
+							}*/
+							//Sleep(100);
 							}
 							else
 							{
 							UpdateColor2(button3);
-							}*/
-							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[3]);
+							}
+
+							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[2]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (Int32::Parse(split[3])<45 || Int32::Parse(split[3])>75)  //湿度超限报警
+							
+							if (Int32::Parse(split[2])<0 || Int32::Parse(split[2])>20)  //振荡度超限报警
 							{
 							UpdateColor1(button4);
-							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[3] != nullptr)
+							this->chart4->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+							/*if (split[2] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车厢]) VALUES( " + split[3] + " ,Now() , '" + strTableName + "' )";
+							sql4 = "INSERT INTO 异常数据表_振荡度([振荡度],[振荡度日期时间],[振荡度对应车辆]) VALUES( " + split[2] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
-							}
+							}*/
 							Sleep(100);
 
 							}
 							else
 							{
 							UpdateColor2(button4);
-							}*/
+							}
 
 							//分析
 							if ((float::Parse(split[2]) > 10 && float::Parse(split[2]) < 30)) this->textBox1->Text = "震荡度较大";
@@ -1389,30 +1415,30 @@ namespace AGMS {
 
 							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[6]);
 							chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (Int32::Parse(split[4])<0 || Int32::Parse(split[4])>100)  //酒精超限报警
+							if (Int32::Parse(split[6])<26 || Int32::Parse(split[6])>28)  //温度超限报警
 							{
 							UpdateColor1(button1);
 							this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[4] != nullptr)
+							if (split[6] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_酒精([酒精浓度],[酒精日期时间],[酒精对应车厢]) VALUES( " + split[4] + " ,Now() , '" + strTableName + "' )";
+							sql4 = "INSERT INTO 异常数据表_温度([温度浓度],[温度日期时间],[温度对应车辆]) VALUES( " + split[6] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
 							//Sleep(100);
 							}
-							else UpdateColor2(button1);*/
+							else UpdateColor2(button1);
 							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[7]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (Int32::Parse(split[5])<0 || Int32::Parse(split[5])>150)  //PM2.5超限报警
+							if (Int32::Parse(split[7])<0 || Int32::Parse(split[7])>50)  //湿度超限报警
 							{
 							UpdateColor1(button2);
 							this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[5] != nullptr)
+							if (split[7] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_PM([PM浓度],[PM日期时间],[PM对应车厢]) VALUES( " + split[5] + " ,Now() , '" + strTableName + "'  )";
+							sql4 = "INSERT INTO 异常数据表_湿度([湿度浓度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[7] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1421,17 +1447,19 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button2);
-							}*/
-							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[8]);
+							}
+
+							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[9]);
 							chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (float::Parse(split[6])<26 || float::Parse(split[6])>28)  //温度超限报警
+							
+							if (float::Parse(split[9])<0 || float::Parse(split[9])>80)  //有毒气体超限报警
 							{
 							UpdateColor1(button3);
 							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[6] != nullptr)
+							if (split[9] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车厢]) VALUES(" + split[6] + " ,Now() , '" + strTableName + "'  )";
+							sql4 = "INSERT INTO 异常数据表_有毒气体([有毒气体],[有毒气体日期时间],[有毒气体对应车辆]) VALUES(" + split[9] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1440,17 +1468,17 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button3);
-							}*/
-							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[9]);
+							}
+							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[8]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (Int32::Parse(split[7])<45 || Int32::Parse(split[7])>75)  //湿度超限报警
+							if (Int32::Parse(split[8])<45 || Int32::Parse(split[8])>75)  //振荡度超限报警
 							{
 							UpdateColor1(button4);
-							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[7] != nullptr)
+							this->chart4->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
+							if (split[8] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车厢]) VALUES( " + split[7] + " ,Now() , '" + strTableName + "' )";
+							sql4 = "INSERT INTO 异常数据表_振荡度([振荡度],[振荡度日期时间],[振荡度对应车辆]) VALUES( " + split[8] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1460,7 +1488,7 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button4);
-							}*/
+							}
 
 							//分析
 							if ((float::Parse(split[8]) > 10 && float::Parse(split[8]) < 30)) this->textBox1->Text = "震荡度较大";
@@ -1492,30 +1520,30 @@ namespace AGMS {
 
 							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[12]);
 							chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (Int32::Parse(split[8])<0 || Int32::Parse(split[8])>100)  //酒精超限报警
+						   if (Int32::Parse(split[12])<26|| Int32::Parse(split[12])>28)  //温度超限报警
 							{
 							UpdateColor1(button1);
 							this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[0] != nullptr)
+							if (split[12] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_酒精([酒精浓度],[酒精日期时间],[酒精对应车厢]) VALUES( " + split[8] + " ,Now() , '" + strTableName + "' )";
+							sql4 = "INSERT INTO 异常数据表_温度([温度浓度],[温度日期时间],[温度对应车辆]) VALUES( " + split[12] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
 							//Sleep(100);
 							}
-							else UpdateColor2(button1);*/
+							else UpdateColor2(button1);
 							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[13]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (Int32::Parse(split[9])<0 || Int32::Parse(split[9])>150)  //PM2.5超限报警
+							if (Int32::Parse(split[13])<0 || Int32::Parse(split[13])>50)  //湿度超限报警
 							{
 							UpdateColor1(button2);
 							this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[1] != nullptr)
+							if (split[13] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_PM([PM浓度],[PM日期时间],[PM对应车厢]) VALUES( " + split[9] + " ,Now() , '" + strTableName + "'  )";
+							sql4 = "INSERT INTO 异常数据表_PM([湿度浓度],[湿度日期时间],[湿度对应车辆]) VALUES( " + split[13] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1524,17 +1552,17 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button2);
-							}*/
-							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[14]);
+							}
+							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[15]);
 							chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (float::Parse(split[10])<26 || float::Parse(split[10])>28)  //温度超限报警
+							if (float::Parse(split[15])<26 || float::Parse(split[15])>28)  //有毒气体超限报警
 							{
 							UpdateColor1(button3);
 							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[2] != nullptr)
+							if (split[15] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_温度([温度],[温度日期时间],[温度对应车厢]) VALUES(" + split[10] + " ,Now() , '" + strTableName + "'  )";
+							sql4 = "INSERT INTO 异常数据表_有毒气体([有毒气体],[有毒气体日期时间],[有毒气体对应车辆]) VALUES(" + split[15] + " ,Now() , '" + strTableName + "'  )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1543,17 +1571,17 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button3);
-							}*/
-							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[15]);
+							}
+							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[14]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							/*if (Int32::Parse(split[11])<45 || Int32::Parse(split[11])>75)  //湿度超限报警
+							if (Int32::Parse(split[14])<45 || Int32::Parse(split[14])>75)  //振荡度超限报警
 							{
 							UpdateColor1(button4);
 							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
-							if (split[3] != nullptr)
+							if (split[14] != nullptr)
 							{
 							con1->Open();    // 打开连接
-							sql4 = "INSERT INTO 异常数据表_湿度([湿度],[湿度日期时间],[湿度对应车厢]) VALUES( " + split[11] + " ,Now() , '" + strTableName + "' )";
+							sql4 = "INSERT INTO 异常数据表_振荡度([振荡度],[振荡度日期时间],[振荡度对应车厢]) VALUES( " + split[14] + " ,Now() , '" + strTableName + "' )";
 							OleDbCommand^ comm2 = gcnew OleDbCommand(sql4, con1); comm2->ExecuteNonQuery();
 							con1->Close();
 							}
@@ -1562,7 +1590,7 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button4);
-							}*/
+							}
 
 							//分析
 							if ((float::Parse(split[14]) > 10 && float::Parse(split[14]) < 30)) this->textBox1->Text = "震荡度较大";
@@ -1721,7 +1749,7 @@ namespace AGMS {
 
 			//为实现气球提示
 
-			this->notifyIcon1->ShowBalloonTip(30, "注意", "大家好，这是我设计的一个系统", ToolTipIcon::Info);
+			this->notifyIcon1->ShowBalloonTip(30, "快递运输环境监测系统", "中通快递竭诚为您服务！", ToolTipIcon::Info);
 
 		}
 	}

@@ -175,7 +175,7 @@ namespace AGMS {
 			this->listView1->TabIndex = 7;
 			this->listView1->UseCompatibleStateImageBehavior = false;
 			this->listView1->View = System::Windows::Forms::View::Details;
-			this->listView1->AutoResizeColumns(ColumnHeaderAutoResizeStyle::ColumnContent);
+			//this->listView1->AutoResizeColumns(ColumnHeaderAutoResizeStyle::ColumnContent);
 			// 
 			// label4
 			// 
@@ -382,6 +382,7 @@ private: System::Void comboBox2_SelectedIndexChanged(System::Object^  sender, Sy
 
 	binding1 = gcnew BindingSource(dataSet, strTableName);
 	DispView(table1);
+	this->listView1->AutoResizeColumns(ColumnHeaderAutoResizeStyle::ColumnContent);
 	//	 this->dataGridView1->DataSource = dataSet1;
 
 	//	 this->dataGridView1->DataMember = "TestInfo";
