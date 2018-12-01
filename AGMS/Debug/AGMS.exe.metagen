@@ -51,6 +51,7 @@ Class AGMS.LocationForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   Fields:
     System.Windows.Forms.TextBox textBox2 : Public, Static
     System.Windows.Forms.TextBox textBox1 : Public, Static
+    System.Windows.Forms.WebBrowser webBrowser1 : Public, Static
     System.Windows.Forms.ComboBox comboBox1 : Public, Static
 Class AGMS.TempForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form

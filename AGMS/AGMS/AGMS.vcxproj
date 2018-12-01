@@ -101,6 +101,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TempForm.cpp" />
+    <ClCompile Include="valuechange.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChartSetForm.h">
@@ -135,6 +136,7 @@
     <ClInclude Include="TempForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="valuechange.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />

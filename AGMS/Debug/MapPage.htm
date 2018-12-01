@@ -43,7 +43,7 @@
 
 
     var point = new BMap.Point(113.5408, 22.258);    // ����������(����,γ��)
-    map.centerAndZoom(point, 11);                   // ��ʼ����ͼ,�������ĵ�����͵�ͼ��С����
+    map.centerAndZoom(point, 5);                   // ��ʼ����ͼ,�������ĵ�����͵�ͼ��С����
     map.addOverlay(new BMap.Marker(point));         // ���������һ�������
 
 
@@ -64,9 +64,9 @@
 
     map.enableScrollWheelZoom();                    //���ù��ַŴ���С
 
-    function setLocation(x, y) {//��������γ��
+    function setLocation(x, y, z) {//��������γ��
         var point = new BMap.Point(x, y);
-        map.centerAndZoom(point, 11);
+        map.centerAndZoom(point, 5);
         map.addOverlay(new BMap.Marker(point));
     }
 </script>

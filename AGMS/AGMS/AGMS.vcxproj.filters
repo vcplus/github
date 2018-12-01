@@ -54,6 +54,9 @@
     <ClCompile Include="HistorySearch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="valuechange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -90,6 +93,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="HistorySearch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="valuechange.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

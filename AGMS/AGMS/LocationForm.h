@@ -1,5 +1,5 @@
 #pragma once
-//#include"Form1.h"
+#include"valuechange.h"
 namespace AGMS {
 	using namespace System;
 	using namespace System::IO;
@@ -41,16 +41,24 @@ namespace AGMS {
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label1;
-	public:static  System::Windows::Forms::TextBox^  textBox2;
+	public: static System::Windows::Forms::TextBox^  textBox2;
 	private:
 	public: static System::Windows::Forms::TextBox^  textBox1;
+	public: static System::Windows::Forms::WebBrowser^  webBrowser1;
+
+	private:
 
 
 
 
-	private: System::Windows::Forms::WebBrowser^  webBrowser1;
+
 	private: System::Windows::Forms::Button^  button1;
 	public: static System::Windows::Forms::ComboBox^  comboBox1;
+	private:
+	private: System::Windows::Forms::Timer^  timer1;
+	public:
+	private: System::ComponentModel::IContainer^  components;
+
 	public:
 	private:
 	protected:
@@ -59,7 +67,7 @@ namespace AGMS {
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -68,6 +76,7 @@ namespace AGMS {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
@@ -77,6 +86,7 @@ namespace AGMS {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->webBrowser1 = (gcnew System::Windows::Forms::WebBrowser());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
 			this->splitContainer1->Panel2->SuspendLayout();
@@ -116,16 +126,17 @@ namespace AGMS {
 			this->button1->TabIndex = 4;
 			this->button1->Text = L"确定";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &LocationForm::button1_Click);
+			//this->button1->Click += gcnew System::EventHandler(this, &LocationForm::button1_Click);
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号车辆", L"2号车辆", L"3号车辆" });
 			this->comboBox1->Location = System::Drawing::Point(107, 89);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(121, 20);
 			this->comboBox1->TabIndex = 3;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号车辆", L"2号车辆", L"3号车辆" });
+			//this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &LocationForm::comboBox1_SelectedIndexChanged);
 			// 
 			// label3
 			// 
@@ -185,6 +196,11 @@ namespace AGMS {
 			this->webBrowser1->TabIndex = 0;
 			this->webBrowser1->DocumentCompleted += gcnew System::Windows::Forms::WebBrowserDocumentCompletedEventHandler(this, &LocationForm::webBrowser1_DocumentCompleted_1);
 			// 
+			// timer1
+			// 
+			this->timer1->Interval = 1000;
+			this->timer1->Tick += gcnew System::EventHandler(this, &LocationForm::timer1_Tick);
+			// 
 			// LocationForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
@@ -223,30 +239,60 @@ namespace AGMS {
 	}
 
 			
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	/*private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 				 // AGMS::Form1^ form1 = gcnew  Form1();
 				 int index = this->comboBox1->SelectedIndex;
 				 double m, n;
-				 array<System::Object^>^a = gcnew array<System::Object^>{m, n};
 				 switch (index)
 				 {
 				 case 0:
-					// m =Double::Parse(form1->split[4]) ;
-					// n = Double::Parse(form1->split[5]);
+					 m =Double::Parse(valuechange::经度1) ;
+					 n = Double::Parse(valuechange::纬度1);
 					 break;
 				 case 1:
-					 //m = Double::Parse(form1->split[10]);
-					// n = Double::Parse(form1->split[11]);
+					 m = Double::Parse(valuechange::经度2);
+					 n = Double::Parse(valuechange::纬度2);
 					 break;
 				 case 2:
-					// m = Double::Parse(form1->split[16]);
-					// n = Double::Parse(form1->split[17]);
+					 m = Double::Parse(valuechange::经度3);
+					 n = Double::Parse(valuechange::纬度3);
 					 
 					 break;
 				 }
-			//	 this->textBox1->Text = m.ToString;
-			//	 this->textBox2->Text = n.ToString;
+			 this->textBox1->Text = m.ToString();
+			 this->textBox2->Text = n.ToString();				 
+			 array<System::Object^>^a = gcnew array<System::Object^>{m, n};
+			this->webBrowser1->Document->InvokeScript("setLocation", a);
+	}*/
+private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
+			 //Locationchange();
+}
+private: System::Void Locationchange() {
+			 /*if (this->comboBox1->Items->Count > 0)
+			 {
+				 int index = this->comboBox1->SelectedIndex;
+				 double m, n;
+				 switch (index)
+				 {
+				 case 0:
+					 m = Double::Parse(valuechange::经度1);
+					 n = Double::Parse(valuechange::纬度1);
+					 break;
+				 case 1:
+					 m = Double::Parse(valuechange::经度2);
+					 n = Double::Parse(valuechange::纬度2);
+					 break;
+				 case 2:
+					 m = Double::Parse(valuechange::经度3);
+					 n = Double::Parse(valuechange::纬度3);
+
+					 break;
+				 }
+				 this->textBox1->Text = m.ToString();
+				 this->textBox2->Text = n.ToString();
+				 array<System::Object^>^a = gcnew array<System::Object^>{m, n};
 				 this->webBrowser1->Document->InvokeScript("setLocation", a);
-	}
+			 }*/
+}
 };
 }

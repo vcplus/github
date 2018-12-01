@@ -10,7 +10,7 @@
 #include"ShakeForm.h"
 #include"ChartSetForm.h"
 #include"HistorySearch.h"
-
+#include"valuechange.h"
 namespace AGMS {
 
 	using namespace System;
@@ -161,8 +161,6 @@ namespace AGMS {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-
-			
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
@@ -290,8 +288,7 @@ namespace AGMS {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Padding = System::Windows::Forms::Padding(8, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(1775, 28);
+			this->menuStrip1->Size = System::Drawing::Size(1302, 25);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			this->menuStrip1->MouseEnter += gcnew System::EventHandler(this, &Form1::menuStrip1_MouseEnter);
@@ -304,7 +301,7 @@ namespace AGMS {
 					this->关闭ToolStripMenuItem
 			});
 			this->系统ToolStripMenuItem1->Name = L"系统ToolStripMenuItem1";
-			this->系统ToolStripMenuItem1->Size = System::Drawing::Size(51, 24);
+			this->系统ToolStripMenuItem1->Size = System::Drawing::Size(44, 21);
 			this->系统ToolStripMenuItem1->Text = L"系统";
 			this->系统ToolStripMenuItem1->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::On_DoSystemMenu);
 			this->系统ToolStripMenuItem1->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -312,14 +309,14 @@ namespace AGMS {
 			// 打开ToolStripMenuItem
 			// 
 			this->打开ToolStripMenuItem->Name = L"打开ToolStripMenuItem";
-			this->打开ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->打开ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开ToolStripMenuItem->Text = L"打开文件";
 			this->打开ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关闭ToolStripMenuItem
 			// 
 			this->关闭ToolStripMenuItem->Name = L"关闭ToolStripMenuItem";
-			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关闭ToolStripMenuItem->Text = L"关闭";
 			this->关闭ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -330,7 +327,7 @@ namespace AGMS {
 					this->关闭系统ToolStripMenuItem
 			});
 			this->系统ToolStripMenuItem->Name = L"系统ToolStripMenuItem";
-			this->系统ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
+			this->系统ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
 			this->系统ToolStripMenuItem->Text = L"开始";
 			this->系统ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::系统ToolStripMenuItem_DropDownItemClicked);
 			this->系统ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -338,14 +335,14 @@ namespace AGMS {
 			// 打开系统ToolStripMenuItem
 			// 
 			this->打开系统ToolStripMenuItem->Name = L"打开系统ToolStripMenuItem";
-			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->打开系统ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开系统ToolStripMenuItem->Text = L"打开系统";
 			this->打开系统ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关闭系统ToolStripMenuItem
 			// 
 			this->关闭系统ToolStripMenuItem->Name = L"关闭系统ToolStripMenuItem";
-			this->关闭系统ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->关闭系统ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关闭系统ToolStripMenuItem->Text = L"关闭系统";
 			this->关闭系统ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -356,7 +353,7 @@ namespace AGMS {
 					this->打开串口ToolStripMenuItem, this->关闭串口ToolStripMenuItem
 			});
 			this->串口设置ToolStripMenuItem->Name = L"串口设置ToolStripMenuItem";
-			this->串口设置ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->串口设置ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
 			this->串口设置ToolStripMenuItem->Text = L"串口设置";
 			this->串口设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::串口设置ToolStripMenuItem_DropDownItemClicked);
 			this->串口设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -364,7 +361,7 @@ namespace AGMS {
 			// 串口设置ToolStripMenuItem1
 			// 
 			this->串口设置ToolStripMenuItem1->Name = L"串口设置ToolStripMenuItem1";
-			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(144, 26);
+			this->串口设置ToolStripMenuItem1->Size = System::Drawing::Size(124, 22);
 			this->串口设置ToolStripMenuItem1->Text = L"串口设置";
 			this->串口设置ToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Form1::串口设置ToolStripMenuItem1_Click);
 			this->串口设置ToolStripMenuItem1->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -372,7 +369,7 @@ namespace AGMS {
 			// 打开串口ToolStripMenuItem
 			// 
 			this->打开串口ToolStripMenuItem->Name = L"打开串口ToolStripMenuItem";
-			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->打开串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开串口ToolStripMenuItem->Text = L"打开串口";
 			this->打开串口ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::打开串口ToolStripMenuItem_Click);
 			this->打开串口ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -380,7 +377,7 @@ namespace AGMS {
 			// 关闭串口ToolStripMenuItem
 			// 
 			this->关闭串口ToolStripMenuItem->Name = L"关闭串口ToolStripMenuItem";
-			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->关闭串口ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关闭串口ToolStripMenuItem->Text = L"关闭串口";
 			this->关闭串口ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::关闭串口ToolStripMenuItem_Click);
 			this->关闭串口ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -389,14 +386,14 @@ namespace AGMS {
 			// 
 			this->地图ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->显示地图ToolStripMenuItem });
 			this->地图ToolStripMenuItem->Name = L"地图ToolStripMenuItem";
-			this->地图ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
+			this->地图ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
 			this->地图ToolStripMenuItem->Text = L"地图";
 			this->地图ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 显示地图ToolStripMenuItem
 			// 
 			this->显示地图ToolStripMenuItem->Name = L"显示地图ToolStripMenuItem";
-			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->显示地图ToolStripMenuItem->Text = L"显示地图";
 			this->显示地图ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::显示地图ToolStripMenuItem_Click);
 			this->显示地图ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -408,7 +405,7 @@ namespace AGMS {
 					this->湿度ToolStripMenuItem, this->振荡度ToolStripMenuItem, this->有害气体ToolStripMenuItem, this->期望值设置ToolStripMenuItem
 			});
 			this->气体类型ToolStripMenuItem->Name = L"气体类型ToolStripMenuItem";
-			this->气体类型ToolStripMenuItem->Size = System::Drawing::Size(81, 24);
+			this->气体类型ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
 			this->气体类型ToolStripMenuItem->Text = L"监测对象";
 			this->气体类型ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::气体类型ToolStripMenuItem_DropDownItemClicked);
 			this->气体类型ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -416,35 +413,35 @@ namespace AGMS {
 			// 温度ToolStripMenuItem
 			// 
 			this->温度ToolStripMenuItem->Name = L"温度ToolStripMenuItem";
-			this->温度ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
+			this->温度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->温度ToolStripMenuItem->Text = L"温度";
 			this->温度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 湿度ToolStripMenuItem
 			// 
 			this->湿度ToolStripMenuItem->Name = L"湿度ToolStripMenuItem";
-			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
+			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->湿度ToolStripMenuItem->Text = L"湿度";
 			this->湿度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 振荡度ToolStripMenuItem
 			// 
 			this->振荡度ToolStripMenuItem->Name = L"振荡度ToolStripMenuItem";
-			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
+			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->振荡度ToolStripMenuItem->Text = L"振荡度";
 			this->振荡度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 有害气体ToolStripMenuItem
 			// 
 			this->有害气体ToolStripMenuItem->Name = L"有害气体ToolStripMenuItem";
-			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
+			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->有害气体ToolStripMenuItem->Text = L"有害气体";
 			this->有害气体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 期望值设置ToolStripMenuItem
 			// 
 			this->期望值设置ToolStripMenuItem->Name = L"期望值设置ToolStripMenuItem";
-			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
+			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
 			this->期望值设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -455,7 +452,7 @@ namespace AGMS {
 					this->状态栏ToolStripMenuItem, this->字体ToolStripMenuItem, this->自动换行ToolStripMenuItem
 			});
 			this->查看ToolStripMenuItem->Name = L"查看ToolStripMenuItem";
-			this->查看ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
+			this->查看ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
 			this->查看ToolStripMenuItem->Text = L"格式";
 			this->查看ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::查看ToolStripMenuItem_DropDownItemClicked);
 			this->查看ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::查看ToolStripMenuItem_Click);
@@ -464,28 +461,28 @@ namespace AGMS {
 			// 工具栏ToolStripMenuItem
 			// 
 			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
-			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->工具栏ToolStripMenuItem->Text = L"工具栏";
 			this->工具栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 状态栏ToolStripMenuItem
 			// 
 			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
-			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->状态栏ToolStripMenuItem->Text = L"状态栏";
 			this->状态栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 字体ToolStripMenuItem
 			// 
 			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
-			this->字体ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->字体ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->字体ToolStripMenuItem->Text = L"字体";
 			this->字体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 自动换行ToolStripMenuItem
 			// 
 			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
-			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->自动换行ToolStripMenuItem->Text = L"自动换行";
 			this->自动换行ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -496,14 +493,14 @@ namespace AGMS {
 					this->平滑度设置ToolStripMenuItem, this->格式设置ToolStripMenuItem
 			});
 			this->toolStripMenuItem1->Name = L"toolStripMenuItem1";
-			this->toolStripMenuItem1->Size = System::Drawing::Size(81, 24);
+			this->toolStripMenuItem1->Size = System::Drawing::Size(68, 21);
 			this->toolStripMenuItem1->Text = L"图像设置";
 			this->toolStripMenuItem1->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 坐标设置ToolStripMenuItem
 			// 
 			this->坐标设置ToolStripMenuItem->Name = L"坐标设置ToolStripMenuItem";
-			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
+			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->坐标设置ToolStripMenuItem->Text = L"坐标设置";
 			this->坐标设置ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::坐标设置ToolStripMenuItem_Click);
 			this->坐标设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -511,7 +508,7 @@ namespace AGMS {
 			// 平滑度设置ToolStripMenuItem
 			// 
 			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
-			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
+			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
 			this->平滑度设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -522,7 +519,7 @@ namespace AGMS {
 					this->折线图ToolStripMenuItem
 			});
 			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
-			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(159, 26);
+			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->格式设置ToolStripMenuItem->Text = L"格式设置";
 			this->格式设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::格式设置ToolStripMenuItem_DropDownItemClicked);
 			this->格式设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -530,13 +527,13 @@ namespace AGMS {
 			// 曲线图ToolStripMenuItem
 			// 
 			this->曲线图ToolStripMenuItem->Name = L"曲线图ToolStripMenuItem";
-			this->曲线图ToolStripMenuItem->Size = System::Drawing::Size(129, 26);
+			this->曲线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
 			this->曲线图ToolStripMenuItem->Text = L"曲线图";
 			// 
 			// 折线图ToolStripMenuItem
 			// 
 			this->折线图ToolStripMenuItem->Name = L"折线图ToolStripMenuItem";
-			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(129, 26);
+			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
 			this->折线图ToolStripMenuItem->Text = L"折线图";
 			// 
 			// 帮助ToolStripMenuItem
@@ -546,21 +543,21 @@ namespace AGMS {
 					this->关于ToolStripMenuItem
 			});
 			this->帮助ToolStripMenuItem->Name = L"帮助ToolStripMenuItem";
-			this->帮助ToolStripMenuItem->Size = System::Drawing::Size(51, 24);
+			this->帮助ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
 			this->帮助ToolStripMenuItem->Text = L"帮助";
 			this->帮助ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 系统介绍ToolStripMenuItem
 			// 
 			this->系统介绍ToolStripMenuItem->Name = L"系统介绍ToolStripMenuItem";
-			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->系统介绍ToolStripMenuItem->Text = L"系统介绍";
 			this->系统介绍ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关于ToolStripMenuItem
 			// 
 			this->关于ToolStripMenuItem->Name = L"关于ToolStripMenuItem";
-			this->关于ToolStripMenuItem->Size = System::Drawing::Size(144, 26);
+			this->关于ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关于ToolStripMenuItem->Text = L"关于";
 			this->关于ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -574,9 +571,9 @@ namespace AGMS {
 					this->复制CToolStripButton, this->粘贴PToolStripButton, this->toolStripSeparator1, this->toolStripButton1, this->toolStripButton2,
 					this->toolStripButton3, this->toolStripButton4
 			});
-			this->toolStrip1->Location = System::Drawing::Point(0, 28);
+			this->toolStrip1->Location = System::Drawing::Point(0, 25);
 			this->toolStrip1->Name = L"toolStrip1";
-			this->toolStrip1->Size = System::Drawing::Size(1775, 25);
+			this->toolStrip1->Size = System::Drawing::Size(1302, 25);
 			this->toolStrip1->TabIndex = 1;
 			this->toolStrip1->Text = L"toolStrip1";
 			// 
@@ -713,23 +710,22 @@ namespace AGMS {
 					this->toolStripStatusLabel2, this->toolStripProgressBar1, this->toolStripStatusLabel3, this->toolStripStatusLabel4, this->toolStripStatusLabel5,
 					this->toolStripStatusLabel6
 			});
-			this->statusStrip1->Location = System::Drawing::Point(0, 794);
+			this->statusStrip1->Location = System::Drawing::Point(0, 633);
 			this->statusStrip1->Name = L"statusStrip1";
-			this->statusStrip1->Padding = System::Windows::Forms::Padding(1, 0, 19, 0);
-			this->statusStrip1->Size = System::Drawing::Size(1775, 48);
+			this->statusStrip1->Size = System::Drawing::Size(1302, 48);
 			this->statusStrip1->TabIndex = 2;
 			this->statusStrip1->Text = L"statusStrip1";
 			// 
 			// toolStripStatusLabel1
 			// 
 			this->toolStripStatusLabel1->Name = L"toolStripStatusLabel1";
-			this->toolStripStatusLabel1->Size = System::Drawing::Size(167, 43);
+			this->toolStripStatusLabel1->Size = System::Drawing::Size(131, 43);
 			this->toolStripStatusLabel1->Text = L"toolStripStatusLabel1";
 			// 
 			// toolStripStatusLabel2
 			// 
 			this->toolStripStatusLabel2->Name = L"toolStripStatusLabel2";
-			this->toolStripStatusLabel2->Size = System::Drawing::Size(167, 43);
+			this->toolStripStatusLabel2->Size = System::Drawing::Size(131, 43);
 			this->toolStripStatusLabel2->Text = L"toolStripStatusLabel2";
 			// 
 			// toolStripProgressBar1
@@ -738,14 +734,14 @@ namespace AGMS {
 			this->toolStripProgressBar1->Maximum = 60;
 			this->toolStripProgressBar1->Name = L"toolStripProgressBar1";
 			this->toolStripProgressBar1->RightToLeftLayout = true;
-			this->toolStripProgressBar1->Size = System::Drawing::Size(133, 42);
+			this->toolStripProgressBar1->Size = System::Drawing::Size(100, 42);
 			this->toolStripProgressBar1->Step = 1;
 			this->toolStripProgressBar1->Click += gcnew System::EventHandler(this, &Form1::toolStripProgressBar1_Click);
 			// 
 			// toolStripStatusLabel3
 			// 
 			this->toolStripStatusLabel3->Name = L"toolStripStatusLabel3";
-			this->toolStripStatusLabel3->Size = System::Drawing::Size(785, 43);
+			this->toolStripStatusLabel3->Size = System::Drawing::Size(422, 43);
 			this->toolStripStatusLabel3->Spring = true;
 			// 
 			// toolStripStatusLabel4
@@ -801,11 +797,9 @@ namespace AGMS {
 			this->实时数据->Controls->Add(this->chart1);
 			this->实时数据->Font = (gcnew System::Drawing::Font(L"宋体", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->实时数据->Location = System::Drawing::Point(16, 84);
-			this->实时数据->Margin = System::Windows::Forms::Padding(4);
+			this->实时数据->Location = System::Drawing::Point(12, 67);
 			this->实时数据->Name = L"实时数据";
-			this->实时数据->Padding = System::Windows::Forms::Padding(4);
-			this->实时数据->Size = System::Drawing::Size(1096, 700);
+			this->实时数据->Size = System::Drawing::Size(822, 560);
 			this->实时数据->TabIndex = 3;
 			this->实时数据->TabStop = false;
 			this->实时数据->Text = L"实时数据";
@@ -814,10 +808,9 @@ namespace AGMS {
 			// 
 			this->button4->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button4->Location = System::Drawing::Point(288, 661);
-			this->button4->Margin = System::Windows::Forms::Padding(4);
+			this->button4->Location = System::Drawing::Point(216, 529);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(85, 30);
+			this->button4->Size = System::Drawing::Size(64, 24);
 			this->button4->TabIndex = 5;
 			this->button4->Text = L"显示";
 			this->button4->UseVisualStyleBackColor = true;
@@ -827,10 +820,9 @@ namespace AGMS {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label4->Location = System::Drawing::Point(168, 668);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(126, 534);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(82, 24);
+			this->label4->Size = System::Drawing::Size(66, 19);
 			this->label4->TabIndex = 4;
 			this->label4->Text = L"振荡度";
 			this->label4->Click += gcnew System::EventHandler(this, &Form1::label4_Click);
@@ -839,10 +831,9 @@ namespace AGMS {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button3->Location = System::Drawing::Point(816, 661);
-			this->button3->Margin = System::Windows::Forms::Padding(4);
+			this->button3->Location = System::Drawing::Point(612, 529);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(85, 30);
+			this->button3->Size = System::Drawing::Size(64, 24);
 			this->button3->TabIndex = 5;
 			this->button3->Text = L"显示";
 			this->button3->UseVisualStyleBackColor = true;
@@ -852,10 +843,9 @@ namespace AGMS {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label3->Location = System::Drawing::Point(677, 668);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(508, 534);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(106, 24);
+			this->label3->Size = System::Drawing::Size(85, 19);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"有害气体";
 			// 
@@ -863,10 +853,9 @@ namespace AGMS {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button2->Location = System::Drawing::Point(816, 334);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(612, 267);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(85, 30);
+			this->button2->Size = System::Drawing::Size(64, 24);
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"显示";
 			this->button2->UseVisualStyleBackColor = true;
@@ -876,10 +865,9 @@ namespace AGMS {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label2->Location = System::Drawing::Point(696, 335);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(522, 268);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(58, 24);
+			this->label2->Size = System::Drawing::Size(47, 19);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"湿度";
 			// 
@@ -887,10 +875,9 @@ namespace AGMS {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button1->Location = System::Drawing::Point(288, 332);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(216, 266);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(85, 30);
+			this->button1->Size = System::Drawing::Size(64, 24);
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"显示";
 			this->button1->UseVisualStyleBackColor = true;
@@ -900,10 +887,9 @@ namespace AGMS {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label1->Location = System::Drawing::Point(168, 334);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(126, 267);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(58, 24);
+			this->label1->Size = System::Drawing::Size(47, 19);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"温度";
 			// 
@@ -914,15 +900,14 @@ namespace AGMS {
 			legend1->Enabled = false;
 			legend1->Name = L"Legend1";
 			this->chart4->Legends->Add(legend1);
-			this->chart4->Location = System::Drawing::Point(25, 388);
-			this->chart4->Margin = System::Windows::Forms::Padding(4);
+			this->chart4->Location = System::Drawing::Point(19, 310);
 			this->chart4->Name = L"chart4";
 			series1->ChartArea = L"ChartArea1";
 			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
 			series1->Legend = L"Legend1";
 			series1->Name = L"Series1";
 			this->chart4->Series->Add(series1);
-			this->chart4->Size = System::Drawing::Size(477, 250);
+			this->chart4->Size = System::Drawing::Size(358, 200);
 			this->chart4->TabIndex = 3;
 			this->chart4->Text = L"chart4";
 			// 
@@ -933,15 +918,14 @@ namespace AGMS {
 			legend2->Enabled = false;
 			legend2->Name = L"Legend1";
 			this->chart3->Legends->Add(legend2);
-			this->chart3->Location = System::Drawing::Point(552, 388);
-			this->chart3->Margin = System::Windows::Forms::Padding(4);
+			this->chart3->Location = System::Drawing::Point(414, 310);
 			this->chart3->Name = L"chart3";
 			series2->ChartArea = L"ChartArea1";
 			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
 			series2->Legend = L"Legend1";
 			series2->Name = L"Series1";
 			this->chart3->Series->Add(series2);
-			this->chart3->Size = System::Drawing::Size(477, 250);
+			this->chart3->Size = System::Drawing::Size(358, 200);
 			this->chart3->TabIndex = 2;
 			this->chart3->Text = L"chart3";
 			// 
@@ -955,15 +939,14 @@ namespace AGMS {
 			legend3->Enabled = false;
 			legend3->Name = L"Legend1";
 			this->chart2->Legends->Add(legend3);
-			this->chart2->Location = System::Drawing::Point(552, 61);
-			this->chart2->Margin = System::Windows::Forms::Padding(4);
+			this->chart2->Location = System::Drawing::Point(414, 49);
 			this->chart2->Name = L"chart2";
 			series3->ChartArea = L"ChartArea1";
 			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
 			series3->Legend = L"Legend1";
 			series3->Name = L"Series1";
 			this->chart2->Series->Add(series3);
-			this->chart2->Size = System::Drawing::Size(477, 250);
+			this->chart2->Size = System::Drawing::Size(358, 200);
 			this->chart2->TabIndex = 1;
 			this->chart2->Text = L"chart2";
 			// 
@@ -974,25 +957,23 @@ namespace AGMS {
 			legend4->Enabled = false;
 			legend4->Name = L"Legend1";
 			this->chart1->Legends->Add(legend4);
-			this->chart1->Location = System::Drawing::Point(25, 61);
-			this->chart1->Margin = System::Windows::Forms::Padding(4);
+			this->chart1->Location = System::Drawing::Point(19, 49);
 			this->chart1->Name = L"chart1";
 			series4->ChartArea = L"ChartArea1";
 			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
 			series4->Legend = L"Legend1";
 			series4->Name = L"Series1";
 			this->chart1->Series->Add(series4);
-			this->chart1->Size = System::Drawing::Size(477, 250);
+			this->chart1->Size = System::Drawing::Size(358, 200);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(1211, 84);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
+			this->pictureBox1->Location = System::Drawing::Point(908, 67);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(461, 304);
+			this->pictureBox1->Size = System::Drawing::Size(346, 243);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 4;
 			this->pictureBox1->TabStop = false;
@@ -1002,21 +983,19 @@ namespace AGMS {
 			this->listBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 20;
-			this->listBox1->Location = System::Drawing::Point(1211, 630);
-			this->listBox1->Margin = System::Windows::Forms::Padding(4);
+			this->listBox1->ItemHeight = 16;
+			this->listBox1->Location = System::Drawing::Point(908, 504);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(476, 144);
+			this->listBox1->Size = System::Drawing::Size(358, 116);
 			this->listBox1->TabIndex = 5;
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号", L"2号", L"3号" });
-			this->comboBox1->Location = System::Drawing::Point(1475, 458);
-			this->comboBox1->Margin = System::Windows::Forms::Padding(4);
+			this->comboBox1->Location = System::Drawing::Point(1106, 366);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(212, 23);
+			this->comboBox1->Size = System::Drawing::Size(160, 20);
 			this->comboBox1->Sorted = true;
 			this->comboBox1->TabIndex = 6;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::comboBox1_SelectedIndexChanged);
@@ -1026,10 +1005,9 @@ namespace AGMS {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label6->Location = System::Drawing::Point(1471, 424);
-			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Location = System::Drawing::Point(1103, 339);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(129, 20);
+			this->label6->Size = System::Drawing::Size(104, 16);
 			this->label6->TabIndex = 7;
 			this->label6->Text = L"选择快递车辆";
 			// 
@@ -1037,10 +1015,9 @@ namespace AGMS {
 			// 
 			this->button5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button5->Location = System::Drawing::Point(1475, 501);
-			this->button5->Margin = System::Windows::Forms::Padding(4);
+			this->button5->Location = System::Drawing::Point(1106, 401);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(213, 71);
+			this->button5->Size = System::Drawing::Size(160, 57);
 			this->button5->TabIndex = 8;
 			this->button5->Text = L"查询历史数据";
 			this->button5->UseVisualStyleBackColor = true;
@@ -1053,37 +1030,32 @@ namespace AGMS {
 			this->groupBox1->Controls->Add(this->textBox1);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"微软雅黑", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox1->Location = System::Drawing::Point(1199, 395);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
+			this->groupBox1->Location = System::Drawing::Point(899, 316);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
-			this->groupBox1->Size = System::Drawing::Size(243, 204);
+			this->groupBox1->Size = System::Drawing::Size(182, 163);
 			this->groupBox1->TabIndex = 9;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"环境评定";
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(12, 145);
-			this->textBox3->Margin = System::Windows::Forms::Padding(4);
+			this->textBox3->Location = System::Drawing::Point(9, 116);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(209, 31);
+			this->textBox3->Size = System::Drawing::Size(158, 26);
 			this->textBox3->TabIndex = 2;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(12, 89);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4);
+			this->textBox2->Location = System::Drawing::Point(9, 71);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(209, 31);
+			this->textBox2->Size = System::Drawing::Size(158, 26);
 			this->textBox2->TabIndex = 1;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(12, 31);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
+			this->textBox1->Location = System::Drawing::Point(9, 25);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(209, 31);
+			this->textBox1->Size = System::Drawing::Size(158, 26);
 			this->textBox1->TabIndex = 0;
 			// 
 			// notifyIcon1
@@ -1099,13 +1071,13 @@ namespace AGMS {
 			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->contextMenuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->退出ToolStripMenuItem });
 			this->contextMenuStrip1->Name = L"contextMenuStrip1";
-			this->contextMenuStrip1->Size = System::Drawing::Size(109, 28);
+			this->contextMenuStrip1->Size = System::Drawing::Size(101, 26);
 			this->contextMenuStrip1->Opening += gcnew System::ComponentModel::CancelEventHandler(this, &Form1::contextMenuStrip1_Opening);
 			// 
 			// 退出ToolStripMenuItem
 			// 
 			this->退出ToolStripMenuItem->Name = L"退出ToolStripMenuItem";
-			this->退出ToolStripMenuItem->Size = System::Drawing::Size(108, 24);
+			this->退出ToolStripMenuItem->Size = System::Drawing::Size(100, 22);
 			this->退出ToolStripMenuItem->Text = L"退出";
 			this->退出ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::退出ToolStripMenuItem_Click);
 			// 
@@ -1118,10 +1090,9 @@ namespace AGMS {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label5->Location = System::Drawing::Point(1205, 602);
-			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Location = System::Drawing::Point(904, 482);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(130, 24);
+			this->label5->Size = System::Drawing::Size(104, 19);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"数据接收区";
 			// 
@@ -1132,26 +1103,28 @@ namespace AGMS {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(1457, 592);
+			this->label7->Location = System::Drawing::Point(1093, 474);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(143, 15);
+			this->label7->Size = System::Drawing::Size(113, 12);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"接收时间间隔（ms）";
 			this->label7->Click += gcnew System::EventHandler(this, &Form1::label7_Click);
 			// 
 			// numericUpDown1
 			// 
-			this->numericUpDown1->Location = System::Drawing::Point(1606, 590);
+			this->numericUpDown1->Location = System::Drawing::Point(1204, 472);
+			this->numericUpDown1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5000, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(120, 25);
+			this->numericUpDown1->Size = System::Drawing::Size(90, 21);
 			this->numericUpDown1->TabIndex = 12;
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1775, 842);
+			this->ClientSize = System::Drawing::Size(1302, 681);
 			this->Controls->Add(this->numericUpDown1);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label5);
@@ -1167,7 +1140,6 @@ namespace AGMS {
 			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Form1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"快递运输环境监测系统";
@@ -1237,7 +1209,7 @@ namespace AGMS {
 		else
 
 			this->toolStripStatusLabel6->Text = "";
-		this->timer1->Interval = Int32::Parse(this->numericUpDown1->Text);
+		//this->timer1->Interval = Int32::Parse(this->numericUpDown1->Text);
 		data_receivce();
 
 	}
@@ -1285,6 +1257,13 @@ namespace AGMS {
 
 					//LocationForm::textBox1->Text = split[12];
 					//LocationForm::textBox1->Text = split[13];
+
+					valuechange::经度1 = split[4];
+					valuechange::纬度1 = split[5];
+					valuechange::经度2 = split[10];
+					valuechange::纬度2 = split[11];
+					valuechange::经度3 = split[16];
+					valuechange::纬度3 = split[17];
 
 					con1->Open();    // 打开连接
 					sql1 = "INSERT INTO 1号车数据表([温度],[湿度],[震荡度],[有害气体],[日期时间],[对应车辆]) VALUES( " + split[0] + " , " + split[1] + " , " + split[2] + ", " + split[3] + ",Now() , '1号' )";
@@ -1609,7 +1588,7 @@ namespace AGMS {
 						}
 					}
 
-					if (LocationForm::comboBox1->Items->Count > 0){
+					/*if (LocationForm::comboBox1->Items->Count > 0){
 						int index = LocationForm::comboBox1->SelectedIndex;
 						switch (index)
 						{
@@ -1632,7 +1611,7 @@ namespace AGMS {
 							break;
 						}
 						}
-					}
+					}*/
 
 					if (TempForm::comboBox1->Items->Count > 0){
 						int index1 = TempForm::comboBox1->SelectedIndex;
@@ -1673,6 +1652,45 @@ namespace AGMS {
 						case 0:FForm::textBox1->Text = split[3]; break;
 						case 1:FForm::textBox1->Text = split[9]; break;
 						case 2:FForm::textBox1->Text = split[15]; break;
+						}
+					if (LocationForm::comboBox1->Items->Count > 0)
+						{
+							int index = LocationForm::comboBox1->SelectedIndex;
+							double m, n;
+							switch (index)
+							{
+							case 0:
+							{
+									  m = Double::Parse(valuechange::经度1);
+									  n = Double::Parse(valuechange::纬度1);
+									  LocationForm::textBox1->Text = m.ToString();
+									  LocationForm::textBox2->Text = n.ToString();
+									  array<System::Object^>^a = gcnew array<System::Object^>{m, n};
+									  LocationForm::webBrowser1->Document->InvokeScript("setLocation", a);
+								break;	
+							}
+							case 1:
+							{
+									  m = Double::Parse(valuechange::经度2);
+									  n = Double::Parse(valuechange::纬度2);
+									  LocationForm::textBox1->Text = m.ToString();
+									  LocationForm::textBox2->Text = n.ToString();
+									  array<System::Object^>^a = gcnew array<System::Object^>{m, n};
+									  LocationForm::webBrowser1->Document->InvokeScript("setLocation", a);
+									  break;
+							}
+							case 2:
+							{
+									  m = Double::Parse(valuechange::经度3);
+									  n = Double::Parse(valuechange::纬度3);
+									  LocationForm::textBox1->Text = m.ToString();
+									  LocationForm::textBox2->Text = n.ToString();
+									  array<System::Object^>^a = gcnew array<System::Object^>{m, n};
+									  LocationForm::webBrowser1->Document->InvokeScript("setLocation", a);
+									  break;
+							}
+							}
+
 						}
 					}
 				}
