@@ -675,7 +675,7 @@ namespace AGMS {
 
 				 for each (DataColumn^ col in table->Columns)
 
-					 listView1->Columns->Add(col->Caption, 80);
+					 listView1->Columns->Add(col->Caption, 120);
 
 	}
 
@@ -810,7 +810,7 @@ namespace AGMS {
 				 table1->PrimaryKey = gcnew array<DataColumn^>{ table1->Columns[0] };
 				 binding1 = gcnew BindingSource(dataSet, strTableName);
 				 DispView(table1);
-				 this->listView1->AutoResizeColumns(ColumnHeaderAutoResizeStyle::ColumnContent);
+				 this->listView1->AutoResizeColumn(5,ColumnHeaderAutoResizeStyle::ColumnContent);
 				 //	 this->dataGridView1->DataSource = dataSet1;
 
 				 //	 this->dataGridView1->DataMember = "TestInfo";

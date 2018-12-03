@@ -54,6 +54,17 @@ namespace AGMS {
 
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Button^  button2;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown2;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown4;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown6;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown8;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown9;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown10;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown11;
+	private: System::Windows::Forms::NumericUpDown^  numericUpDown12;
 
 	private:
 		/// <summary>
@@ -79,10 +90,29 @@ namespace AGMS {
 			this->numericUpDown7 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown4 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown6 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown8 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown9 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown10 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown11 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown12 = (gcnew System::Windows::Forms::NumericUpDown());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown9))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown11))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown12))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -102,7 +132,7 @@ namespace AGMS {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label2->Location = System::Drawing::Point(110, 97);
+			this->label2->Location = System::Drawing::Point(22, 97);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(79, 20);
@@ -114,7 +144,7 @@ namespace AGMS {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label3->Location = System::Drawing::Point(120, 151);
+			this->label3->Location = System::Drawing::Point(37, 151);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(49, 20);
@@ -126,7 +156,7 @@ namespace AGMS {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label4->Location = System::Drawing::Point(120, 206);
+			this->label4->Location = System::Drawing::Point(37, 205);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(49, 20);
@@ -138,7 +168,7 @@ namespace AGMS {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label5->Location = System::Drawing::Point(97, 254);
+			this->label5->Location = System::Drawing::Point(13, 259);
 			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(109, 20);
@@ -147,41 +177,41 @@ namespace AGMS {
 			// 
 			// numericUpDown1
 			// 
-			this->numericUpDown1->Location = System::Drawing::Point(223, 146);
+			this->numericUpDown1->Location = System::Drawing::Point(124, 155);
 			this->numericUpDown1->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(136, 25);
+			this->numericUpDown1->Size = System::Drawing::Size(95, 25);
 			this->numericUpDown1->TabIndex = 2;
 			// 
 			// numericUpDown3
 			// 
-			this->numericUpDown3->Location = System::Drawing::Point(223, 92);
+			this->numericUpDown3->Location = System::Drawing::Point(124, 99);
 			this->numericUpDown3->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown3->Name = L"numericUpDown3";
-			this->numericUpDown3->Size = System::Drawing::Size(136, 25);
+			this->numericUpDown3->Size = System::Drawing::Size(95, 25);
 			this->numericUpDown3->TabIndex = 2;
 			// 
 			// numericUpDown5
 			// 
-			this->numericUpDown5->Location = System::Drawing::Point(223, 200);
+			this->numericUpDown5->Location = System::Drawing::Point(124, 202);
 			this->numericUpDown5->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown5->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown5->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->numericUpDown5->Name = L"numericUpDown5";
-			this->numericUpDown5->Size = System::Drawing::Size(136, 25);
+			this->numericUpDown5->Size = System::Drawing::Size(95, 25);
 			this->numericUpDown5->TabIndex = 2;
 			// 
 			// numericUpDown7
 			// 
-			this->numericUpDown7->Location = System::Drawing::Point(223, 254);
+			this->numericUpDown7->Location = System::Drawing::Point(124, 256);
 			this->numericUpDown7->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown7->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown7->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->numericUpDown7->Name = L"numericUpDown7";
-			this->numericUpDown7->Size = System::Drawing::Size(136, 25);
+			this->numericUpDown7->Size = System::Drawing::Size(95, 25);
 			this->numericUpDown7->TabIndex = 2;
 			// 
 			// button1
@@ -206,12 +236,122 @@ namespace AGMS {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &SetForm::button2_Click);
 			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(142, 64);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(45, 15);
+			this->label6->TabIndex = 8;
+			this->label6->Text = L"1号车";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(289, 64);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(45, 15);
+			this->label7->TabIndex = 9;
+			this->label7->Text = L"2号车";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(430, 64);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(45, 15);
+			this->label8->TabIndex = 10;
+			this->label8->Text = L"3号车";
+			// 
+			// numericUpDown2
+			// 
+			this->numericUpDown2->Location = System::Drawing::Point(264, 200);
+			this->numericUpDown2->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown2->Name = L"numericUpDown2";
+			this->numericUpDown2->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown2->TabIndex = 11;
+			// 
+			// numericUpDown4
+			// 
+			this->numericUpDown4->Location = System::Drawing::Point(264, 151);
+			this->numericUpDown4->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown4->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown4->Name = L"numericUpDown4";
+			this->numericUpDown4->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown4->TabIndex = 12;
+			// 
+			// numericUpDown6
+			// 
+			this->numericUpDown6->Location = System::Drawing::Point(264, 254);
+			this->numericUpDown6->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown6->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown6->Name = L"numericUpDown6";
+			this->numericUpDown6->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown6->TabIndex = 13;
+			// 
+			// numericUpDown8
+			// 
+			this->numericUpDown8->Location = System::Drawing::Point(264, 99);
+			this->numericUpDown8->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown8->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown8->Name = L"numericUpDown8";
+			this->numericUpDown8->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown8->TabIndex = 14;
+			// 
+			// numericUpDown9
+			// 
+			this->numericUpDown9->Location = System::Drawing::Point(402, 256);
+			this->numericUpDown9->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown9->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown9->Name = L"numericUpDown9";
+			this->numericUpDown9->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown9->TabIndex = 15;
+			// 
+			// numericUpDown10
+			// 
+			this->numericUpDown10->Location = System::Drawing::Point(402, 205);
+			this->numericUpDown10->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown10->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown10->Name = L"numericUpDown10";
+			this->numericUpDown10->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown10->TabIndex = 16;
+			// 
+			// numericUpDown11
+			// 
+			this->numericUpDown11->Location = System::Drawing::Point(402, 151);
+			this->numericUpDown11->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown11->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown11->Name = L"numericUpDown11";
+			this->numericUpDown11->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown11->TabIndex = 17;
+			// 
+			// numericUpDown12
+			// 
+			this->numericUpDown12->Location = System::Drawing::Point(402, 97);
+			this->numericUpDown12->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown12->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown12->Name = L"numericUpDown12";
+			this->numericUpDown12->Size = System::Drawing::Size(95, 25);
+			this->numericUpDown12->TabIndex = 18;
+			// 
 			// SetForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::MenuBar;
 			this->ClientSize = System::Drawing::Size(523, 411);
+			this->Controls->Add(this->numericUpDown12);
+			this->Controls->Add(this->numericUpDown11);
+			this->Controls->Add(this->numericUpDown10);
+			this->Controls->Add(this->numericUpDown9);
+			this->Controls->Add(this->numericUpDown8);
+			this->Controls->Add(this->numericUpDown6);
+			this->Controls->Add(this->numericUpDown4);
+			this->Controls->Add(this->numericUpDown2);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->numericUpDown7);
@@ -230,6 +370,14 @@ namespace AGMS {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown8))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown9))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown10))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown11))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown12))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -280,8 +428,19 @@ namespace AGMS {
 
 	private: System::Void send_click(System::Object^  sender, System::EventArgs^  e) {
 
-		String ^str = this->numericUpDown3->Text->Trim() + ";" + this->numericUpDown1->Text->Trim() + ";" + this->numericUpDown5->Text->Trim() + ";" + this->numericUpDown7->Text->Trim();
-
+		String ^str = this->numericUpDown3->Text->Trim() + ";"
+			+ this->numericUpDown1->Text->Trim() + ";"
+			+ this->numericUpDown5->Text->Trim() + ";"
+			+ this->numericUpDown7->Text->Trim() + ";"
+			+ this->numericUpDown8->Text->Trim() + ";"
+			+ this->numericUpDown4->Text->Trim() + ";"
+			+ this->numericUpDown2->Text->Trim() + ";"
+			+ this->numericUpDown6->Text->Trim() + ";"
+			+ this->numericUpDown12->Text->Trim() + ";"
+			+ this->numericUpDown11->Text->Trim() + ";"
+			+ this->numericUpDown10->Text->Trim() + ";"
+			+ this->numericUpDown9->Text->Trim() + ";";
+						
 		if (dlg->com->IsOpen)
 
 		{
