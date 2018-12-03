@@ -473,7 +473,8 @@ namespace AGMS {
 				 Fx = float::Parse(this->textBox8->Text);
 				 Fy = float::Parse(this->textBox7->Text);
 				 Fcolor = this->comboBox4->SelectedIndex;
-				 this->DialogResult == Windows::Forms::DialogResult::OK;
+				 this->DialogResult = Windows::Forms::DialogResult::OK;
+				 this->Close();
 	}
 	};
 }
