@@ -51,12 +51,12 @@ namespace AGMS {
 	private: System::Windows::Forms::Label^  label4;
 
 	private: System::Windows::Forms::ComboBox^  comboBox2;
-	private: System::Windows::Forms::CheckBox^  checkBox1;
+
 	private: System::Windows::Forms::GroupBox^  groupBox2;
-	private: System::Windows::Forms::CheckBox^  checkBox4;
-	private: System::Windows::Forms::CheckBox^  checkBox3;
-	private: System::Windows::Forms::CheckBox^  checkBox2;
-	private: System::Windows::Forms::CheckBox^  checkBox5;
+
+
+
+
 	private: System::Windows::Forms::GroupBox^  groupBox3;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::Label^  label3;
@@ -89,6 +89,11 @@ namespace AGMS {
 	private: System::Windows::Forms::Label^  label12;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  label13;
+	private: System::Windows::Forms::RadioButton^  radioButton5;
+	private: System::Windows::Forms::RadioButton^  radioButton4;
+	private: System::Windows::Forms::RadioButton^  radioButton3;
+	private: System::Windows::Forms::RadioButton^  radioButton2;
+	private: System::Windows::Forms::RadioButton^  radioButton1;
 
 	private:
 		/// <summary>
@@ -118,12 +123,12 @@ namespace AGMS {
 			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->checkBox5 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox4 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
-			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
+			this->radioButton5 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -186,11 +191,11 @@ namespace AGMS {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"宋体", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
 			this->groupBox1->ForeColor = System::Drawing::Color::Green;
-			this->groupBox1->Location = System::Drawing::Point(52, 100);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->groupBox1->Location = System::Drawing::Point(39, 80);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->groupBox1->Size = System::Drawing::Size(341, 197);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox1->Size = System::Drawing::Size(441, 152);
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"选择查询时间范围";
@@ -199,18 +204,20 @@ namespace AGMS {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(13, 104);
+			this->label2->Location = System::Drawing::Point(10, 83);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(106, 24);
+			this->label2->Size = System::Drawing::Size(85, 19);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"结束时间";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(13, 29);
+			this->label1->Location = System::Drawing::Point(10, 23);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(106, 24);
+			this->label1->Size = System::Drawing::Size(85, 19);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"开始时间";
 			this->label1->Click += gcnew System::EventHandler(this, &HistorySearch::label1_Click);
@@ -219,20 +226,20 @@ namespace AGMS {
 			// 
 			this->dateTimePicker2->CustomFormat = L"yyyy/MM/dd HH:mm:ss";
 			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker2->Location = System::Drawing::Point(6, 130);
-			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->dateTimePicker2->Location = System::Drawing::Point(62, 104);
+			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(2);
 			this->dateTimePicker2->Name = L"dateTimePicker2";
-			this->dateTimePicker2->Size = System::Drawing::Size(280, 34);
+			this->dateTimePicker2->Size = System::Drawing::Size(294, 28);
 			this->dateTimePicker2->TabIndex = 1;
 			// 
 			// dateTimePicker1
 			// 
 			this->dateTimePicker1->CustomFormat = L"yyyy/MM/dd HH:mm:ss";
 			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Custom;
-			this->dateTimePicker1->Location = System::Drawing::Point(6, 55);
-			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->dateTimePicker1->Location = System::Drawing::Point(62, 44);
+			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(2);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(273, 34);
+			this->dateTimePicker1->Size = System::Drawing::Size(294, 28);
 			this->dateTimePicker1->TabIndex = 0;
 			// 
 			// listView1
@@ -242,11 +249,11 @@ namespace AGMS {
 			this->listView1->FullRowSelect = true;
 			this->listView1->GridLines = true;
 			this->listView1->HideSelection = false;
-			this->listView1->Location = System::Drawing::Point(749, 85);
-			this->listView1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->listView1->Location = System::Drawing::Point(566, 80);
+			this->listView1->Margin = System::Windows::Forms::Padding(2);
 			this->listView1->MultiSelect = false;
 			this->listView1->Name = L"listView1";
-			this->listView1->Size = System::Drawing::Size(869, 513);
+			this->listView1->Size = System::Drawing::Size(620, 317);
 			this->listView1->TabIndex = 7;
 			this->listView1->UseCompatibleStateImageBehavior = false;
 			this->listView1->View = System::Windows::Forms::View::Details;
@@ -256,103 +263,99 @@ namespace AGMS {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label4->Location = System::Drawing::Point(711, 34);
+			this->label4->Location = System::Drawing::Point(705, 33);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(114, 20);
+			this->label4->Size = System::Drawing::Size(93, 16);
 			this->label4->TabIndex = 5;
-			this->label4->Text = L"历史数据表";
+			this->label4->Text = L"选择数据表";
 			// 
 			// comboBox2
 			// 
 			this->comboBox2->Font = (gcnew System::Drawing::Font(L"宋体", 12));
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号车数据表", L"2号车数据表", L"3号车数据表" });
-			this->comboBox2->Location = System::Drawing::Point(951, 34);
-			this->comboBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->comboBox2->Location = System::Drawing::Point(826, 30);
+			this->comboBox2->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(177, 28);
+			this->comboBox2->Size = System::Drawing::Size(134, 24);
 			this->comboBox2->TabIndex = 8;
 			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &HistorySearch::comboBox2_SelectedIndexChanged);
-			// 
-			// checkBox1
-			// 
-			this->checkBox1->AutoSize = true;
-			this->checkBox1->Checked = true;
-			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->checkBox1->Location = System::Drawing::Point(6, 31);
-			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(115, 24);
-			this->checkBox1->TabIndex = 9;
-			this->checkBox1->Text = L"日期时间";
-			this->checkBox1->UseVisualStyleBackColor = true;
 			// 
 			// groupBox2
 			// 
 			this->groupBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->groupBox2->Controls->Add(this->checkBox5);
-			this->groupBox2->Controls->Add(this->checkBox4);
-			this->groupBox2->Controls->Add(this->checkBox3);
-			this->groupBox2->Controls->Add(this->checkBox2);
-			this->groupBox2->Controls->Add(this->checkBox1);
+			this->groupBox2->Controls->Add(this->radioButton5);
+			this->groupBox2->Controls->Add(this->radioButton4);
+			this->groupBox2->Controls->Add(this->radioButton3);
+			this->groupBox2->Controls->Add(this->radioButton2);
+			this->groupBox2->Controls->Add(this->radioButton1);
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox2->Location = System::Drawing::Point(52, 12);
+			this->groupBox2->Location = System::Drawing::Point(39, 10);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(545, 72);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox2->Size = System::Drawing::Size(441, 57);
 			this->groupBox2->TabIndex = 10;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"请选择查询特征值";
 			// 
-			// checkBox5
+			// radioButton5
 			// 
-			this->checkBox5->AutoSize = true;
-			this->checkBox5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->checkBox5->Location = System::Drawing::Point(395, 31);
-			this->checkBox5->Name = L"checkBox5";
-			this->checkBox5->Size = System::Drawing::Size(115, 24);
-			this->checkBox5->TabIndex = 13;
-			this->checkBox5->Text = L"有害气体";
-			this->checkBox5->UseVisualStyleBackColor = true;
+			this->radioButton5->AutoSize = true;
+			this->radioButton5->Location = System::Drawing::Point(327, 24);
+			this->radioButton5->Name = L"radioButton5";
+			this->radioButton5->Size = System::Drawing::Size(94, 20);
+			this->radioButton5->TabIndex = 23;
+			this->radioButton5->TabStop = true;
+			this->radioButton5->Text = L"有害气体";
+			this->radioButton5->UseVisualStyleBackColor = true;
 			// 
-			// checkBox4
+			// radioButton4
 			// 
-			this->checkBox4->AutoSize = true;
-			this->checkBox4->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->checkBox4->Location = System::Drawing::Point(295, 31);
-			this->checkBox4->Name = L"checkBox4";
-			this->checkBox4->Size = System::Drawing::Size(94, 24);
-			this->checkBox4->TabIndex = 12;
-			this->checkBox4->Text = L"震荡度";
-			this->checkBox4->UseVisualStyleBackColor = true;
+			this->radioButton4->AutoSize = true;
+			this->radioButton4->Location = System::Drawing::Point(244, 24);
+			this->radioButton4->Name = L"radioButton4";
+			this->radioButton4->Size = System::Drawing::Size(77, 20);
+			this->radioButton4->TabIndex = 22;
+			this->radioButton4->TabStop = true;
+			this->radioButton4->Text = L"振荡度";
+			this->radioButton4->UseVisualStyleBackColor = true;
 			// 
-			// checkBox3
+			// radioButton3
 			// 
-			this->checkBox3->AutoSize = true;
-			this->checkBox3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->checkBox3->Location = System::Drawing::Point(216, 31);
-			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(73, 24);
-			this->checkBox3->TabIndex = 11;
-			this->checkBox3->Text = L"湿度";
-			this->checkBox3->UseVisualStyleBackColor = true;
+			this->radioButton3->AutoSize = true;
+			this->radioButton3->Location = System::Drawing::Point(178, 24);
+			this->radioButton3->Name = L"radioButton3";
+			this->radioButton3->Size = System::Drawing::Size(60, 20);
+			this->radioButton3->TabIndex = 21;
+			this->radioButton3->TabStop = true;
+			this->radioButton3->Text = L"湿度";
+			this->radioButton3->UseVisualStyleBackColor = true;
 			// 
-			// checkBox2
+			// radioButton2
 			// 
-			this->checkBox2->AutoSize = true;
-			this->checkBox2->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->checkBox2->Location = System::Drawing::Point(117, 31);
-			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(73, 24);
-			this->checkBox2->TabIndex = 11;
-			this->checkBox2->Text = L"温度";
-			this->checkBox2->UseVisualStyleBackColor = true;
+			this->radioButton2->AutoSize = true;
+			this->radioButton2->Location = System::Drawing::Point(112, 24);
+			this->radioButton2->Name = L"radioButton2";
+			this->radioButton2->Size = System::Drawing::Size(60, 20);
+			this->radioButton2->TabIndex = 20;
+			this->radioButton2->TabStop = true;
+			this->radioButton2->Text = L"温度";
+			this->radioButton2->UseVisualStyleBackColor = true;
+			// 
+			// radioButton1
+			// 
+			this->radioButton1->AutoSize = true;
+			this->radioButton1->Location = System::Drawing::Point(12, 24);
+			this->radioButton1->Name = L"radioButton1";
+			this->radioButton1->Size = System::Drawing::Size(94, 20);
+			this->radioButton1->TabIndex = 19;
+			this->radioButton1->TabStop = true;
+			this->radioButton1->Text = L"日期时间";
+			this->radioButton1->UseVisualStyleBackColor = true;
 			// 
 			// groupBox3
 			// 
@@ -362,42 +365,48 @@ namespace AGMS {
 			this->groupBox3->Controls->Add(this->label3);
 			this->groupBox3->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox3->Location = System::Drawing::Point(422, 100);
+			this->groupBox3->Location = System::Drawing::Point(43, 290);
+			this->groupBox3->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(218, 98);
+			this->groupBox3->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox3->Size = System::Drawing::Size(210, 88);
 			this->groupBox3->TabIndex = 11;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"请输入查询温度范围";
 			// 
 			// numericUpDown2
 			// 
-			this->numericUpDown2->Location = System::Drawing::Point(98, 53);
+			this->numericUpDown2->Location = System::Drawing::Point(74, 49);
+			this->numericUpDown2->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown2->Name = L"numericUpDown2";
-			this->numericUpDown2->Size = System::Drawing::Size(120, 30);
+			this->numericUpDown2->Size = System::Drawing::Size(90, 26);
 			this->numericUpDown2->TabIndex = 5;
 			// 
 			// numericUpDown1
 			// 
-			this->numericUpDown1->Location = System::Drawing::Point(98, 24);
+			this->numericUpDown1->Location = System::Drawing::Point(74, 19);
+			this->numericUpDown1->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(120, 30);
+			this->numericUpDown1->Size = System::Drawing::Size(90, 26);
 			this->numericUpDown1->TabIndex = 4;
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(48, 55);
+			this->label5->Location = System::Drawing::Point(24, 51);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(29, 20);
+			this->label5->Size = System::Drawing::Size(24, 16);
 			this->label5->TabIndex = 3;
 			this->label5->Text = L"to";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(32, 27);
+			this->label3->Location = System::Drawing::Point(24, 22);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(49, 20);
+			this->label3->Size = System::Drawing::Size(40, 16);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"from";
 			// 
@@ -409,42 +418,48 @@ namespace AGMS {
 			this->groupBox4->Controls->Add(this->label6);
 			this->groupBox4->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox4->Location = System::Drawing::Point(422, 204);
+			this->groupBox4->Location = System::Drawing::Point(283, 290);
+			this->groupBox4->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(231, 100);
+			this->groupBox4->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox4->Size = System::Drawing::Size(206, 88);
 			this->groupBox4->TabIndex = 12;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"请输入湿度查询范围";
 			// 
 			// numericUpDown4
 			// 
-			this->numericUpDown4->Location = System::Drawing::Point(98, 60);
+			this->numericUpDown4->Location = System::Drawing::Point(74, 48);
+			this->numericUpDown4->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown4->Name = L"numericUpDown4";
-			this->numericUpDown4->Size = System::Drawing::Size(120, 30);
+			this->numericUpDown4->Size = System::Drawing::Size(90, 26);
 			this->numericUpDown4->TabIndex = 6;
 			// 
 			// numericUpDown3
 			// 
-			this->numericUpDown3->Location = System::Drawing::Point(98, 24);
+			this->numericUpDown3->Location = System::Drawing::Point(74, 19);
+			this->numericUpDown3->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown3->Name = L"numericUpDown3";
-			this->numericUpDown3->Size = System::Drawing::Size(120, 30);
+			this->numericUpDown3->Size = System::Drawing::Size(90, 26);
 			this->numericUpDown3->TabIndex = 5;
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(16, 45);
+			this->label7->Location = System::Drawing::Point(12, 50);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(29, 20);
+			this->label7->Size = System::Drawing::Size(24, 16);
 			this->label7->TabIndex = 1;
 			this->label7->Text = L"to";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(16, 26);
+			this->label6->Location = System::Drawing::Point(12, 22);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(49, 20);
+			this->label6->Size = System::Drawing::Size(40, 16);
 			this->label6->TabIndex = 0;
 			this->label6->Text = L"from";
 			// 
@@ -456,42 +471,48 @@ namespace AGMS {
 			this->groupBox5->Controls->Add(this->label8);
 			this->groupBox5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox5->Location = System::Drawing::Point(58, 330);
+			this->groupBox5->Location = System::Drawing::Point(43, 413);
+			this->groupBox5->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Size = System::Drawing::Size(234, 100);
+			this->groupBox5->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox5->Size = System::Drawing::Size(210, 98);
 			this->groupBox5->TabIndex = 13;
 			this->groupBox5->TabStop = false;
 			this->groupBox5->Text = L"请输入震荡度查询范围";
 			// 
 			// numericUpDown6
 			// 
-			this->numericUpDown6->Location = System::Drawing::Point(77, 52);
+			this->numericUpDown6->Location = System::Drawing::Point(58, 57);
+			this->numericUpDown6->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown6->Name = L"numericUpDown6";
-			this->numericUpDown6->Size = System::Drawing::Size(120, 30);
+			this->numericUpDown6->Size = System::Drawing::Size(90, 26);
 			this->numericUpDown6->TabIndex = 16;
 			// 
 			// numericUpDown5
 			// 
-			this->numericUpDown5->Location = System::Drawing::Point(77, 19);
+			this->numericUpDown5->Location = System::Drawing::Point(58, 30);
+			this->numericUpDown5->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown5->Name = L"numericUpDown5";
-			this->numericUpDown5->Size = System::Drawing::Size(120, 30);
+			this->numericUpDown5->Size = System::Drawing::Size(90, 26);
 			this->numericUpDown5->TabIndex = 15;
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(6, 51);
+			this->label9->Location = System::Drawing::Point(5, 59);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(29, 20);
+			this->label9->Size = System::Drawing::Size(24, 16);
 			this->label9->TabIndex = 14;
 			this->label9->Text = L"to";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(6, 21);
+			this->label8->Location = System::Drawing::Point(5, 32);
+			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(49, 20);
+			this->label8->Size = System::Drawing::Size(40, 16);
 			this->label8->TabIndex = 14;
 			this->label8->Text = L"from";
 			// 
@@ -503,42 +524,50 @@ namespace AGMS {
 			this->groupBox6->Controls->Add(this->label10);
 			this->groupBox6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox6->Location = System::Drawing::Point(422, 330);
+			this->groupBox6->Location = System::Drawing::Point(283, 413);
+			this->groupBox6->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox6->Name = L"groupBox6";
-			this->groupBox6->Size = System::Drawing::Size(250, 100);
+			this->groupBox6->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox6->Size = System::Drawing::Size(206, 98);
 			this->groupBox6->TabIndex = 14;
 			this->groupBox6->TabStop = false;
 			this->groupBox6->Text = L"请输入有害气体查询范围";
 			// 
 			// numericUpDown8
 			// 
-			this->numericUpDown8->Location = System::Drawing::Point(104, 48);
+			this->numericUpDown8->Location = System::Drawing::Point(72, 57);
+			this->numericUpDown8->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown8->Name = L"numericUpDown8";
-			this->numericUpDown8->Size = System::Drawing::Size(120, 30);
+			this->numericUpDown8->Size = System::Drawing::Size(90, 26);
 			this->numericUpDown8->TabIndex = 6;
+			this->numericUpDown8->ValueChanged += gcnew System::EventHandler(this, &HistorySearch::numericUpDown8_ValueChanged);
 			// 
 			// numericUpDown7
 			// 
-			this->numericUpDown7->Location = System::Drawing::Point(104, 16);
+			this->numericUpDown7->Location = System::Drawing::Point(72, 30);
+			this->numericUpDown7->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown7->Name = L"numericUpDown7";
-			this->numericUpDown7->Size = System::Drawing::Size(120, 30);
+			this->numericUpDown7->Size = System::Drawing::Size(90, 26);
 			this->numericUpDown7->TabIndex = 5;
+			this->numericUpDown7->ValueChanged += gcnew System::EventHandler(this, &HistorySearch::numericUpDown7_ValueChanged);
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(3, 48);
+			this->label11->Location = System::Drawing::Point(15, 59);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(29, 20);
+			this->label11->Size = System::Drawing::Size(24, 16);
 			this->label11->TabIndex = 1;
 			this->label11->Text = L"to";
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(6, 28);
+			this->label10->Location = System::Drawing::Point(14, 30);
+			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(49, 20);
+			this->label10->Size = System::Drawing::Size(40, 16);
 			this->label10->TabIndex = 0;
 			this->label10->Text = L"from";
 			// 
@@ -546,11 +575,12 @@ namespace AGMS {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button1->Location = System::Drawing::Point(807, 633);
+			this->button1->Location = System::Drawing::Point(687, 429);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(147, 57);
+			this->button1->Size = System::Drawing::Size(107, 36);
 			this->button1->TabIndex = 15;
-			this->button1->Text = L"记录统计：";
+			this->button1->Text = L"显示统计";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &HistorySearch::button1_Click);
 			// 
@@ -559,17 +589,19 @@ namespace AGMS {
 			this->label12->AutoSize = true;
 			this->label12->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label12->Location = System::Drawing::Point(971, 644);
+			this->label12->Location = System::Drawing::Point(808, 444);
+			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(30, 20);
+			this->label12->Size = System::Drawing::Size(59, 16);
 			this->label12->TabIndex = 16;
-			this->label12->Text = L"共";
+			this->label12->Text = L"共加载";
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(1007, 639);
+			this->textBox1->Location = System::Drawing::Point(875, 440);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 25);
+			this->textBox1->Size = System::Drawing::Size(76, 21);
 			this->textBox1->TabIndex = 17;
 			// 
 			// label13
@@ -577,17 +609,18 @@ namespace AGMS {
 			this->label13->AutoSize = true;
 			this->label13->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label13->Location = System::Drawing::Point(1113, 644);
+			this->label13->Location = System::Drawing::Point(955, 444);
+			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(30, 20);
+			this->label13->Size = System::Drawing::Size(59, 16);
 			this->label13->TabIndex = 18;
-			this->label13->Text = L"条";
+			this->label13->Text = L"条数据";
 			// 
 			// HistorySearch
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 15);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1732, 702);
+			this->ClientSize = System::Drawing::Size(1219, 525);
 			this->Controls->Add(this->label13);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label12);
@@ -601,9 +634,10 @@ namespace AGMS {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->listView1);
 			this->Controls->Add(this->groupBox1);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"HistorySearch";
 			this->Text = L"历史查询";
+			this->Load += gcnew System::EventHandler(this, &HistorySearch::HistorySearch_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataSet1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
@@ -762,23 +796,24 @@ namespace AGMS {
 
 				 // 使用DataAdapter和DataSet
 				 String^ strCmd;
-				 if (this->checkBox1->Checked)
+				 if (this->radioButton1->Checked==true)
 				 {
 					 strCmd = String::Format("SELECT * FROM {0} WHERE 日期时间>={1} AND 日期时间<={2}", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
 				 }
-				 if (this->checkBox2->Checked)
+
+				 else if (this->radioButton2->Checked)
 				 {
 					 strCmd = String::Format("SELECT * FROM {0} WHERE 温度>={1} AND 温度<={2}", strTableName, this->numericUpDown1->Value, this->numericUpDown2->Value);
 				 }
-				 if (this->checkBox3->Checked)
+				 else if (this->radioButton3->Checked)
 				 {
 					 strCmd = String::Format("SELECT * FROM {0} WHERE 湿度>={1} AND 湿度<={2}", strTableName, this->numericUpDown3->Value, this->numericUpDown4->Value);
 				 }
-				 if (this->checkBox2->Checked)
+				 else if (this->radioButton4->Checked)
 				 {
 					 strCmd = String::Format("SELECT * FROM {0} WHERE 震荡度>={1} AND 震荡度<={2}", strTableName, this->numericUpDown5->Value, this->numericUpDown6->Value);
 				 }
-				 if (this->checkBox2->Checked)
+				 else if (this->radioButton5->Checked)
 				 {
 					 strCmd = String::Format("SELECT * FROM {0} WHERE 有害气体>={1} AND 有害气体<={2}", strTableName, this->numericUpDown7->Value, this->numericUpDown8->Value);
 				 }
@@ -1123,5 +1158,13 @@ namespace AGMS {
 				 this->textBox1->Text = this->listView1->Items->Count.ToString();
 
 	}
-	};
+	private: System::Void HistorySearch_Load(System::Object^  sender, System::EventArgs^  e) {
+			
+
+	}
+private: System::Void numericUpDown8_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void numericUpDown7_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+};
 }

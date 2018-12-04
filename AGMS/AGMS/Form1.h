@@ -125,9 +125,9 @@ namespace AGMS {
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton2;
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton3;
 	private: System::Windows::Forms::ToolStripMenuItem^  期望值设置ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  系统ToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^  打开ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  关闭ToolStripMenuItem;
+
+
+
 	private: System::Windows::Forms::ToolStripMenuItem^  格式设置ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  自动换行ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  退出ToolStripMenuItem;
@@ -146,6 +146,13 @@ namespace AGMS {
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::NumericUpDown^  numericUpDown1;
 	public: static array<String^> ^split = gcnew array<String^>(18){ "1" };
+private: System::Windows::Forms::ToolStripMenuItem^  系统ToolStripMenuItem1;
+public:
+private: System::Windows::Forms::ToolStripMenuItem^  打开ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  关闭ToolStripMenuItem;
+private: System::Windows::Forms::Label^  label8;
+private: System::Windows::Forms::Label^  label9;
+private: System::Windows::Forms::Label^  label10;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -176,9 +183,6 @@ namespace AGMS {
 			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->系统ToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->打开ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->关闭ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->关闭系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -194,17 +198,20 @@ namespace AGMS {
 			this->振荡度ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->有害气体ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->期望值设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->查看ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->工具栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->状态栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->字体ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->自动换行ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->坐标设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->平滑度设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->格式设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->曲线图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->折线图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->查看ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->工具栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->状态栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->字体ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->自动换行ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->系统ToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->打开ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->关闭ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->帮助ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->系统介绍ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->关于ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -251,6 +258,9 @@ namespace AGMS {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -282,9 +292,9 @@ namespace AGMS {
 			// 
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
-				this->系统ToolStripMenuItem1,
-					this->系统ToolStripMenuItem, this->串口设置ToolStripMenuItem, this->地图ToolStripMenuItem, this->气体类型ToolStripMenuItem, this->查看ToolStripMenuItem,
-					this->toolStripMenuItem1, this->帮助ToolStripMenuItem
+				this->系统ToolStripMenuItem,
+					this->串口设置ToolStripMenuItem, this->地图ToolStripMenuItem, this->气体类型ToolStripMenuItem, this->toolStripMenuItem1, this->查看ToolStripMenuItem,
+					this->系统ToolStripMenuItem1, this->帮助ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -293,32 +303,6 @@ namespace AGMS {
 			this->menuStrip1->Text = L"menuStrip1";
 			this->menuStrip1->MouseEnter += gcnew System::EventHandler(this, &Form1::menuStrip1_MouseEnter);
 			this->menuStrip1->MouseLeave += gcnew System::EventHandler(this, &Form1::menuStrip1_MouseLeave);
-			// 
-			// 系统ToolStripMenuItem1
-			// 
-			this->系统ToolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->打开ToolStripMenuItem,
-					this->关闭ToolStripMenuItem
-			});
-			this->系统ToolStripMenuItem1->Name = L"系统ToolStripMenuItem1";
-			this->系统ToolStripMenuItem1->Size = System::Drawing::Size(44, 21);
-			this->系统ToolStripMenuItem1->Text = L"系统";
-			this->系统ToolStripMenuItem1->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::On_DoSystemMenu);
-			this->系统ToolStripMenuItem1->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
-			// 
-			// 打开ToolStripMenuItem
-			// 
-			this->打开ToolStripMenuItem->Name = L"打开ToolStripMenuItem";
-			this->打开ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->打开ToolStripMenuItem->Text = L"打开文件";
-			this->打开ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
-			// 
-			// 关闭ToolStripMenuItem
-			// 
-			this->关闭ToolStripMenuItem->Name = L"关闭ToolStripMenuItem";
-			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->关闭ToolStripMenuItem->Text = L"关闭";
-			this->关闭ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 系统ToolStripMenuItem
 			// 
@@ -445,47 +429,6 @@ namespace AGMS {
 			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
 			this->期望值设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
-			// 查看ToolStripMenuItem
-			// 
-			this->查看ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->工具栏ToolStripMenuItem,
-					this->状态栏ToolStripMenuItem, this->字体ToolStripMenuItem, this->自动换行ToolStripMenuItem
-			});
-			this->查看ToolStripMenuItem->Name = L"查看ToolStripMenuItem";
-			this->查看ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
-			this->查看ToolStripMenuItem->Text = L"格式";
-			this->查看ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::查看ToolStripMenuItem_DropDownItemClicked);
-			this->查看ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::查看ToolStripMenuItem_Click);
-			this->查看ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
-			// 
-			// 工具栏ToolStripMenuItem
-			// 
-			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
-			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->工具栏ToolStripMenuItem->Text = L"工具栏";
-			this->工具栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
-			// 
-			// 状态栏ToolStripMenuItem
-			// 
-			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
-			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->状态栏ToolStripMenuItem->Text = L"状态栏";
-			this->状态栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
-			// 
-			// 字体ToolStripMenuItem
-			// 
-			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
-			this->字体ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->字体ToolStripMenuItem->Text = L"字体";
-			this->字体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
-			// 
-			// 自动换行ToolStripMenuItem
-			// 
-			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
-			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
-			this->自动换行ToolStripMenuItem->Text = L"自动换行";
-			this->自动换行ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
-			// 
 			// toolStripMenuItem1
 			// 
 			this->toolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
@@ -535,6 +478,73 @@ namespace AGMS {
 			this->折线图ToolStripMenuItem->Name = L"折线图ToolStripMenuItem";
 			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
 			this->折线图ToolStripMenuItem->Text = L"折线图";
+			// 
+			// 查看ToolStripMenuItem
+			// 
+			this->查看ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->工具栏ToolStripMenuItem,
+					this->状态栏ToolStripMenuItem, this->字体ToolStripMenuItem, this->自动换行ToolStripMenuItem
+			});
+			this->查看ToolStripMenuItem->Name = L"查看ToolStripMenuItem";
+			this->查看ToolStripMenuItem->Size = System::Drawing::Size(68, 21);
+			this->查看ToolStripMenuItem->Text = L"系统格式";
+			this->查看ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::查看ToolStripMenuItem_DropDownItemClicked);
+			this->查看ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::查看ToolStripMenuItem_Click);
+			this->查看ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 工具栏ToolStripMenuItem
+			// 
+			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
+			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->工具栏ToolStripMenuItem->Text = L"工具栏";
+			this->工具栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 状态栏ToolStripMenuItem
+			// 
+			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
+			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->状态栏ToolStripMenuItem->Text = L"状态栏";
+			this->状态栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 字体ToolStripMenuItem
+			// 
+			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
+			this->字体ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->字体ToolStripMenuItem->Text = L"字体";
+			this->字体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 自动换行ToolStripMenuItem
+			// 
+			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
+			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->自动换行ToolStripMenuItem->Text = L"自动换行";
+			this->自动换行ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 系统ToolStripMenuItem1
+			// 
+			this->系统ToolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->打开ToolStripMenuItem,
+					this->关闭ToolStripMenuItem
+			});
+			this->系统ToolStripMenuItem1->Name = L"系统ToolStripMenuItem1";
+			this->系统ToolStripMenuItem1->Size = System::Drawing::Size(44, 21);
+			this->系统ToolStripMenuItem1->Text = L"文件";
+			this->系统ToolStripMenuItem1->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::On_DoSystemMenu);
+			this->系统ToolStripMenuItem1->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 打开ToolStripMenuItem
+			// 
+			this->打开ToolStripMenuItem->Name = L"打开ToolStripMenuItem";
+			this->打开ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->打开ToolStripMenuItem->Text = L"打开文件";
+			this->打开ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 关闭ToolStripMenuItem
+			// 
+			this->关闭ToolStripMenuItem->Name = L"关闭ToolStripMenuItem";
+			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关闭ToolStripMenuItem->Text = L"关闭";
+			this->关闭ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 帮助ToolStripMenuItem
 			// 
@@ -812,7 +822,7 @@ namespace AGMS {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(64, 24);
 			this->button4->TabIndex = 5;
-			this->button4->Text = L"显示";
+			this->button4->Text = L"正常";
 			this->button4->UseVisualStyleBackColor = true;
 			// 
 			// label4
@@ -835,7 +845,7 @@ namespace AGMS {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(64, 24);
 			this->button3->TabIndex = 5;
-			this->button3->Text = L"显示";
+			this->button3->Text = L"正常";
 			this->button3->UseVisualStyleBackColor = true;
 			// 
 			// label3
@@ -857,7 +867,7 @@ namespace AGMS {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(64, 24);
 			this->button2->TabIndex = 5;
-			this->button2->Text = L"显示";
+			this->button2->Text = L"正常";
 			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// label2
@@ -879,7 +889,7 @@ namespace AGMS {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(64, 24);
 			this->button1->TabIndex = 5;
-			this->button1->Text = L"显示";
+			this->button1->Text = L"正常";
 			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// label1
@@ -973,7 +983,7 @@ namespace AGMS {
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(908, 67);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(346, 243);
+			this->pictureBox1->Size = System::Drawing::Size(344, 220);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 4;
 			this->pictureBox1->TabStop = false;
@@ -993,7 +1003,7 @@ namespace AGMS {
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号", L"2号", L"3号" });
-			this->comboBox1->Location = System::Drawing::Point(1106, 366);
+			this->comboBox1->Location = System::Drawing::Point(1105, 327);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(160, 20);
 			this->comboBox1->Sorted = true;
@@ -1003,21 +1013,23 @@ namespace AGMS {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label6->Location = System::Drawing::Point(1103, 339);
+			this->label6->Location = System::Drawing::Point(1102, 300);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(104, 16);
+			this->label6->Size = System::Drawing::Size(110, 16);
 			this->label6->TabIndex = 7;
 			this->label6->Text = L"选择快递车辆";
 			// 
 			// button5
 			// 
+			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
+			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->button5->Location = System::Drawing::Point(1106, 401);
+			this->button5->Location = System::Drawing::Point(1106, 359);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(160, 57);
+			this->button5->Size = System::Drawing::Size(160, 58);
 			this->button5->TabIndex = 8;
 			this->button5->Text = L"查询历史数据";
 			this->button5->UseVisualStyleBackColor = true;
@@ -1025,37 +1037,76 @@ namespace AGMS {
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->groupBox1->Controls->Add(this->label8);
+			this->groupBox1->Controls->Add(this->label9);
+			this->groupBox1->Controls->Add(this->label10);
 			this->groupBox1->Controls->Add(this->textBox3);
 			this->groupBox1->Controls->Add(this->textBox2);
 			this->groupBox1->Controls->Add(this->textBox1);
-			this->groupBox1->Font = (gcnew System::Drawing::Font(L"微软雅黑", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->groupBox1->Font = (gcnew System::Drawing::Font(L"微软雅黑", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->groupBox1->Location = System::Drawing::Point(899, 316);
+			this->groupBox1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->groupBox1->Location = System::Drawing::Point(899, 293);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(182, 163);
+			this->groupBox1->Size = System::Drawing::Size(189, 186);
 			this->groupBox1->TabIndex = 9;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"环境评定";
 			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label8->Location = System::Drawing::Point(6, 23);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(63, 14);
+			this->label8->TabIndex = 13;
+			this->label8->Text = L"振荡环境";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label9->Location = System::Drawing::Point(6, 76);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(63, 14);
+			this->label9->TabIndex = 14;
+			this->label9->Text = L"空气环境";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Font = (gcnew System::Drawing::Font(L"宋体", 10.5F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label10->Location = System::Drawing::Point(6, 128);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(63, 14);
+			this->label10->TabIndex = 15;
+			this->label10->Text = L"温度环境";
+			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(9, 116);
+			this->textBox3->Location = System::Drawing::Point(9, 154);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(158, 26);
+			this->textBox3->Size = System::Drawing::Size(158, 29);
 			this->textBox3->TabIndex = 2;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(9, 71);
+			this->textBox2->Location = System::Drawing::Point(9, 95);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(158, 26);
+			this->textBox2->Size = System::Drawing::Size(158, 29);
 			this->textBox2->TabIndex = 1;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(9, 25);
+			this->textBox1->Location = System::Drawing::Point(9, 42);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(158, 26);
+			this->textBox1->Size = System::Drawing::Size(158, 29);
 			this->textBox1->TabIndex = 0;
 			// 
 			// notifyIcon1
@@ -1103,7 +1154,7 @@ namespace AGMS {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(1093, 474);
+			this->label7->Location = System::Drawing::Point(1104, 432);
 			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(113, 12);
@@ -1113,17 +1164,18 @@ namespace AGMS {
 			// 
 			// numericUpDown1
 			// 
-			this->numericUpDown1->Location = System::Drawing::Point(1204, 472);
-			this->numericUpDown1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->numericUpDown1->Location = System::Drawing::Point(1106, 455);
+			this->numericUpDown1->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5000, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(90, 21);
+			this->numericUpDown1->Size = System::Drawing::Size(111, 21);
 			this->numericUpDown1->TabIndex = 12;
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::InactiveBorder;
 			this->ClientSize = System::Drawing::Size(1302, 681);
 			this->Controls->Add(this->numericUpDown1);
 			this->Controls->Add(this->label7);
@@ -1308,6 +1360,7 @@ namespace AGMS {
 							if (Int32::Parse(split[0])<0 || Int32::Parse(split[0])>30)  //温度超限报警
 							{
 							UpdateColor1(button1);//R
+							button1->Text = "警告";
 							this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[0] != nullptr)
 							{
@@ -1319,7 +1372,11 @@ namespace AGMS {
 							}
 							//Sleep(100);
 							}
-							else UpdateColor2(button1);//G
+							else
+							{
+								UpdateColor2(button1);//G
+								button1->Text = "正常";
+							}
 
 							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[1]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
@@ -1327,6 +1384,7 @@ namespace AGMS {
 							if (Int32::Parse(split[1])<0 || Int32::Parse(split[1])>50)  //湿度超限报警
 							{
 							UpdateColor1(button2);
+							button2->Text = "警告";
 							this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[1] != nullptr)
 							{
@@ -1340,6 +1398,7 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button2);
+							button2->Text = "正常";
 							}
 
 							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[3]);
@@ -1348,6 +1407,7 @@ namespace AGMS {
 							if (float::Parse(split[3])<0 || float::Parse(split[3])>80)  //有毒气体超限报警
 							{
 							UpdateColor1(button3);
+							button3->Text = "警告";
 							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[3] != nullptr)
 							{
@@ -1361,6 +1421,7 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button3);
+							button3->Text = "正常";
 							}
 
 							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[2]);
@@ -1369,6 +1430,7 @@ namespace AGMS {
 							if (Int32::Parse(split[2])<0 || Int32::Parse(split[2])>20)  //振荡度超限报警
 							{
 							UpdateColor1(button4);
+							button4->Text = "警告";
 							this->chart4->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[2] != nullptr)
 							{
@@ -1383,6 +1445,7 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button4);
+							button4->Text = "正常";
 							}
 
 							//分析
@@ -1419,6 +1482,7 @@ namespace AGMS {
 							if (Int32::Parse(split[6])<26 || Int32::Parse(split[6])>28)  //温度超限报警
 							{
 							UpdateColor1(button1);
+							button1->Text = "警告";
 							this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[6] != nullptr)
 							{
@@ -1429,12 +1493,17 @@ namespace AGMS {
 							}
 							//Sleep(100);
 							}
-							else UpdateColor2(button1);
+							else
+							{
+								UpdateColor2(button1);
+								button1->Text = "正常";
+							}
 							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[7]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							if (Int32::Parse(split[7])<0 || Int32::Parse(split[7])>50)  //湿度超限报警
 							{
 							UpdateColor1(button2);
+							button2->Text = "警告";
 							this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[7] != nullptr)
 							{
@@ -1448,6 +1517,7 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button2);
+							button2->Text = "正常";
 							}
 
 							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[9]);
@@ -1456,6 +1526,7 @@ namespace AGMS {
 							if (float::Parse(split[9])<0 || float::Parse(split[9])>80)  //有毒气体超限报警
 							{
 							UpdateColor1(button3);
+							button3->Text = "警告";
 							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[9] != nullptr)
 							{
@@ -1469,12 +1540,14 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button3);
+							button3->Text = "正常";
 							}
 							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[8]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							if (Int32::Parse(split[8])<45 || Int32::Parse(split[8])>75)  //振荡度超限报警
 							{
 							UpdateColor1(button4);
+							button4->Text = "警告";
 							this->chart4->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[8] != nullptr)
 							{
@@ -1489,6 +1562,7 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button4);
+							button4->Text = "正常";
 							}
 
 							//分析
@@ -1524,6 +1598,7 @@ namespace AGMS {
 						   if (Int32::Parse(split[12])<26|| Int32::Parse(split[12])>28)  //温度超限报警
 							{
 							UpdateColor1(button1);
+							button1->Text = "警告";
 							this->chart1->Series["Series1"]->Points[this->chart1->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[12] != nullptr)
 							{
@@ -1534,12 +1609,17 @@ namespace AGMS {
 							}
 							//Sleep(100);
 							}
-							else UpdateColor2(button1);
+						   else
+						   {
+							   UpdateColor2(button1);
+							   button1->Text = "正常";
+						   }
 							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[13]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							if (Int32::Parse(split[13])<0 || Int32::Parse(split[13])>50)  //湿度超限报警
 							{
 							UpdateColor1(button2);
+							button2->Text = "警告";
 							this->chart2->Series["Series1"]->Points[this->chart2->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[13] != nullptr)
 							{
@@ -1553,12 +1633,14 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button2);
+							button2->Text = "正常";
 							}
 							chart3->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[15]);
 							chart3->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							if (float::Parse(split[15])<26 || float::Parse(split[15])>28)  //有毒气体超限报警
 							{
 							UpdateColor1(button3);
+							button3->Text = "警告";
 							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[15] != nullptr)
 							{
@@ -1572,12 +1654,14 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button3);
+							button3->Text = "正常";
 							}
 							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[14]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							if (Int32::Parse(split[14])<45 || Int32::Parse(split[14])>75)  //振荡度超限报警
 							{
-							UpdateColor1(button4);
+								UpdateColor1(button4); 
+								button4->Text = "警告";
 							this->chart3->Series["Series1"]->Points[this->chart3->Series["Series1"]->Points->Count - 1]->MarkerColor = Color::FromArgb(255, 0, 0);
 							if (split[14] != nullptr)
 							{
@@ -1591,6 +1675,7 @@ namespace AGMS {
 							else
 							{
 							UpdateColor2(button4);
+							button4->Text = "正常";
 							}
 
 							//分析
