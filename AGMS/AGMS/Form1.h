@@ -11,6 +11,7 @@
 #include"ChartSetForm.h"
 #include"HistorySearch.h"
 #include"valuechange.h"
+#include"StaticForm.h"
 namespace AGMS {
 
 	using namespace System;
@@ -154,6 +155,10 @@ private: System::Windows::Forms::Label^  label8;
 private: System::Windows::Forms::Label^  label9;
 private: System::Windows::Forms::Label^  label10;
 private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  统计与分析ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  异常数据统计ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  正常数据统计ToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -171,18 +176,18 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -275,6 +280,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			this->oleDbConnection1 = (gcnew System::Data::OleDb::OleDbConnection());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->统计与分析ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->异常数据统计ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->正常数据统计ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->数据分析ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->toolStrip1->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
@@ -292,10 +301,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			// menuStrip1
 			// 
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(9) {
 				this->系统ToolStripMenuItem,
-					this->串口设置ToolStripMenuItem, this->地图ToolStripMenuItem, this->气体类型ToolStripMenuItem, this->toolStripMenuItem1, this->查看ToolStripMenuItem,
-					this->系统ToolStripMenuItem1, this->帮助ToolStripMenuItem
+					this->串口设置ToolStripMenuItem, this->地图ToolStripMenuItem, this->气体类型ToolStripMenuItem, this->toolStripMenuItem1, this->统计与分析ToolStripMenuItem,
+					this->查看ToolStripMenuItem, this->系统ToolStripMenuItem1, this->帮助ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -408,35 +417,35 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			// 温度ToolStripMenuItem
 			// 
 			this->温度ToolStripMenuItem->Name = L"温度ToolStripMenuItem";
-			this->温度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->温度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->温度ToolStripMenuItem->Text = L"温度";
 			this->温度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 湿度ToolStripMenuItem
 			// 
 			this->湿度ToolStripMenuItem->Name = L"湿度ToolStripMenuItem";
-			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->湿度ToolStripMenuItem->Text = L"湿度";
 			this->湿度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 振荡度ToolStripMenuItem
 			// 
 			this->振荡度ToolStripMenuItem->Name = L"振荡度ToolStripMenuItem";
-			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->振荡度ToolStripMenuItem->Text = L"振荡度";
 			this->振荡度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 有害气体ToolStripMenuItem
 			// 
 			this->有害气体ToolStripMenuItem->Name = L"有害气体ToolStripMenuItem";
-			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->有害气体ToolStripMenuItem->Text = L"有害气体";
 			this->有害气体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 期望值设置ToolStripMenuItem
 			// 
 			this->期望值设置ToolStripMenuItem->Name = L"期望值设置ToolStripMenuItem";
-			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
 			this->期望值设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -454,7 +463,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			// 坐标设置ToolStripMenuItem
 			// 
 			this->坐标设置ToolStripMenuItem->Name = L"坐标设置ToolStripMenuItem";
-			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->坐标设置ToolStripMenuItem->Text = L"坐标设置";
 			this->坐标设置ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::坐标设置ToolStripMenuItem_Click);
 			this->坐标设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -462,7 +471,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			// 平滑度设置ToolStripMenuItem
 			// 
 			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
-			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
 			this->平滑度设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -473,7 +482,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 					this->折线图ToolStripMenuItem
 			});
 			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
-			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
+			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->格式设置ToolStripMenuItem->Text = L"格式设置";
 			this->格式设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::格式设置ToolStripMenuItem_DropDownItemClicked);
 			this->格式设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -506,28 +515,28 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			// 工具栏ToolStripMenuItem
 			// 
 			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
-			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->工具栏ToolStripMenuItem->Text = L"工具栏";
 			this->工具栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 状态栏ToolStripMenuItem
 			// 
 			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
-			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->状态栏ToolStripMenuItem->Text = L"状态栏";
 			this->状态栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 字体ToolStripMenuItem
 			// 
 			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
-			this->字体ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->字体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->字体ToolStripMenuItem->Text = L"字体";
 			this->字体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 自动换行ToolStripMenuItem
 			// 
 			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
-			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->自动换行ToolStripMenuItem->Text = L"自动换行";
 			this->自动换行ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -546,14 +555,14 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			// 打开ToolStripMenuItem
 			// 
 			this->打开ToolStripMenuItem->Name = L"打开ToolStripMenuItem";
-			this->打开ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->打开ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->打开ToolStripMenuItem->Text = L"打开文件";
 			this->打开ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关闭ToolStripMenuItem
 			// 
 			this->关闭ToolStripMenuItem->Name = L"关闭ToolStripMenuItem";
-			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->关闭ToolStripMenuItem->Text = L"关闭";
 			this->关闭ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -571,14 +580,14 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			// 系统介绍ToolStripMenuItem
 			// 
 			this->系统介绍ToolStripMenuItem->Name = L"系统介绍ToolStripMenuItem";
-			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->系统介绍ToolStripMenuItem->Text = L"系统介绍";
 			this->系统介绍ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关于ToolStripMenuItem
 			// 
 			this->关于ToolStripMenuItem->Name = L"关于ToolStripMenuItem";
-			this->关于ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->关于ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->关于ToolStripMenuItem->Text = L"关于";
 			this->关于ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -916,36 +925,36 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			// 
 			// chart4
 			// 
-			chartArea5->Name = L"ChartArea1";
-			this->chart4->ChartAreas->Add(chartArea5);
-			legend5->Enabled = false;
-			legend5->Name = L"Legend1";
-			this->chart4->Legends->Add(legend5);
+			chartArea1->Name = L"ChartArea1";
+			this->chart4->ChartAreas->Add(chartArea1);
+			legend1->Enabled = false;
+			legend1->Name = L"Legend1";
+			this->chart4->Legends->Add(legend1);
 			this->chart4->Location = System::Drawing::Point(19, 310);
 			this->chart4->Name = L"chart4";
-			series5->ChartArea = L"ChartArea1";
-			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series5->Legend = L"Legend1";
-			series5->Name = L"Series1";
-			this->chart4->Series->Add(series5);
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Series1";
+			this->chart4->Series->Add(series1);
 			this->chart4->Size = System::Drawing::Size(358, 200);
 			this->chart4->TabIndex = 3;
 			this->chart4->Text = L"chart4";
 			// 
 			// chart3
 			// 
-			chartArea6->Name = L"ChartArea1";
-			this->chart3->ChartAreas->Add(chartArea6);
-			legend6->Enabled = false;
-			legend6->Name = L"Legend1";
-			this->chart3->Legends->Add(legend6);
+			chartArea2->Name = L"ChartArea1";
+			this->chart3->ChartAreas->Add(chartArea2);
+			legend2->Enabled = false;
+			legend2->Name = L"Legend1";
+			this->chart3->Legends->Add(legend2);
 			this->chart3->Location = System::Drawing::Point(414, 310);
 			this->chart3->Name = L"chart3";
-			series6->ChartArea = L"ChartArea1";
-			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series6->Legend = L"Legend1";
-			series6->Name = L"Series1";
-			this->chart3->Series->Add(series6);
+			series2->ChartArea = L"ChartArea1";
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series2->Legend = L"Legend1";
+			series2->Name = L"Series1";
+			this->chart3->Series->Add(series2);
 			this->chart3->Size = System::Drawing::Size(358, 200);
 			this->chart3->TabIndex = 2;
 			this->chart3->Text = L"chart3";
@@ -953,38 +962,38 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			// chart2
 			// 
 			this->chart2->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea7->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea7);
+			chartArea3->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea3);
 			this->chart2->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend7->Alignment = System::Drawing::StringAlignment::Far;
-			legend7->Enabled = false;
-			legend7->Name = L"Legend1";
-			this->chart2->Legends->Add(legend7);
+			legend3->Alignment = System::Drawing::StringAlignment::Far;
+			legend3->Enabled = false;
+			legend3->Name = L"Legend1";
+			this->chart2->Legends->Add(legend3);
 			this->chart2->Location = System::Drawing::Point(414, 49);
 			this->chart2->Name = L"chart2";
-			series7->ChartArea = L"ChartArea1";
-			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series7->Legend = L"Legend1";
-			series7->Name = L"Series1";
-			this->chart2->Series->Add(series7);
+			series3->ChartArea = L"ChartArea1";
+			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series3->Legend = L"Legend1";
+			series3->Name = L"Series1";
+			this->chart2->Series->Add(series3);
 			this->chart2->Size = System::Drawing::Size(358, 200);
 			this->chart2->TabIndex = 1;
 			this->chart2->Text = L"chart2";
 			// 
 			// chart1
 			// 
-			chartArea8->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea8);
-			legend8->Enabled = false;
-			legend8->Name = L"Legend1";
-			this->chart1->Legends->Add(legend8);
+			chartArea4->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea4);
+			legend4->Enabled = false;
+			legend4->Name = L"Legend1";
+			this->chart1->Legends->Add(legend4);
 			this->chart1->Location = System::Drawing::Point(19, 49);
 			this->chart1->Name = L"chart1";
-			series8->ChartArea = L"ChartArea1";
-			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series8->Legend = L"Legend1";
-			series8->Name = L"Series1";
-			this->chart1->Series->Add(series8);
+			series4->ChartArea = L"ChartArea1";
+			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series4->Legend = L"Legend1";
+			series4->Name = L"Series1";
+			this->chart1->Series->Add(series4);
 			this->chart1->Size = System::Drawing::Size(358, 200);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
@@ -1171,6 +1180,35 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 			this->numericUpDown1->Name = L"numericUpDown1";
 			this->numericUpDown1->Size = System::Drawing::Size(111, 26);
 			this->numericUpDown1->TabIndex = 12;
+			// 
+			// 统计与分析ToolStripMenuItem
+			// 
+			this->统计与分析ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->异常数据统计ToolStripMenuItem,
+					this->正常数据统计ToolStripMenuItem, this->数据分析ToolStripMenuItem
+			});
+			this->统计与分析ToolStripMenuItem->Name = L"统计与分析ToolStripMenuItem";
+			this->统计与分析ToolStripMenuItem->Size = System::Drawing::Size(80, 21);
+			this->统计与分析ToolStripMenuItem->Text = L"统计与分析";
+			// 
+			// 异常数据统计ToolStripMenuItem
+			// 
+			this->异常数据统计ToolStripMenuItem->Name = L"异常数据统计ToolStripMenuItem";
+			this->异常数据统计ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->异常数据统计ToolStripMenuItem->Text = L"异常数据统计";
+			this->异常数据统计ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::异常数据统计ToolStripMenuItem_Click);
+			// 
+			// 正常数据统计ToolStripMenuItem
+			// 
+			this->正常数据统计ToolStripMenuItem->Name = L"正常数据统计ToolStripMenuItem";
+			this->正常数据统计ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->正常数据统计ToolStripMenuItem->Text = L"正常数据统计";
+			// 
+			// 数据分析ToolStripMenuItem
+			// 
+			this->数据分析ToolStripMenuItem->Name = L"数据分析ToolStripMenuItem";
+			this->数据分析ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->数据分析ToolStripMenuItem->Text = L"数据分析";
 			// 
 			// Form1
 			// 
@@ -2305,6 +2343,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 				 HistorySearch ^dlg = gcnew HistorySearch();
 				 dlg->ShowDialog();
 	}
+private: System::Void 异常数据统计ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 StaticForm^dlg = gcnew StaticForm();
+			 dlg->ShowDialog();
+}
 };
 }
 

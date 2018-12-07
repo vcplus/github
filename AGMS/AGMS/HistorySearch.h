@@ -832,7 +832,7 @@ namespace AGMS {
 
 
 
-				 Data::OleDb::OleDbCommand ^ cmd = gcnew Data::OleDb::OleDbCommand(strCmd, con1);
+				 System::Data::OleDb::OleDbCommand ^ cmd = gcnew System::Data::OleDb::OleDbCommand(strCmd, con1);
 
 				 this->oleDbDataAdapter1->SelectCommand = cmd;
 

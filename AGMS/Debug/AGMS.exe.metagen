@@ -7,6 +7,7 @@
   AGMS.SerialForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.SetForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.ShakeForm.resources - Embedded, ContainedInManifestFile, 
+  AGMS.StaticForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.TempForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly AGMS, Version=1.0.*, Culture=固定语言(固定国家/地区): 
@@ -94,6 +95,9 @@ Class AGMS.ChartSetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Single Fy : Public
     Int32 Fcolor : Public
 Class AGMS.HistorySearch: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class AGMS.StaticForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class AGMS.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
