@@ -1357,7 +1357,7 @@ private: System::Windows::Forms::Label^  label10;
 
 							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[0]);
 							chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							if (Int32::Parse(split[0])<0 || Int32::Parse(split[0])>30)  //温度超限报警
+							if (float::Parse(split[0])<0 || float::Parse(split[0])>30)  //温度超限报警
 							{
 							UpdateColor1(button1);//R
 							button1->Text = "警告";
@@ -1381,7 +1381,7 @@ private: System::Windows::Forms::Label^  label10;
 							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[1]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							
-							if (Int32::Parse(split[1])<0 || Int32::Parse(split[1])>50)  //湿度超限报警
+							if (float::Parse(split[1])<0 || float::Parse(split[1])>50)  //湿度超限报警
 							{
 							UpdateColor1(button2);
 							button2->Text = "警告";
@@ -1427,7 +1427,7 @@ private: System::Windows::Forms::Label^  label10;
 							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[2]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
 							
-							if (Int32::Parse(split[2])<0 || Int32::Parse(split[2])>20)  //振荡度超限报警
+							if (float::Parse(split[2])<0 || float::Parse(split[2])>20)  //振荡度超限报警
 							{
 							UpdateColor1(button4);
 							button4->Text = "警告";
@@ -1479,7 +1479,7 @@ private: System::Windows::Forms::Label^  label10;
 
 							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[6]);
 							chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							if (Int32::Parse(split[6])<26 || Int32::Parse(split[6])>28)  //温度超限报警
+							if (float::Parse(split[6])<26 || float::Parse(split[6])>28)  //温度超限报警
 							{
 							UpdateColor1(button1);
 							button1->Text = "警告";
@@ -1500,7 +1500,7 @@ private: System::Windows::Forms::Label^  label10;
 							}
 							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[7]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							if (Int32::Parse(split[7])<0 || Int32::Parse(split[7])>50)  //湿度超限报警
+							if (float::Parse(split[7])<0 || float::Parse(split[7])>50)  //湿度超限报警
 							{
 							UpdateColor1(button2);
 							button2->Text = "警告";
@@ -1544,7 +1544,7 @@ private: System::Windows::Forms::Label^  label10;
 							}
 							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[8]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							if (Int32::Parse(split[8])<45 || Int32::Parse(split[8])>75)  //振荡度超限报警
+							if (float::Parse(split[8])<45 || float::Parse(split[8])>75)  //振荡度超限报警
 							{
 							UpdateColor1(button4);
 							button4->Text = "警告";
@@ -1595,7 +1595,7 @@ private: System::Windows::Forms::Label^  label10;
 
 							chart1->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[12]);
 							chart1->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-						   if (Int32::Parse(split[12])<26|| Int32::Parse(split[12])>28)  //温度超限报警
+							if (float::Parse(split[12])<26 || float::Parse(split[12])>28)  //温度超限报警
 							{
 							UpdateColor1(button1);
 							button1->Text = "警告";
@@ -1616,7 +1616,7 @@ private: System::Windows::Forms::Label^  label10;
 						   }
 							chart2->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[13]);
 							chart2->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							if (Int32::Parse(split[13])<0 || Int32::Parse(split[13])>50)  //湿度超限报警
+							if (float::Parse(split[13])<0 || float::Parse(split[13])>50)  //湿度超限报警
 							{
 							UpdateColor1(button2);
 							button2->Text = "警告";
@@ -1658,7 +1658,7 @@ private: System::Windows::Forms::Label^  label10;
 							}
 							chart4->Series["Series1"]->Points->AddXY(dateTime.ToLongTimeString(), split[14]);
 							chart4->ChartAreas["ChartArea1"]->AxisX->ScaleView->Scroll(System::Windows::Forms::DataVisualization::Charting::ScrollType::Last);
-							if (Int32::Parse(split[14])<45 || Int32::Parse(split[14])>75)  //振荡度超限报警
+							if (float::Parse(split[14])<45 || float::Parse(split[14])>75)  //振荡度超限报警
 							{
 								UpdateColor1(button4); 
 								button4->Text = "警告";
