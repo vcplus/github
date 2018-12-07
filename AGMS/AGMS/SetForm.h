@@ -393,7 +393,18 @@ namespace AGMS {
 		F0 = Single::Parse(this->numericUpDown7->Text);
 		// F1 = Single::Parse(this->numericUpDown8->Text);
 
-		String ^str = this->numericUpDown3->Text->Trim() + ";" + this->numericUpDown1->Text->Trim() + ";" + this->numericUpDown5->Text->Trim() + ";" + this->numericUpDown7->Text->Trim();
+		String ^str = this->numericUpDown3->Text->Trim() + ";"
+			+ this->numericUpDown1->Text->Trim() + ";"
+			+ this->numericUpDown5->Text->Trim() + ";"
+			+ this->numericUpDown7->Text->Trim() + ";"
+			+ this->numericUpDown8->Text->Trim() + ";"
+			+ this->numericUpDown4->Text->Trim() + ";"
+			+ this->numericUpDown2->Text->Trim() + ";"
+			+ this->numericUpDown6->Text->Trim() + ";"
+			+ this->numericUpDown12->Text->Trim() + ";"
+			+ this->numericUpDown11->Text->Trim() + ";"
+			+ this->numericUpDown10->Text->Trim() + ";"
+			+ this->numericUpDown9->Text->Trim();
 
 		if (dlg->com->IsOpen)
 
