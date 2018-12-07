@@ -1296,7 +1296,7 @@ private: System::Windows::Forms::Label^  label10;
 	public: void data_receivce()//接收串口数据
 	{
 		String^ receiveText = nullptr;
-		char buffer[100] = {};
+		char buffer[200] = {};
 		if (dlg->com->IsOpen)
 		{
 			int bufroom = 0;
