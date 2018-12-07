@@ -94,7 +94,7 @@ namespace AGMS {
 
 	private: System::Windows::Forms::ComboBox^  comboBox1;
 	private: System::Windows::Forms::Label^  label6;
-	private: System::Windows::Forms::Button^  button5;
+
 	private: System::Windows::Forms::GroupBox^  groupBox1;
 	private: System::Windows::Forms::TextBox^  textBox3;
 	private: System::Windows::Forms::TextBox^  textBox2;
@@ -153,6 +153,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  关闭ToolStripMenuItem;
 private: System::Windows::Forms::Label^  label8;
 private: System::Windows::Forms::Label^  label9;
 private: System::Windows::Forms::Label^  label10;
+private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -170,18 +171,18 @@ private: System::Windows::Forms::Label^  label10;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->打开系统ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -192,6 +193,7 @@ private: System::Windows::Forms::Label^  label10;
 			this->关闭串口ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->显示地图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->历史数据ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->气体类型ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->温度ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->湿度ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -256,7 +258,6 @@ private: System::Windows::Forms::Label^  label10;
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
@@ -368,19 +369,29 @@ private: System::Windows::Forms::Label^  label10;
 			// 
 			// 地图ToolStripMenuItem
 			// 
-			this->地图ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->显示地图ToolStripMenuItem });
+			this->地图ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->显示地图ToolStripMenuItem,
+					this->历史数据ToolStripMenuItem
+			});
 			this->地图ToolStripMenuItem->Name = L"地图ToolStripMenuItem";
 			this->地图ToolStripMenuItem->Size = System::Drawing::Size(44, 21);
-			this->地图ToolStripMenuItem->Text = L"地图";
+			this->地图ToolStripMenuItem->Text = L"查询";
 			this->地图ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 显示地图ToolStripMenuItem
 			// 
 			this->显示地图ToolStripMenuItem->Name = L"显示地图ToolStripMenuItem";
-			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
+			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->显示地图ToolStripMenuItem->Text = L"显示地图";
 			this->显示地图ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::显示地图ToolStripMenuItem_Click);
 			this->显示地图ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
+			// 
+			// 历史数据ToolStripMenuItem
+			// 
+			this->历史数据ToolStripMenuItem->Name = L"历史数据ToolStripMenuItem";
+			this->历史数据ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->历史数据ToolStripMenuItem->Text = L"历史数据";
+			this->历史数据ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::历史数据ToolStripMenuItem_Click);
 			// 
 			// 气体类型ToolStripMenuItem
 			// 
@@ -905,36 +916,36 @@ private: System::Windows::Forms::Label^  label10;
 			// 
 			// chart4
 			// 
-			chartArea1->Name = L"ChartArea1";
-			this->chart4->ChartAreas->Add(chartArea1);
-			legend1->Enabled = false;
-			legend1->Name = L"Legend1";
-			this->chart4->Legends->Add(legend1);
+			chartArea5->Name = L"ChartArea1";
+			this->chart4->ChartAreas->Add(chartArea5);
+			legend5->Enabled = false;
+			legend5->Name = L"Legend1";
+			this->chart4->Legends->Add(legend5);
 			this->chart4->Location = System::Drawing::Point(19, 310);
 			this->chart4->Name = L"chart4";
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series1->Legend = L"Legend1";
-			series1->Name = L"Series1";
-			this->chart4->Series->Add(series1);
+			series5->ChartArea = L"ChartArea1";
+			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series5->Legend = L"Legend1";
+			series5->Name = L"Series1";
+			this->chart4->Series->Add(series5);
 			this->chart4->Size = System::Drawing::Size(358, 200);
 			this->chart4->TabIndex = 3;
 			this->chart4->Text = L"chart4";
 			// 
 			// chart3
 			// 
-			chartArea2->Name = L"ChartArea1";
-			this->chart3->ChartAreas->Add(chartArea2);
-			legend2->Enabled = false;
-			legend2->Name = L"Legend1";
-			this->chart3->Legends->Add(legend2);
+			chartArea6->Name = L"ChartArea1";
+			this->chart3->ChartAreas->Add(chartArea6);
+			legend6->Enabled = false;
+			legend6->Name = L"Legend1";
+			this->chart3->Legends->Add(legend6);
 			this->chart3->Location = System::Drawing::Point(414, 310);
 			this->chart3->Name = L"chart3";
-			series2->ChartArea = L"ChartArea1";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series2->Legend = L"Legend1";
-			series2->Name = L"Series1";
-			this->chart3->Series->Add(series2);
+			series6->ChartArea = L"ChartArea1";
+			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series6->Legend = L"Legend1";
+			series6->Name = L"Series1";
+			this->chart3->Series->Add(series6);
 			this->chart3->Size = System::Drawing::Size(358, 200);
 			this->chart3->TabIndex = 2;
 			this->chart3->Text = L"chart3";
@@ -942,38 +953,38 @@ private: System::Windows::Forms::Label^  label10;
 			// chart2
 			// 
 			this->chart2->BorderlineDashStyle = System::Windows::Forms::DataVisualization::Charting::ChartDashStyle::DashDot;
-			chartArea3->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea3);
+			chartArea7->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea7);
 			this->chart2->Cursor = System::Windows::Forms::Cursors::Cross;
-			legend3->Alignment = System::Drawing::StringAlignment::Far;
-			legend3->Enabled = false;
-			legend3->Name = L"Legend1";
-			this->chart2->Legends->Add(legend3);
+			legend7->Alignment = System::Drawing::StringAlignment::Far;
+			legend7->Enabled = false;
+			legend7->Name = L"Legend1";
+			this->chart2->Legends->Add(legend7);
 			this->chart2->Location = System::Drawing::Point(414, 49);
 			this->chart2->Name = L"chart2";
-			series3->ChartArea = L"ChartArea1";
-			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series3->Legend = L"Legend1";
-			series3->Name = L"Series1";
-			this->chart2->Series->Add(series3);
+			series7->ChartArea = L"ChartArea1";
+			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series7->Legend = L"Legend1";
+			series7->Name = L"Series1";
+			this->chart2->Series->Add(series7);
 			this->chart2->Size = System::Drawing::Size(358, 200);
 			this->chart2->TabIndex = 1;
 			this->chart2->Text = L"chart2";
 			// 
 			// chart1
 			// 
-			chartArea4->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea4);
-			legend4->Enabled = false;
-			legend4->Name = L"Legend1";
-			this->chart1->Legends->Add(legend4);
+			chartArea8->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea8);
+			legend8->Enabled = false;
+			legend8->Name = L"Legend1";
+			this->chart1->Legends->Add(legend8);
 			this->chart1->Location = System::Drawing::Point(19, 49);
 			this->chart1->Name = L"chart1";
-			series4->ChartArea = L"ChartArea1";
-			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series4->Legend = L"Legend1";
-			series4->Name = L"Series1";
-			this->chart1->Series->Add(series4);
+			series8->ChartArea = L"ChartArea1";
+			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series8->Legend = L"Legend1";
+			series8->Name = L"Series1";
+			this->chart1->Series->Add(series8);
 			this->chart1->Size = System::Drawing::Size(358, 200);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
@@ -1003,7 +1014,7 @@ private: System::Windows::Forms::Label^  label10;
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"1号", L"2号", L"3号" });
-			this->comboBox1->Location = System::Drawing::Point(1105, 327);
+			this->comboBox1->Location = System::Drawing::Point(1097, 344);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(160, 20);
 			this->comboBox1->Sorted = true;
@@ -1015,25 +1026,11 @@ private: System::Windows::Forms::Label^  label10;
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label6->Location = System::Drawing::Point(1102, 300);
+			this->label6->Location = System::Drawing::Point(1094, 314);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(110, 16);
 			this->label6->TabIndex = 7;
 			this->label6->Text = L"选择快递车辆";
-			// 
-			// button5
-			// 
-			this->button5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.BackgroundImage")));
-			this->button5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(134)));
-			this->button5->Location = System::Drawing::Point(1106, 359);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(160, 58);
-			this->button5->TabIndex = 8;
-			this->button5->Text = L"查询历史数据";
-			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &Form1::button5_Click);
 			// 
 			// groupBox1
 			// 
@@ -1154,21 +1151,25 @@ private: System::Windows::Forms::Label^  label10;
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(1104, 432);
+			this->label7->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->label7->Location = System::Drawing::Point(1104, 421);
 			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(113, 12);
+			this->label7->Size = System::Drawing::Size(162, 16);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"接收时间间隔（ms）";
 			this->label7->Click += gcnew System::EventHandler(this, &Form1::label7_Click);
 			// 
 			// numericUpDown1
 			// 
-			this->numericUpDown1->Location = System::Drawing::Point(1106, 455);
+			this->numericUpDown1->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(134)));
+			this->numericUpDown1->Location = System::Drawing::Point(1105, 447);
 			this->numericUpDown1->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5000, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(111, 21);
+			this->numericUpDown1->Size = System::Drawing::Size(111, 26);
 			this->numericUpDown1->TabIndex = 12;
 			// 
 			// Form1
@@ -1181,7 +1182,6 @@ private: System::Windows::Forms::Label^  label10;
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->groupBox1);
-			this->Controls->Add(this->button5);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->listBox1);
@@ -2301,6 +2301,10 @@ private: System::Windows::Forms::Label^  label10;
 		HistorySearch ^dlg = gcnew HistorySearch();
 		dlg->ShowDialog();
 	}
-	};
+	private: System::Void 历史数据ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+				 HistorySearch ^dlg = gcnew HistorySearch();
+				 dlg->ShowDialog();
+	}
+};
 }
 
