@@ -12,6 +12,7 @@
 #include"HistorySearch.h"
 #include"valuechange.h"
 #include"StaticForm.h"
+#include"AnalyseForm.h"
 namespace AGMS {
 
 	using namespace System;
@@ -157,8 +158,9 @@ private: System::Windows::Forms::Label^  label10;
 private: System::Windows::Forms::ToolStripMenuItem^  历史数据ToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^  统计与分析ToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^  异常数据统计ToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^  正常数据统计ToolStripMenuItem;
+
 private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
+
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -211,6 +213,9 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			this->格式设置ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->曲线图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->折线图ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->统计与分析ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->异常数据统计ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->数据分析ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->查看ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->工具栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->状态栏ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -280,10 +285,6 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			this->oleDbConnection1 = (gcnew System::Data::OleDb::OleDbConnection());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
-			this->统计与分析ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->异常数据统计ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->正常数据统计ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->数据分析ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->toolStrip1->SuspendLayout();
 			this->statusStrip1->SuspendLayout();
@@ -390,7 +391,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			// 显示地图ToolStripMenuItem
 			// 
 			this->显示地图ToolStripMenuItem->Name = L"显示地图ToolStripMenuItem";
-			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->显示地图ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->显示地图ToolStripMenuItem->Text = L"显示地图";
 			this->显示地图ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::显示地图ToolStripMenuItem_Click);
 			this->显示地图ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -398,7 +399,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			// 历史数据ToolStripMenuItem
 			// 
 			this->历史数据ToolStripMenuItem->Name = L"历史数据ToolStripMenuItem";
-			this->历史数据ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->历史数据ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->历史数据ToolStripMenuItem->Text = L"历史数据";
 			this->历史数据ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::历史数据ToolStripMenuItem_Click);
 			// 
@@ -417,35 +418,35 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			// 温度ToolStripMenuItem
 			// 
 			this->温度ToolStripMenuItem->Name = L"温度ToolStripMenuItem";
-			this->温度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->温度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->温度ToolStripMenuItem->Text = L"温度";
 			this->温度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 湿度ToolStripMenuItem
 			// 
 			this->湿度ToolStripMenuItem->Name = L"湿度ToolStripMenuItem";
-			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->湿度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->湿度ToolStripMenuItem->Text = L"湿度";
 			this->湿度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 振荡度ToolStripMenuItem
 			// 
 			this->振荡度ToolStripMenuItem->Name = L"振荡度ToolStripMenuItem";
-			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->振荡度ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->振荡度ToolStripMenuItem->Text = L"振荡度";
 			this->振荡度ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 有害气体ToolStripMenuItem
 			// 
 			this->有害气体ToolStripMenuItem->Name = L"有害气体ToolStripMenuItem";
-			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->有害气体ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->有害气体ToolStripMenuItem->Text = L"有害气体";
 			this->有害气体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 期望值设置ToolStripMenuItem
 			// 
 			this->期望值设置ToolStripMenuItem->Name = L"期望值设置ToolStripMenuItem";
-			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->期望值设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->期望值设置ToolStripMenuItem->Text = L"期望值设置";
 			this->期望值设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -463,7 +464,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			// 坐标设置ToolStripMenuItem
 			// 
 			this->坐标设置ToolStripMenuItem->Name = L"坐标设置ToolStripMenuItem";
-			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->坐标设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->坐标设置ToolStripMenuItem->Text = L"坐标设置";
 			this->坐标设置ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::坐标设置ToolStripMenuItem_Click);
 			this->坐标设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -471,7 +472,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			// 平滑度设置ToolStripMenuItem
 			// 
 			this->平滑度设置ToolStripMenuItem->Name = L"平滑度设置ToolStripMenuItem";
-			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->平滑度设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->平滑度设置ToolStripMenuItem->Text = L"平滑度设置";
 			this->平滑度设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -482,7 +483,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 					this->折线图ToolStripMenuItem
 			});
 			this->格式设置ToolStripMenuItem->Name = L"格式设置ToolStripMenuItem";
-			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->格式设置ToolStripMenuItem->Size = System::Drawing::Size(136, 22);
 			this->格式设置ToolStripMenuItem->Text = L"格式设置";
 			this->格式设置ToolStripMenuItem->DropDownItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &Form1::格式设置ToolStripMenuItem_DropDownItemClicked);
 			this->格式设置ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
@@ -498,6 +499,30 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			this->折线图ToolStripMenuItem->Name = L"折线图ToolStripMenuItem";
 			this->折线图ToolStripMenuItem->Size = System::Drawing::Size(112, 22);
 			this->折线图ToolStripMenuItem->Text = L"折线图";
+			// 
+			// 统计与分析ToolStripMenuItem
+			// 
+			this->统计与分析ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->异常数据统计ToolStripMenuItem,
+					this->数据分析ToolStripMenuItem
+			});
+			this->统计与分析ToolStripMenuItem->Name = L"统计与分析ToolStripMenuItem";
+			this->统计与分析ToolStripMenuItem->Size = System::Drawing::Size(80, 21);
+			this->统计与分析ToolStripMenuItem->Text = L"统计与分析";
+			// 
+			// 异常数据统计ToolStripMenuItem
+			// 
+			this->异常数据统计ToolStripMenuItem->Name = L"异常数据统计ToolStripMenuItem";
+			this->异常数据统计ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->异常数据统计ToolStripMenuItem->Text = L"异常数据统计";
+			this->异常数据统计ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::异常数据统计ToolStripMenuItem_Click);
+			// 
+			// 数据分析ToolStripMenuItem
+			// 
+			this->数据分析ToolStripMenuItem->Name = L"数据分析ToolStripMenuItem";
+			this->数据分析ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->数据分析ToolStripMenuItem->Text = L"数据分析";
+			this->数据分析ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::数据分析ToolStripMenuItem_Click);
 			// 
 			// 查看ToolStripMenuItem
 			// 
@@ -515,28 +540,28 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			// 工具栏ToolStripMenuItem
 			// 
 			this->工具栏ToolStripMenuItem->Name = L"工具栏ToolStripMenuItem";
-			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->工具栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->工具栏ToolStripMenuItem->Text = L"工具栏";
 			this->工具栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 状态栏ToolStripMenuItem
 			// 
 			this->状态栏ToolStripMenuItem->Name = L"状态栏ToolStripMenuItem";
-			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->状态栏ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->状态栏ToolStripMenuItem->Text = L"状态栏";
 			this->状态栏ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 字体ToolStripMenuItem
 			// 
 			this->字体ToolStripMenuItem->Name = L"字体ToolStripMenuItem";
-			this->字体ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->字体ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->字体ToolStripMenuItem->Text = L"字体";
 			this->字体ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 自动换行ToolStripMenuItem
 			// 
 			this->自动换行ToolStripMenuItem->Name = L"自动换行ToolStripMenuItem";
-			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->自动换行ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->自动换行ToolStripMenuItem->Text = L"自动换行";
 			this->自动换行ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -555,14 +580,14 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			// 打开ToolStripMenuItem
 			// 
 			this->打开ToolStripMenuItem->Name = L"打开ToolStripMenuItem";
-			this->打开ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->打开ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->打开ToolStripMenuItem->Text = L"打开文件";
 			this->打开ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关闭ToolStripMenuItem
 			// 
 			this->关闭ToolStripMenuItem->Name = L"关闭ToolStripMenuItem";
-			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关闭ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关闭ToolStripMenuItem->Text = L"关闭";
 			this->关闭ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -580,14 +605,14 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			// 系统介绍ToolStripMenuItem
 			// 
 			this->系统介绍ToolStripMenuItem->Name = L"系统介绍ToolStripMenuItem";
-			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->系统介绍ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->系统介绍ToolStripMenuItem->Text = L"系统介绍";
 			this->系统介绍ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
 			// 关于ToolStripMenuItem
 			// 
 			this->关于ToolStripMenuItem->Name = L"关于ToolStripMenuItem";
-			this->关于ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->关于ToolStripMenuItem->Size = System::Drawing::Size(124, 22);
 			this->关于ToolStripMenuItem->Text = L"关于";
 			this->关于ToolStripMenuItem->MouseEnter += gcnew System::EventHandler(this, &Form1::On_MouseEnter);
 			// 
@@ -1181,35 +1206,6 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			this->numericUpDown1->Size = System::Drawing::Size(111, 26);
 			this->numericUpDown1->TabIndex = 12;
 			// 
-			// 统计与分析ToolStripMenuItem
-			// 
-			this->统计与分析ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->异常数据统计ToolStripMenuItem,
-					this->正常数据统计ToolStripMenuItem, this->数据分析ToolStripMenuItem
-			});
-			this->统计与分析ToolStripMenuItem->Name = L"统计与分析ToolStripMenuItem";
-			this->统计与分析ToolStripMenuItem->Size = System::Drawing::Size(80, 21);
-			this->统计与分析ToolStripMenuItem->Text = L"统计与分析";
-			// 
-			// 异常数据统计ToolStripMenuItem
-			// 
-			this->异常数据统计ToolStripMenuItem->Name = L"异常数据统计ToolStripMenuItem";
-			this->异常数据统计ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->异常数据统计ToolStripMenuItem->Text = L"异常数据统计";
-			this->异常数据统计ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::异常数据统计ToolStripMenuItem_Click);
-			// 
-			// 正常数据统计ToolStripMenuItem
-			// 
-			this->正常数据统计ToolStripMenuItem->Name = L"正常数据统计ToolStripMenuItem";
-			this->正常数据统计ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->正常数据统计ToolStripMenuItem->Text = L"正常数据统计";
-			// 
-			// 数据分析ToolStripMenuItem
-			// 
-			this->数据分析ToolStripMenuItem->Name = L"数据分析ToolStripMenuItem";
-			this->数据分析ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->数据分析ToolStripMenuItem->Text = L"数据分析";
-			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
@@ -1289,6 +1285,7 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 		this->button3->Enabled = false;
 		this->button4->Enabled = false;
 		numericUpDown1->Text = "1000";
+		//this->reportViewer1->RefreshReport();
 	}
 
 	private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
@@ -2345,6 +2342,10 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 	}
 private: System::Void 异常数据统计ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 			 StaticForm^dlg = gcnew StaticForm();
+			 dlg->ShowDialog();
+}
+private: System::Void 数据分析ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+			 AnalyseForm^dlg = gcnew AnalyseForm();
 			 dlg->ShowDialog();
 }
 };

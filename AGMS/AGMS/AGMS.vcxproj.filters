@@ -60,6 +60,9 @@
     <ClCompile Include="StaticForm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AnalyseForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -102,6 +105,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="StaticForm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalyseForm.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -162,6 +168,9 @@
       <Filter>资源文件</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="HistorySearch.resx">
+      <Filter>资源文件</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaticForm.resx">
       <Filter>资源文件</Filter>
     </EmbeddedResource>
   </ItemGroup>

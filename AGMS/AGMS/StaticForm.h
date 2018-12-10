@@ -251,7 +251,7 @@ namespace AGMS {
 			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->listView1);
 			this->Name = L"StaticForm";
-			this->Text = L"StaticForm";
+			this->Text = L"Òì³£Êý¾Ý";
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->ResumeLayout(false);
@@ -361,6 +361,7 @@ namespace AGMS {
 				 table1->PrimaryKey = gcnew array<DataColumn^>{ table1->Columns[0] };
 				 binding1 = gcnew BindingSource(dataSet, strTableName);
 				 DispView(table1);
+				 int i;
 				 this->textBox1->Text = this->listView1->Items->Count.ToString();
 				 //this->listView1->AutoResizeColumn(5, ColumnHeaderAutoResizeStyle::ColumnContent);
 	}
