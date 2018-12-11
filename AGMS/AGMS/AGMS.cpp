@@ -4,6 +4,7 @@
 #include "Form1.h"
 #include"StaticForm.h"
 #include"AnalyseForm.h"
+#include"CreatingForm.h"
 using namespace AGMS;
 
 [STAThreadAttribute]

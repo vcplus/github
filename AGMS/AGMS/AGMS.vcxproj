@@ -98,6 +98,7 @@
     <ClCompile Include="AnalyseForm.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="ChartSetForm.cpp" />
+    <ClCompile Include="CreatingForm.cpp" />
     <ClCompile Include="FForm.cpp" />
     <ClCompile Include="HistorySearch.cpp" />
     <ClCompile Include="HumidForm.cpp" />
@@ -118,6 +119,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ChartSetForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CreatingForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FForm.h">
@@ -172,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChartSetForm.resx">
       <DependentUpon>ChartSetForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatingForm.resx">
+      <DependentUpon>CreatingForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FForm.resx">
       <DependentUpon>FForm.h</DependentUpon>

@@ -1,5 +1,6 @@
   AGMS.AnalyseForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.ChartSetForm.resources - Embedded, ContainedInManifestFile, 
+  AGMS.CreatingForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.FForm.resources - Embedded, ContainedInManifestFile, 
   AGMS.Form1.resources - Embedded, ContainedInManifestFile, 
   AGMS.HistorySearch.resources - Embedded, ContainedInManifestFile, 
@@ -120,6 +121,9 @@ Class AGMS.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.String[] split : Public, Static
   Methods:
     data_receivce(): PrivateScope, Public, HideBySig
+Class AGMS.CreatingForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class AGMS.SetForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

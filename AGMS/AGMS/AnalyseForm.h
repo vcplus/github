@@ -56,6 +56,14 @@ namespace AGMS {
 	private: System::Windows::Forms::GroupBox^  groupBox1;
 	private: System::Windows::Forms::ListView^  listView1;
 	private: System::Windows::Forms::ListView^  listView2;
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::TextBox^  textBox3;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::TextBox^  textBox4;
+	private: System::Windows::Forms::ComboBox^  comboBox1;
+	private: System::Windows::Forms::Label^  label9;
 
 	protected:
 
@@ -90,8 +98,16 @@ namespace AGMS {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->listView2 = (gcnew System::Windows::Forms::ListView());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -104,7 +120,7 @@ namespace AGMS {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(82, 88);
+			this->textBox1->Location = System::Drawing::Point(82, 121);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 21);
 			this->textBox1->TabIndex = 1;
@@ -128,14 +144,14 @@ namespace AGMS {
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(21, 46);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(65, 12);
+			this->label1->Size = System::Drawing::Size(59, 12);
 			this->label1->TabIndex = 4;
-			this->label1->Text = L"10-20度有 ";
+			this->label1->Text = L"2-10度有 ";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(188, 91);
+			this->label2->Location = System::Drawing::Point(188, 124);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(41, 12);
 			this->label2->TabIndex = 5;
@@ -153,31 +169,53 @@ namespace AGMS {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(21, 91);
+			this->label4->Location = System::Drawing::Point(21, 124);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(59, 12);
+			this->label4->Size = System::Drawing::Size(65, 12);
 			this->label4->TabIndex = 7;
-			this->label4->Text = L"2-10度有 ";
+			this->label4->Text = L"30-50度有 ";
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->label7);
+			this->groupBox1->Controls->Add(this->label8);
+			this->groupBox1->Controls->Add(this->textBox4);
+			this->groupBox1->Controls->Add(this->label6);
+			this->groupBox1->Controls->Add(this->label5);
+			this->groupBox1->Controls->Add(this->textBox3);
 			this->groupBox1->Controls->Add(this->textBox1);
 			this->groupBox1->Controls->Add(this->label4);
 			this->groupBox1->Controls->Add(this->textBox2);
 			this->groupBox1->Controls->Add(this->label3);
 			this->groupBox1->Controls->Add(this->label1);
 			this->groupBox1->Controls->Add(this->label2);
-			this->groupBox1->Location = System::Drawing::Point(21, 26);
+			this->groupBox1->Location = System::Drawing::Point(26, 47);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(256, 150);
+			this->groupBox1->Size = System::Drawing::Size(255, 184);
 			this->groupBox1->TabIndex = 8;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"温度分析";
 			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(21, 85);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(125, 12);
+			this->label5->TabIndex = 9;
+			this->label5->Text = L"低温条件占总异常数目";
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(152, 82);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(48, 21);
+			this->textBox3->TabIndex = 8;
+			// 
 			// listView1
 			// 
 			this->listView1->Enabled = false;
-			this->listView1->Location = System::Drawing::Point(380, 133);
+			this->listView1->Location = System::Drawing::Point(178, 241);
 			this->listView1->Name = L"listView1";
 			this->listView1->Size = System::Drawing::Size(8, 8);
 			this->listView1->TabIndex = 9;
@@ -186,17 +224,71 @@ namespace AGMS {
 			// listView2
 			// 
 			this->listView2->Enabled = false;
-			this->listView2->Location = System::Drawing::Point(268, 187);
+			this->listView2->Location = System::Drawing::Point(77, 241);
 			this->listView2->Name = L"listView2";
 			this->listView2->Size = System::Drawing::Size(8, 8);
 			this->listView2->TabIndex = 10;
 			this->listView2->UseCompatibleStateImageBehavior = false;
 			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(206, 85);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(11, 12);
+			this->label6->TabIndex = 10;
+			this->label6->Text = L"%";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(206, 157);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(11, 12);
+			this->label7->TabIndex = 13;
+			this->label7->Text = L"%";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(21, 157);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(125, 12);
+			this->label8->TabIndex = 12;
+			this->label8->Text = L"高温条件占总异常数目";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(152, 154);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(48, 21);
+			this->textBox4->TabIndex = 11;
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"温度分析" });
+			this->comboBox1->Location = System::Drawing::Point(122, 12);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(121, 20);
+			this->comboBox1->TabIndex = 11;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(53, 15);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(53, 12);
+			this->label9->TabIndex = 12;
+			this->label9->Text = L"类型查询";
+			// 
 			// AnalyseForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(544, 382);
+			this->ClientSize = System::Drawing::Size(326, 237);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->comboBox1);
 			this->Controls->Add(this->listView2);
 			this->Controls->Add(this->listView1);
 			this->Controls->Add(this->groupBox1);
@@ -206,6 +298,7 @@ namespace AGMS {
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -310,7 +403,7 @@ private: BindingSource^ binding2;
 				 // 使用DataAdapter和DataSet
 				 String^ strCmd1;
 				 String^ strCmd2;
-				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 温度>={1} AND 温度<={2}", strTableName, 10, 20);
+				 strCmd1 = String::Format("SELECT * FROM {0} WHERE 温度>={1} AND 温度<={2}", strTableName, 30, 50);
 				 strCmd2 = String::Format("SELECT * FROM {0} WHERE 温度>={1} AND 温度<={2}", strTableName, 2, 10);
 				 System::Data::OleDb::OleDbCommand ^ cmd = gcnew System::Data::OleDb::OleDbCommand(strCmd1, con1);
 				 System::Data::OleDb::OleDbCommand ^ cmd2 = gcnew System::Data::OleDb::OleDbCommand(strCmd2, con1);
@@ -336,6 +429,8 @@ private: BindingSource^ binding2;
 				 DispView0(table2);
 				 this->textBox1->Text = this->listView1->Items->Count.ToString();
 				 this->textBox2->Text = this->listView2->Items->Count.ToString();
+				 this->textBox3->Text = (Double(this->listView2->Items->Count)*100/500).ToString();
+				 this->textBox4->Text = (Double(this->listView1->Items->Count) * 100 / 500).ToString();
 	}
 	};
 }

@@ -59,6 +59,10 @@ namespace AGMS {
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
+	private: System::Drawing::Printing::PrintDocument^  printDocument1;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
 
 	private:
 		/// <summary>
@@ -73,6 +77,8 @@ namespace AGMS {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(StaticForm::typeid));
 			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -91,7 +97,12 @@ namespace AGMS {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->printDocument1 = (gcnew System::Drawing::Printing::PrintDocument());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// listView1
@@ -199,7 +210,7 @@ namespace AGMS {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(309, 311);
+			this->textBox1->Location = System::Drawing::Point(299, 250);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 21);
 			this->textBox1->TabIndex = 12;
@@ -220,7 +231,7 @@ namespace AGMS {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label5->Location = System::Drawing::Point(218, 311);
+			this->label5->Location = System::Drawing::Point(208, 250);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(88, 16);
 			this->label5->TabIndex = 14;
@@ -231,17 +242,53 @@ namespace AGMS {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"宋体", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(134)));
-			this->label6->Location = System::Drawing::Point(415, 310);
+			this->label6->Location = System::Drawing::Point(405, 249);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(24, 16);
 			this->label6->TabIndex = 15;
 			this->label6->Text = L"条";
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(182, 346);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(86, 23);
+			this->button1->TabIndex = 16;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &StaticForm::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(334, 346);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->TabIndex = 17;
+			this->button2->Text = L"button2";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &StaticForm::button2_Click);
+			// 
+			// printDocument1
+			// 
+			this->printDocument1->PrintPage += gcnew System::Drawing::Printing::PrintPageEventHandler(this, &StaticForm::printDocument1_PrintPage);
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(299, 12);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(25, 14);
+			this->pictureBox1->TabIndex = 18;
+			this->pictureBox1->TabStop = false;
 			// 
 			// StaticForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1182, 410);
+			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -254,6 +301,7 @@ namespace AGMS {
 			this->Text = L"异常数据";
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -366,5 +414,107 @@ namespace AGMS {
 				 //this->listView1->AutoResizeColumn(5, ColumnHeaderAutoResizeStyle::ColumnContent);
 	}
 
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 PrintPreviewDialog^ previewDlg = gcnew PrintPreviewDialog(); // 打印预览对话框
+
+			 previewDlg->Document = this->printDocument1;         //设置打印文档对象
+
+			 previewDlg->ShowDialog();                                      // 显示打印预览对话框
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+			 PrintDialog^ printDlg = gcnew PrintDialog();                   //打印对话框
+
+			 printDlg->Document = this->printDocument1;            //设置打印文档
+
+			 if (printDlg->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+
+				 this->printDocument1->Print();                               //开始打印
+}
+
+private: System::Void printDocument1_PrintPage(System::Object^  sender, System::Drawing::Printing::PrintPageEventArgs^  e) {
+			 Graphics^ g = e->Graphics;
+
+			 int left = e->MarginBounds.Left;                   // 左上角X位置
+
+			 int top = e->MarginBounds.Top;                   // 左上角Y位置
+
+			 int width = e->MarginBounds.Width;                 //有效区域宽度
+
+			 int height = e->MarginBounds.Height;             // 有效区域高度
+
+			 // 打印页头(宋体,26号)
+
+			 Drawing::Font^ headerFont =
+
+				 gcnew Drawing::Font(L"宋体", 20, FontStyle::Regular);
+
+			 g->DrawString(L"中通快递运输异常报表", headerFont, Brushes::Black, left + 150, top);
+
+			 // 打印标题(背景灰色,宋体,12号)
+
+			 top += 60;
+
+			 Drawing::Pen^  tablesPen = gcnew Drawing::Pen(Color::Black);
+
+			// g->FillRectangle(Brushes::LightGray, Rectangle(left, top, width, 30));
+			 //g->DrawImage(cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")), left, top + 30, left + width, top + 30);
+			 g->DrawLine(tablesPen, left, top + 30, left + width, top + 30);
+
+			 Drawing::Font^titlesFont = gcnew Drawing::Font(L"宋体", 12, FontStyle::Bold);
+
+			 g->DrawString(L"ID", titlesFont, Brushes::Black, left + 40, top + 5);
+
+			 g->DrawLine(tablesPen, left + 120, top, left + 120, top + 30);          //列分隔线
+
+			 g->DrawString(L"温度", titlesFont, Brushes::Black, left + 160, top + 5);
+
+			 g->DrawLine(tablesPen, left + 300, top, left + 300, top + 30);
+
+			 g->DrawString(L"温度日期时间", titlesFont, Brushes::Black, left + 340, top + 5);
+
+			 g->DrawLine(tablesPen, left + 500, top, left + 500, top + 30);
+
+			 g->DrawString(L"车辆", titlesFont, Brushes::Black, left + 540, top + 5);
+
+			 //g->DrawLine(tablesPen, left + 430, top, left + 430, top + 30);
+
+			 //g->DrawString(L"成绩3", titlesFont, Brushes::Black, left + 450, top + 5);
+
+			 // 打印页表
+
+			 top += 30, height -= 30;
+
+			 Drawing::Font^ tablesFont =
+
+				 gcnew Drawing::Font(L"宋体", 12, FontStyle::Regular);
+
+			 for each(ListViewItem^ item in this->listView1->Items) {
+
+				 g->DrawString(item->SubItems[0]->Text, tablesFont, Brushes::Black, left + 30, top + 5);      // 学号
+
+				 g->DrawLine(tablesPen, left + 120, top, left + 120, top + 30);             //列分隔线
+
+				 g->DrawString(item->SubItems[1]->Text, tablesFont, Brushes::Black, left + 150, top + 5);    // 姓名
+
+				 g->DrawLine(tablesPen, left + 300, top, left + 300, top + 30);
+
+				 g->DrawString(item->SubItems[2]->Text, tablesFont, Brushes::Black, left + 330, top + 5);    // 成绩1
+
+				 g->DrawLine(tablesPen, left + 500, top, left + 500, top + 30);
+
+				 g->DrawString(item->SubItems[3]->Text, tablesFont, Brushes::Black, left + 530, top + 5);    // 成绩2
+
+				 g->DrawLine(tablesPen, left + 600, top, left + 600, top + 30);
+
+				 //g->DrawString(item->SubItems[4]->Text, tablesFont, Brushes::Black, left + 460, top + 5);    // 成绩3
+
+				 //g->DrawLine(tablesPen, left, top + 30, left + width, top + 30);
+
+				 top += 30, height -= 30;
+
+			 }
+
+			 e->HasMorePages = false;
+}
 };
 }

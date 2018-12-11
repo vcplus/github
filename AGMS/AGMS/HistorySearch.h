@@ -796,6 +796,10 @@ namespace AGMS {
 
 				 // 使用DataAdapter和DataSet
 				 String^ strCmd;
+				 if (this->radioButton1->Checked == false && this->radioButton2->Checked == false && this->radioButton3->Checked == false && this->radioButton4->Checked == false && this->radioButton5->Checked == false)
+				 {
+					 MessageBox::Show("请选择查询项", "警告");
+				 }
 				 if (this->radioButton1->Checked==true)
 				 {
 					 strCmd = String::Format("SELECT * FROM {0} WHERE 日期时间>={1} AND 日期时间<={2}", strTableName, dateTimePicker1->Value.ToOADate(), dateTimePicker2->Value.ToOADate());
