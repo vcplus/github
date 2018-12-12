@@ -513,14 +513,14 @@ private: System::Windows::Forms::ToolStripMenuItem^  数据分析ToolStripMenuItem;
 			// 异常数据统计ToolStripMenuItem
 			// 
 			this->异常数据统计ToolStripMenuItem->Name = L"异常数据统计ToolStripMenuItem";
-			this->异常数据统计ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
-			this->异常数据统计ToolStripMenuItem->Text = L"异常数据统计";
+			this->异常数据统计ToolStripMenuItem->Size = System::Drawing::Size(208, 22);
+			this->异常数据统计ToolStripMenuItem->Text = L"异常数据统计与报表生成";
 			this->异常数据统计ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::异常数据统计ToolStripMenuItem_Click);
 			// 
 			// 数据分析ToolStripMenuItem
 			// 
 			this->数据分析ToolStripMenuItem->Name = L"数据分析ToolStripMenuItem";
-			this->数据分析ToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->数据分析ToolStripMenuItem->Size = System::Drawing::Size(208, 22);
 			this->数据分析ToolStripMenuItem->Text = L"数据分析";
 			this->数据分析ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::数据分析ToolStripMenuItem_Click);
 			// 
